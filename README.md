@@ -1,14 +1,10 @@
 <h2 align="center">Github stats :bar_chart:</h2>
 
-<p align="center"><img src="https://github-readme-stats.vercel.app/api/top-langs?username=BankkRoll&show_icons=true&locale=en&theme=chartreuse-dark" alt="BankkRoll" /> <img src="https://github-readme-stats.vercel.app/api?username=BankkRoll&show_icons=true&theme=chartreuse-dark" alt="BankkRoll :: Profile Stats" /></p>
+<p align="center"><img src="https://github-readme-stats.vercel.app/api/top-langs?username=BankkRoll&show_icons=true&locale=en&theme=chartreuse-dark" alt="BankkRoll" /></p>
+<p align="center"><img src="https://github-readme-stats.vercel.app/api?username=BankkRoll&show_icons=true&theme=chartreuse-dark" alt="BankkRoll :: Profile Stats" /></p>
 
 <h4 align="center">Visitor's count :eyes:</h4>
 <p align="center"><img src="https://profile-counter.glitch.me/{Bankk}/count.svg" alt="BankkRoll :: Visitor's Count" /></p>
-
-![chart](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username={Bankk}&theme=vue)
-![contr](https://github-readme-streak-stats.herokuapp.com/?user={Bankk})
-![trophy](https://github-profile-trophy.vercel.app/?username={Bankk})
-
 
 
 ## 🛠️ Skills
