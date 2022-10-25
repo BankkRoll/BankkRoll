@@ -9,8 +9,6 @@
 ## 🛠️ Skills
 
 
-### Programming Languages
-
 [![My Skills](https://skillicons.dev/icons?i=python)](https://skillicons.dev)![python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)    [![My Skills](https://skillicons.dev/icons?i=typescript)](https://skillicons.dev)![typescript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)    [![My Skills](https://skillicons.dev/icons?i=javascript)](https://skillicons.dev)![javascript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)    [![My Skills](https://skillicons.dev/icons?i=next)](https://skillicons.dev)![next](https://img.shields.io/badge/Next-000000?style=for-the-badge&logo=nextdotjs&logoColor=FFFFFF)
 
 [![My Skills](https://skillicons.dev/icons?i=react)](https://skillicons.dev)![react](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)    [![My Skills](https://skillicons.dev/icons?i=nodejs)](https://skillicons.dev)![node](https://img.shields.io/badge/Node.js-3776AB?style=for-the-badge&logo=python&logoColor=white)    [![My Skills](https://skillicons.dev/icons?i=tailwind)](https://skillicons.dev)![tailwind-css](https://img.shields.io/badge/tailwind_css-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white)[![My Skills](https://skillicons.dev/icons?i=java)](https://skillicons.dev)![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
