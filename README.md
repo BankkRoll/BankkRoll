@@ -7,6 +7,9 @@
 
 <p align="center"><a href="https://app.daily.dev/bankk"><img src="https://api.daily.dev/devcards/9d0b193d00a046d687d7853cf73876a1.png?r=esj" width="200" alt="Bankk's Dev Card"/></a></p>
 
+<a href="https://app.daily.dev/bankk"><img src="https://github.com/BankkRoll/README/devcard.svg" width="400" alt="Dev Card"/></a>
+
+
 
 ## 🛠️ Skills
 
