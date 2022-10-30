@@ -5,6 +5,8 @@
 <h4 align="center">Visitor's count :eyes:</h4>
 <p align="center"><img src="https://profile-counter.glitch.me/{BankkRoll}/count.svg" alt="BankkRoll :: Visitor's Count" /></p>
 
+<p align="center"><a href="https://app.daily.dev/bankk"><img src="https://api.daily.dev/devcards/9d0b193d00a046d687d7853cf73876a1.png?r=esj" width="200" alt="Bankk's Dev Card"/></a></p>
+
 
 ## 🛠️ Skills
 
