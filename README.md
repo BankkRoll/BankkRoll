@@ -1,3 +1,6 @@
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=37&duration=2000&pause=2000&color=07D8FF&center=true&vCenter=true&multiline=true&width=900&height=200&lines=%F0%9F%91%8B+Hello!+I'm+Bankk;Thanks+for+checking+out+my+GitHub!;%E2%AD%90+Anything+you+find+useful!;Contact+me+if+you+have+any+questions!)](https://git.io/typing-svg)
+
+
 <h2 align="center">Github stats :bar_chart:</h2>
 
 <p align="left"><img src="https://github-readme-stats.vercel.app/api/top-langs?username=BankkRoll&show_icons=true&locale=en&theme=chartreuse-dark" alt="BankkRoll" align="right"><img src="https://github-readme-stats.vercel.app/api?username=BankkRoll&show_icons=true&theme=chartreuse-dark" alt="BankkRoll :: Profile Stats" /></p>
