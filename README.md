@@ -3,15 +3,13 @@
 
 <h2 align="center">Github stats :bar_chart:</h2>
 
-<p align="left"><img src="https://github-readme-stats.vercel.app/api/top-langs?username=BankkRoll&show_icons=true&locale=en&theme=chartreuse-dark" alt="BankkRoll" align="right"><img src="https://github-readme-stats.vercel.app/api?username=BankkRoll&show_icons=true&theme=chartreuse-dark" alt="BankkRoll :: Profile Stats" /></p>
+<p align="left"><img src="https://github-readme-stats.vercel.app/api/top-langs?username=BankkRoll&show_icons=true&locale=en&theme=chartreuse-dark" alt="BankkRoll">
+<img src="https://github-readme-stats.vercel.app/api?username=BankkRoll&show_icons=true&theme=chartreuse-dark" align="right" alt="BankkRoll :: Profile Stats" /></p>
 
-<h4 align="center">Visitor's count :eyes:</h4>
-<p align="center"><img src="https://profile-counter.glitch.me/{BankkRoll}/count.svg" alt="BankkRoll :: Visitor's Count" /></p>
-
+[![trophy](https://github-profile-trophy.vercel.app/?username=BankkRoll&theme=onedark)](https://github.com/ryo-ma/github-profile-trophy)
 
 
 ## 🛠️ Skills
-
 
 [![My Skills](https://skillicons.dev/icons?i=python)](https://skillicons.dev)![python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)    [![My Skills](https://skillicons.dev/icons?i=typescript)](https://skillicons.dev)![typescript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)    [![My Skills](https://skillicons.dev/icons?i=javascript)](https://skillicons.dev)![javascript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)    [![My Skills](https://skillicons.dev/icons?i=next)](https://skillicons.dev)![next](https://img.shields.io/badge/Next-000000?style=for-the-badge&logo=nextdotjs&logoColor=FFFFFF)
 
@@ -30,6 +28,7 @@
   </a>
 </p>
 
+
 ## 🖥️ Workspace Setup
 
 ![i7](https://i.ibb.co/5TrdbWC/imageedit-14-2619558547.png)
@@ -43,3 +42,8 @@
 
 [![My Skills](https://skillicons.dev/icons?i=vscode)](https://skillicons.dev)
 ![vs-code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=Visual-Studio-Code&logoColor=white)
+
+<h4 align="center">Visitor's count :eyes:</h4>
+<p align="center"><img src="https://profile-counter.glitch.me/{BankkRoll}/count.svg" alt="BankkRoll :: Visitor's Count" /></p>
+
+<p align="center"><a href='https://archiveprogram.github.com/'><img src='https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/acbadge.gif' width='40' height='40'></a> <a href='https://docs.github.com/en/developers'><img src='https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/devbadge.gif' width='40' height='40'></a> <a href='https://github.com/pricing'><img src='https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/pro.gif' width='40' height='40'></a> <a href='https://stars.github.com/'><img src='https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/starbadge.gif' width='35' height='35'></a> <a href='https://docs.github.com/en/github/supporting-the-open-source-community-with-github-sponsors'><img src='https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/sponsorbadge.gif' width='35' height='35'></a></p>
