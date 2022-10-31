@@ -21,12 +21,8 @@
 
 [![My Skills](https://skillicons.dev/icons?i=firebase)](https://skillicons.dev)![firebase](https://img.shields.io/badge/Firebase-ffaa00?style=for-the-badge&logo=Firebase&logoColor=white)      [![My Skills](https://skillicons.dev/icons?i=stackoverflow)](https://skillicons.dev)![stacked](https://img.shields.io/badge/-CTRL%2BC%20%26%20CTRL%2BV-orange?style=for-the-badge&logo=appveyor)    [![My Skills](https://skillicons.dev/icons?i=express)](https://skillicons.dev)![Express](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)       
 
-[![My Skills](https://skillicons.dev/icons?i=ethereum)](https://skillicons.dev)![ethereum](https://img.shields.io/badge/Ethereum-3C3C3D?style=for-the-badge&logo=ethereum&logoColor=white)    [![My Skills](https://skillicons.dev/icons?i=web3)](https://skillicons.dev)![web3](https://img.shields.io/badge/Web_3-F16822?style=for-the-badge&logo=web3.js&logoColor=white) 
-<p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=discord,twitter," />
-  </a>
-</p>
+[![My Skills](https://skillicons.dev/icons?i=ethereum)](https://skillicons.dev)![ethereum](https://img.shields.io/badge/Ethereum-3C3C3D?style=for-the-badge&logo=ethereum&logoColor=white)    [![My Skills](https://skillicons.dev/icons?i=web3)](https://skillicons.dev)![web3](https://img.shields.io/badge/Web_3-F16822?style=for-the-badge&logo=web3.js&logoColor=white)   [![My Skills](https://skillicons.dev/icons?i=discord)](https://skillicons.dev)![discord](https://img.shields.io/badge/Discord-3C3C3D?style=for-the-badge&logo=discord&logoColor=white)    [![My Skills](https://skillicons.dev/icons?i=twitter)](https://skillicons.dev)![web3](https://img.shields.io/badge/Twitter-F16822?style=for-the-badge&logo=twitter&logoColor=white) 
+
 
 
 ## 🖥️ Workspace Setup
