@@ -23,7 +23,6 @@ jobs:
           base_indepth: yes
           config_timezone: America/New_York
           plugin_chess: yes
-          plugin_chess_animation: { "size": 40, "delay": 3, "duration": 0.6 }
           plugin_chess_platform: lichess.org
           plugin_chess_user: .user.login
           plugin_followup: yes
