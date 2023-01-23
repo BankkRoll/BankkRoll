@@ -27,7 +27,7 @@ jobs:
           # Options
           user: BankkRoll
           template: classic
-          base: header, activity, community, repositories, metadata
+          base: activity, community, repositories, metadata
           config_timezone: America/New_York
           plugin_achievements: yes
           plugin_achievements_display: compact
@@ -54,4 +54,3 @@ jobs:
           plugin_pagespeed_pwa: yes
           plugin_pagespeed_screenshot: yes
           plugin_pagespeed_url: https://www.bankkroll.xyz/
-          repositories_forks: yes
