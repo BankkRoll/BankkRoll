@@ -1,5 +1,14 @@
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=37&duration=2000&pause=2000&color=07D8FF&center=true&vCenter=true&multiline=true&width=900&height=200&lines=%F0%9F%91%8B+Hello!+I'm+Bankk;Thanks+for+checking+out+my+GitHub!;%E2%AD%90+Anything+you+find+useful!;Contact+me+if+you+have+any+questions!)](https://git.io/typing-svg)
 
+## Currently Working On 🛠️:
+
+- ![Project X Status](https://img.shields.io/badge/Status-In%20Progress-blue) [MRKTIFY.xyz](https://mrktify.xyz/): The No-Code Solution to Build NFT Holder Rewards Marketplace. Create and setup a marketplace in minutes to reward your NFT holders!
+
+- ![Project X Status](https://img.shields.io/badge/Status-In%20Progress-blue) [Walletool](https://walletool.xyz/): Walletool is a web application that allows users to track their Ethereum wallet transactions and calculate their USD value in real-time. *Future Tax Tool.
+
+- ![Project X Status](https://img.shields.io/badge/Status-In%20Progress-blue) [Royale Rumble](https://royalerumble.xyz/): Web Browser based randmized attack game with 1 winner. Inspired by [Rumble Royale Discord Bot]([https://royalerumble.xyz/](https://rumbleroyale.net/))
+
+
 
 <h2 align="center">Github stats :bar_chart:</h2>
 
