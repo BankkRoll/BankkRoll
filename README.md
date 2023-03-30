@@ -6,7 +6,7 @@
 
 - [Walletool](https://walletool.xyz/): Walletool is a web application that allows users to track their Ethereum wallet transactions and calculate their USD value in real-time. *Future Tax Tool.
 
-- [Royale Rumble](https://royalerumble.xyz/): Web Browser based randmized attack game with 1 winner. Inspired by [Rumble Royale Discord Bot]([https://royalerumble.xyz/](https://rumbleroyale.net/))
+- [Royale Rumble](https://royalerumble.xyz/): Web Browser based randmized attack game with 1 winner. Inspired by [Rumble Royale Discord Bot](https://rumbleroyale.net/)
 
 
 
