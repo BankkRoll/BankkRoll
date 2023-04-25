@@ -2,11 +2,13 @@
 
 ## Currently Working On 🛠️:
 ![Project X Status](https://img.shields.io/badge/Status-In%20Progress-blue)
-- [MRKTIFY.xyz](https://mrktify.xyz/): The No-Code Solution to Build NFT Holder Rewards Marketplace. Create and setup a marketplace in minutes to reward your NFT holders!
+- [NFTGEN](https://github.com/BankkRoll/NFTGEN-nft-gif-generator): NFTGEN is an open-source tool for generating unique NFT images or GIFs, complete with metadata. You can easily customize and configure NFTGEN to suit your needs and generate your own NFTs in just a few simple steps. Easily upload directly to IPFS.
 
 - [Walletool](https://walletool.xyz/): Walletool is a web application that allows users to track their Ethereum wallet transactions and calculate their USD value in real-time. *Future Tax Tool.
 
 - [Royale Rumble](https://royalerumble.xyz/): Web Browser based randmized attack game with 1 winner. Inspired by [Rumble Royale Discord Bot](https://rumbleroyale.net/)
+
+- [MRKTIFY.xyz](https://mrktify.xyz/): The No-Code Solution to Build NFT Holder Rewards Marketplace. Create and setup a marketplace in minutes to reward your NFT holders!
 
 
 
