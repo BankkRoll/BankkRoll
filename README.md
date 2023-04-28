@@ -26,29 +26,35 @@
 ![](./profile-3d-contrib/profile-night-rainbow.svg)
 
 
-## 📈 Metrics [![Metrics](https://github.com/BankkRoll/BankkRoll/actions/workflows/blank.yml/badge.svg)](https://github.com/BankkRoll/BankkRoll/actions/workflows/blank.yml)
-
-![Metrics](https://metrics.lecoq.io/BankkRoll?template=classic&base.header=0&languages=1&lines=1&achievements=1&pagespeed=1&fortune=1&base=header%2C%20activity%2C%20community%2C%20repositories%2C%20metadata&base.indepth=false&base.hireable=false&base.skip=false&languages=false&languages.limit=12&languages.threshold=0%25&languages.other=false&languages.colors=github&languages.sections=most-used&languages.indepth=false&languages.analysis.timeout=15&languages.analysis.timeout.repositories=7.5&languages.categories=markup%2C%20programming&languages.recent.categories=markup%2C%20programming&languages.recent.load=300&languages.recent.days=14&lines=false&lines.sections=base&lines.repositories.limit=4&lines.history.limit=1&achievements=false&achievements.threshold=C&achievements.secrets=false&achievements.display=detailed&achievements.limit=12&pagespeed=false&pagespeed.url=https%3A%2F%2Fwww.bankkroll.xyz%2F&pagespeed.detailed=true&pagespeed.screenshot=true&pagespeed.pwa=true&fortune=false&config.timezone=America%2FNew_York)
-
-
 ## 🏆 Trophys
 
 [![trophy](https://github-profile-trophy.vercel.app/?username=BankkRoll&theme=onedark)](https://github.com/ryo-ma/github-profile-trophy)
 
+<p align="center">
+  <h2>🛠️ Skills</h2>
+  <table>
+    <tr>
+      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=python"></a></td>
+      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=typescript"></a></td>
+      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=javascript"></a></td>
+      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=react"></a></td>
+      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=nodejs"></a></td>
+      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=html"></a></td>
+      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=css"></a></td>
+    </tr>
+    <tr>
+      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=express"></a></td>
+      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=discord"></a></td>
+      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=twitter"></a></td>
+      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=next"></a></td>
+      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=tailwind"></a></td>
+      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=firebase"></a></td>
+      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=stackoverflow"></a></td>
+    </tr>
+  </table>
+</p>
 
-## 🛠️ Skills
 
-[![My Skills](https://skillicons.dev/icons?i=python)](https://skillicons.dev)![python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)    [![My Skills](https://skillicons.dev/icons?i=typescript)](https://skillicons.dev)![typescript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)    [![My Skills](https://skillicons.dev/icons?i=javascript)](https://skillicons.dev)![javascript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)    [![My Skills](https://skillicons.dev/icons?i=next)](https://skillicons.dev)![next](https://img.shields.io/badge/Next-000000?style=for-the-badge&logo=nextdotjs&logoColor=FFFFFF)
-
-[![My Skills](https://skillicons.dev/icons?i=react)](https://skillicons.dev)![react](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)    [![My Skills](https://skillicons.dev/icons?i=nodejs)](https://skillicons.dev)![node](https://img.shields.io/badge/Node.js-3776AB?style=for-the-badge&logo=python&logoColor=white)    [![My Skills](https://skillicons.dev/icons?i=tailwind)](https://skillicons.dev)![tailwind-css](https://img.shields.io/badge/tailwind_css-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white)[![My Skills](https://skillicons.dev/icons?i=java)](https://skillicons.dev)![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
-
-[![My Skills](https://skillicons.dev/icons?i=html)](https://skillicons.dev)![html](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)[![My Skills](https://skillicons.dev/icons?i=css)](https://skillicons.dev)![css](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)    [![My Skills](https://skillicons.dev/icons?i=bootstrap)](https://skillicons.dev)![bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)    [![My Skills](https://skillicons.dev/icons?i=jquery)](https://skillicons.dev)![jquery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
-
-[![My Skills](https://skillicons.dev/icons?i=solidity)](https://skillicons.dev)![solidity](https://img.shields.io/badge/Solidity-363636?style=for-the-badge&logo=solidity&logoColor=white)    [![My Skills](https://skillicons.dev/icons?i=rust)](https://skillicons.dev)![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)    [![My Skills](https://skillicons.dev/icons?i=vercel)](https://skillicons.dev)![vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=Vercel&logoColor=white)    [![My Skills](https://skillicons.dev/icons?i=netlify)](https://skillicons.dev)![netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)      
-
-[![My Skills](https://skillicons.dev/icons?i=firebase)](https://skillicons.dev)![firebase](https://img.shields.io/badge/Firebase-ffaa00?style=for-the-badge&logo=Firebase&logoColor=white)      [![My Skills](https://skillicons.dev/icons?i=stackoverflow)](https://skillicons.dev)![stacked](https://img.shields.io/badge/-CTRL%2BC%20%26%20CTRL%2BV-orange?style=for-the-badge&logo=appveyor)    [![My Skills](https://skillicons.dev/icons?i=express)](https://skillicons.dev)![Express](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)       
-
-[![My Skills](https://skillicons.dev/icons?i=ethereum)](https://skillicons.dev)![ethereum](https://img.shields.io/badge/Ethereum-3C3C3D?style=for-the-badge&logo=ethereum&logoColor=white)    [![My Skills](https://skillicons.dev/icons?i=web3)](https://skillicons.dev)![web3](https://img.shields.io/badge/Web_3-F16822?style=for-the-badge&logo=web3.js&logoColor=white)   [![My Skills](https://skillicons.dev/icons?i=discord)](https://skillicons.dev)![discord](https://img.shields.io/badge/Discord-3C3C3D?style=for-the-badge&logo=discord&logoColor=white)    [![My Skills](https://skillicons.dev/icons?i=twitter)](https://skillicons.dev)![web3](https://img.shields.io/badge/Twitter-F16822?style=for-the-badge&logo=twitter&logoColor=white) 
 
 
 
