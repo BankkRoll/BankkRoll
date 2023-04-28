@@ -1,5 +1,7 @@
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=37&duration=2000&pause=2000&color=07D8FF&center=true&vCenter=true&multiline=true&width=900&height=200&lines=%F0%9F%91%8B+Hello!+I'm+Bankk;Thanks+for+checking+out+my+GitHub!;%E2%AD%90+Anything+you+find+useful!;Contact+me+if+you+have+any+questions!)](https://git.io/typing-svg)
 
+
+## Recent Projects 🆕:
 | Title | Description | Link |
 |:-------------------------:|:-------------------------:|:-------------------------:|
 | Web3Button Generator<br><br><a href="https://github.com/BankkRoll/thirdweb-Web3Button-generator"><img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub"></a> <a href="https://thirdweb-web3button.vercel.app/"><img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Website"></a> | NFTGEN is an open-source tool for generating unique NFT images or GIFs, complete with metadata. You can easily customize and configure NFTGEN to suit your needs and generate your own NFTs in just a few simple steps. Easily upload directly to IPFS. | <img width="800" alt="Web3Button Generator" src="https://user-images.githubusercontent.com/106103625/235013049-6b5af32c-27e6-4b31-8f79-ee68b1d667f8.png"> |
