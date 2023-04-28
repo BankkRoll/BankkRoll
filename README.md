@@ -1,14 +1,18 @@
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=37&duration=2000&pause=2000&color=07D8FF&center=true&vCenter=true&multiline=true&width=900&height=200&lines=%F0%9F%91%8B+Hello!+I'm+Bankk;Thanks+for+checking+out+my+GitHub!;%E2%AD%90+Anything+you+find+useful!;Contact+me+if+you+have+any+questions!)](https://git.io/typing-svg)
 
+| Title | Description | Link |
+|:-------------------------:|:-------------------------:|:-------------------------:|
+| Web3Button Generator<br><br><a href="https://github.com/BankkRoll/thirdweb-Web3Button-generator"><img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub"></a> <a href="https://thirdweb-web3button.vercel.app/"><img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Website"></a> | NFTGEN is an open-source tool for generating unique NFT images or GIFs, complete with metadata. You can easily customize and configure NFTGEN to suit your needs and generate your own NFTs in just a few simple steps. Easily upload directly to IPFS. | <img width="800" alt="Web3Button Generator" src="https://user-images.githubusercontent.com/106103625/235013049-6b5af32c-27e6-4b31-8f79-ee68b1d667f8.png"> |
+| NFT Generator<br><br><a href="https://github.com/BankkRoll/NFTGEN-nft-generator"><img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub"></a> | A tool to generate NFTs. | <video width="800" alt="Memory Loler" src="https://user-images.githubusercontent.com/106103625/234408697-d7fbc1d1-fbf2-4dd7-9c9d-fa4384613886.mp4"> |
+| Memory Loler<br><br><a href="https://github.com/BankkRoll/memoryloler"><img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub"></a> <a href="https://memoryloler.vercel.app/"><img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Website"></a> | A simple memory game built with HTML, CSS, and JavaScript. | <img width="500" height="500" alt="NFT Generator" src="https://user-images.githubusercontent.com/106103625/234483381-98d6b3c1-c71d-4ff6-a0a2-3f8b7bb43a54.png"> |
+
+
 ## Currently Working On 🛠️:
-![Project X Status](https://img.shields.io/badge/Status-In%20Progress-blue)
-- [NFTGEN](https://github.com/BankkRoll/NFTGEN-nft-gif-generator): NFTGEN is an open-source tool for generating unique NFT images or GIFs, complete with metadata. You can easily customize and configure NFTGEN to suit your needs and generate your own NFTs in just a few simple steps. Easily upload directly to IPFS.
-
-- [Walletool](https://walletool.xyz/): Walletool is a web application that allows users to track their Ethereum wallet transactions and calculate their USD value in real-time. *Future Tax Tool.
-
-- [Royale Rumble](https://royalerumble.xyz/): Web Browser based randmized attack game with 1 winner. Inspired by [Rumble Royale Discord Bot](https://rumbleroyale.net/)
-
-- [MRKTIFY.xyz](https://mrktify.xyz/): The No-Code Solution to Build NFT Holder Rewards Marketplace. Create and setup a marketplace in minutes to reward your NFT holders!
+| Project Name | Description | Status |
+|:-------------------------|:-------------------------|:-------------------------|
+| [Walletool](https://walletool.xyz/) | Walletool is a web application that allows users to track their Ethereum wallet transactions and calculate their USD value in real-time. *Future Tax Tool. | ![Project X Status](https://img.shields.io/badge/Status-In%20Progress-blue) |
+| [Royale Rumble](https://royalerumble.xyz/) | Web Browser based randomized attack game with 1 winner. Inspired by [Rumble Royale Discord Bot](https://rumbleroyale.net/) | ![Project X Status](https://img.shields.io/badge/Status-In%20Progress-blue) |
+| [MRKTIFY.xyz](https://mrktify.xyz/) | The No-Code Solution to Build NFT Holder Rewards Marketplace. Create and setup a marketplace in minutes to reward your NFT holders! | ![Project X Status](https://img.shields.io/badge/Status-In%20Progress-blue) |
 
 
 
