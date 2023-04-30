@@ -3,7 +3,7 @@ name: Metrics
 on:
   # Schedule updates (every 12 hours)
   schedule:
-    # Run at 02:00 UTC and 14:00 UTC
+    # Run at 02:00 UTC and 14:00 UTC 
     - cron: "0 2,14 * * *"
   # Lines below let you run workflow manually and on each commit
   workflow_dispatch:
