@@ -2,7 +2,7 @@
 
 
 ## Recent Projects 🆕:
-| Title | Description | Link |
+| Title | Description | Image |
 |:-------------------------:|:-------------------------:|:-------------------------:|
 | GitBadge<br><br><a href="https://gitbadge.xyz/"><img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Website"></a> | Accumulate Your GitHub Achievements as NFT Badges. Sign in with your GitHub account and discover the NFT badges you can claim based on your contributions. Show off your open-source contributions in a new, unique way. | <img width="800" alt="Web3Button Generator" src="https://user-images.githubusercontent.com/106103625/235327435-75611463-4c57-4085-83e3-bc704607e53a.png"> |
 | Web3Button Generator - thirdweb<br><br><a href="https://github.com/BankkRoll/thirdweb-Web3Button-generator"><img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub"></a> <a href="https://thirdweb-web3button.vercel.app/"><img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Website"></a> | Provides an intuitive interface for creating a custom button to interact with Ethereum smart contracts. This React component is perfect for developers who need to quickly generate buttons for their DApps. | <img width="800" alt="Web3Button Generator" src="https://user-images.githubusercontent.com/106103625/235013049-6b5af32c-27e6-4b31-8f79-ee68b1d667f8.png"> |
