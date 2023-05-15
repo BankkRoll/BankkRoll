@@ -12,7 +12,7 @@
 | Memory Loler<br><br><a href="https://github.com/BankkRoll/memoryloler"><img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub"></a> <a href="https://memoryloler.vercel.app/"><img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Website"></a> | A web app built with React that allows users to search for the historical screen names of Twitter accounts using Memory.lol, creating our own API. | <img width="500" height="500" alt="Memory LOL IMG" src="https://user-images.githubusercontent.com/106103625/234483381-98d6b3c1-c71d-4ff6-a0a2-3f8b7bb43a54.png"> |
 
 
-## Currently Working On 🛠️:
+## Currently On hold 🛠️:
 | Project Name | Description | Status |
 |:-------------------------|:-------------------------|:-------------------------|
 | [Walletool](https://walletool.xyz/) | Walletool is a web application that allows users to track their Ethereum wallet transactions and calculate their USD value in real-time. *Future Tax Tool. | ![Project X Status](https://img.shields.io/badge/Status-In%20Progress-blue) |
