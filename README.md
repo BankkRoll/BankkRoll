@@ -1,5 +1,8 @@
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=37&duration=2000&pause=2000&color=07D8FF&center=true&vCenter=true&multiline=true&width=900&height=200&lines=%F0%9F%91%8B+Hello!+I'm+Bankk;Thanks+for+checking+out+my+GitHub!;%E2%AD%90+Anything+you+find+useful!;Contact+me+if+you+have+any+questions!)](https://git.io/typing-svg)
 
+| ![Project X Status](https://img.shields.io/badge/Status-In%20Progress-blue) | Coming Soon |  |
+|:-------------------------:|:-------------------------:|:-------------------------:|
+| BitMint <br><br><a href="https://github.com/BankkRoll/BitMint2"><img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub"></a>  <a href="https://bitmint.vercel.app/"><img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Example Website"></a> | The First ever low-code bitcoin ordinals full-stack minting boilerplate. Developed by Bankkroll.eth | <img width="1000" alt="BitMint" src="https://github.com/BankkRoll/BitMint2/assets/106103625/2cdc75dc-b851-4374-a6d7-f738386a21c0"> |
 
 ## Recent Projects 🆕:
 | Title | Description | Image |
