@@ -2,7 +2,7 @@
 
 | ![Project X Status](https://img.shields.io/badge/Status-In%20Progress-blue) | Coming Soon |  |
 |:-------------------------:|:-------------------------:|:-------------------------:|
-| BitMint <br><br><a href="https://github.com/BankkRoll/BitMint2"><img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub"></a>  <a href="https://bitmint.vercel.app/"><img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Example Website"></a> | The First ever low-code bitcoin ordinals full-stack minting boilerplate. Developed by Bankkroll.eth | <img width="1000" alt="BitMint" src="https://github.com/BankkRoll/BankkRoll/assets/106103625/6031f380-1007-4ccc-bda4-c95640bd5ba4"> |
+| BitMint <br><br><a href="https://github.com/BankkRoll/BitMint2"><img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub"></a>  <a href="https://bitmint-beta.vercel.app/"><img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Example Website"></a> | The First ever low-code bitcoin ordinals full-stack minting boilerplate. Developed by Bankkroll.eth | <img width="1000" alt="BitMint" src="https://github.com/BankkRoll/BankkRoll/assets/106103625/6031f380-1007-4ccc-bda4-c95640bd5ba4"> |
 
 ## Recent Projects 🆕:
 | Title | Description | Image |
