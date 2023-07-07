@@ -14,22 +14,12 @@
 | Web3Button Generator - thirdweb<br><br><a href="https://github.com/BankkRoll/thirdweb-Web3Button-generator"><img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub"></a> <a href="https://thirdweb-web3button.vercel.app/"><img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Website"></a> | Provides an intuitive interface for creating a custom button to interact with Ethereum smart contracts. This React component is perfect for developers who need to quickly generate buttons for their DApps. |  |
 | Snapshot Tool - thirdweb<br><br><a href="https://github.com/BankkRoll/snapshot-tool-thirdweb"><img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub"></a> <a href="https://snapshottool.vercel.app/"><img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Website"></a> | A simple tool for fetching NFT balances from a smart contract. Supports all ERC-721 contracts. |  |
 | NFT Generator<br><br><a href="https://github.com/BankkRoll/NFTGEN-nft-generator"><img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub"></a> | NFTGEN is an open-source tool for generating unique NFT images or GIFs, complete with metadata. You can easily customize and configure NFTGEN to suit your needs and generate your own NFTs in just a few simple steps. Easily upload directly to IPFS. |  |
-| Memory Loler<br><br><a href="https://github.com/BankkRoll/memoryloler"><img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub"></a> <a href="https://memoryloler.vercel.app/"><img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Website"></a> | A web app built with React that allows users to search for the historical screen names of Twitter accounts using Memory.lol, creating our own API. |  |
 
 
-## Currently On hold 🛠️:
-| Project Name | Description | Status |
-|:-------------------------|:-------------------------|:-------------------------|
-| [Walletool](https://walletool.xyz/) | Walletool is a web application that allows users to track their Ethereum wallet transactions and calculate their USD value in real-time. *Future Tax Tool. | ![Project X Status](https://img.shields.io/badge/Status-In%20Progress-blue) |
-| [Royale Rumble](https://royalerumble.xyz/) | Web Browser based randomized attack game with 1 winner. Inspired by [Rumble Royale Discord Bot](https://rumbleroyale.net/) | ![Project X Status](https://img.shields.io/badge/Status-In%20Progress-blue) |
-| [MRKTIFY.xyz](https://mrktify.xyz/) | The No-Code Solution to Build NFT Holder Rewards Marketplace. Create and setup a marketplace in minutes to reward your NFT holders! | ![Project X Status](https://img.shields.io/badge/Status-In%20Progress-blue) |
 
 
 
 <h2 align="center">Github stats :bar_chart:</h2>
-
-<p align="left"><img src="https://github-readme-stats.vercel.app/api/top-langs?username=BankkRoll&show_icons=true&locale=en&theme=chartreuse-dark" alt="BankkRoll">
-<img src="https://github-readme-stats.vercel.app/api?username=BankkRoll&show_icons=true&theme=chartreuse-dark" align="right" alt="BankkRoll :: Profile Stats" /></p>
 
 ![](./profile-3d-contrib/profile-night-rainbow.svg)
 
@@ -43,26 +33,107 @@
   <h2>🛠️ Skills</h2>
   <table>
     <tr>
-      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=python"></a></td>
-      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=typescript"></a></td>
-      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=javascript"></a></td>
-      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=react"></a></td>
-      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=nodejs"></a></td>
-      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=html"></a></td>
-      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=css"></a></td>
+      <th colspan="7" align="center">Favorite Skills</th>
     </tr>
     <tr>
-      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=express"></a></td>
-      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=discord"></a></td>
-      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=twitter"></a></td>
-      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=next"></a></td>
-      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=tailwind"></a></td>
-      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=firebase"></a></td>
-      <td align="center"><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=stackoverflow"></a></td>
+      <td align="center">
+        <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=typescript"></a>
+        <br>Typescript
+      </td>
+      <td align="center">
+        <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=next"></a>
+        <br>Next.js
+      </td>
+      <td align="center">
+        <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=tailwind"></a>
+        <br>Tailwind CSS
+      </td>
+    </tr>
+    <tr>
+      <th colspan="7" align="center">Front-end Development</th>
+    </tr>
+    <tr>
+      <td align="center">
+        <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=javascript"></a>
+        <br>Javascript
+      </td>
+      <td align="center">
+        <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=react"></a>
+        <br>React
+      </td>
+      <td align="center">
+        <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=html"></a>
+        <br>HTML
+      </td>
+      <td align="center">
+        <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=css"></a>
+        <br>CSS
+      </td>
+      <td align="center">
+        <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=bootstrap"></a>
+        <br>Bootstrap
+      </td>
+      <td align="center">
+        <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=jquery"></a>
+        <br>JQuery
+      </td>
+    </tr>
+    <tr>
+      <th colspan="7" align="center">Back-end Development</th>
+    </tr>
+    <tr>
+      <td align="center">
+        <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=nodejs"></a>
+        <br>Node.js
+      </td>
+      <td align="center">
+        <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=express"></a>
+        <br>Express
+      </td>
+      <td align="center">
+        <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=python"></a>
+        <br>Python
+      </td>
+      <td align="center">
+        <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=firebase"></a>
+        <br>Firebase
+      </td>
+      <td align="center">
+        <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=supabase"></a>
+        <br>Supabase
+      </td>
+    </tr>
+    <tr>
+      <th colspan="7" align="center">Other Skills</th>
+    </tr>
+    <tr>
+      <td align="center">
+        <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=discord"></a>
+        <br>Discord API
+      </td>
+      <td align="center">
+        <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=twitter"></a>
+        <br>Twitter API
+      </td>
+      <td align="center">
+        <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=bots"></a>
+        <br>Bots
+      </td>
+      <td align="center">
+        <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=replit"></a>
+        <br>Replit
+      </td>
+      <td align="center">
+        <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=vercel"></a>
+        <br>Vercel
+      </td>
+      <td align="center">
+        <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=netlify"></a>
+        <br>Netlify
+      </td>
     </tr>
   </table>
 </p>
-
 
 
 
