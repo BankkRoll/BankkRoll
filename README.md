@@ -1,19 +1,156 @@
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=37&duration=2000&pause=2000&color=07D8FF&center=true&vCenter=true&multiline=true&width=900&height=200&lines=%F0%9F%91%8B+Hello!+I'm+Bankk;Thanks+for+checking+out+my+GitHub!;%E2%AD%90+Anything+you+find+useful!;Contact+me+if+you+have+any+questions!)](https://git.io/typing-svg)
 
-| ![Project X Status](https://img.shields.io/badge/Status-In%20Progress-blue) | Coming Soon |  |
-|:-------------------------:|:-------------------------:|:-------------------------:|
-| BitMint <br><br><a href="https://github.com/BankkRoll/BitMint2"><img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub"></a>  <a href="https://bitmint-beta.vercel.app/"><img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Example Website"></a> | The First ever low-code bitcoin ordinals full-stack minting boilerplate. Developed by Bankkroll.eth | <img width="1000" alt="BitMint" src="https://github.com/BankkRoll/BankkRoll/assets/106103625/6031f380-1007-4ccc-bda4-c95640bd5ba4"> |
 
-## Recent Projects 🆕:
-| Title | Description | Image |
-|:-------------------------:|:-------------------------:|:-------------------------:|
-| nextjs-pagination <br><br><a href="https://github.com/BankkRoll/nextjs-pagination"><img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub"></a> <a href="https://www.npmjs.com/package/nextjs-pagination"><img src="https://img.shields.io/badge/npm-View%20Package-blue?logo=npm" alt="npm"></a> <a href="https://npm-i-nextjs-pagination.bankkroll.repl.co/"><img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Example Website"></a> | Nextjs-Pagination is a powerful, customizable, and easy-to-use pagination component built specifically for Next.js projects. | <img width="800" alt="nextjs-pagination" src="https://github.com/BankkRoll/nextjs-pagination/assets/106103625/5fbb44cb-b1dc-4335-8194-cb9ce4aaaab5"> |
-| repo2pdf <br><br><a href="https://github.com/BankkRoll/Repo-to-PDF"><img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub"></a> <a href="https://www.npmjs.com/package/repo2pdf"><img src="https://img.shields.io/badge/npm-View%20Package-blue?logo=npm" alt="npm"></a> <a href="https://freecodecamppdf.bankkroll.repl.co/"><img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Example Website"></a> | Repo-to-PDF is a tool that allows you to convert a GitHub repository into a PDF file. It clones the repository, processes the files, and then creates a PDF. | <img width="800" alt="repo2pdf" src="https://github.com/BankkRoll/Repo-to-PDF/assets/106103625/9ceb176f-37f6-40d9-ab95-080942d2d7c0"> |
-| AskGit AI<br><br><a href="https://askgit.live/"><img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Website"></a> | Code Smarter, Not Harder: Enhance Your GitHub Experience with AskGit, the AI-Coding Assistant! | <img width="800" alt="Web3Button Generator" src="https://user-images.githubusercontent.com/106103625/236956607-a4438f83-4486-4899-9096-c6b33f328dc5.png"> |
-| GitBadge<br><br><a href="https://gitbadge.xyz/"><img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Website"></a> | Accumulate Your GitHub Achievements as NFT Badges. Sign in with your GitHub account and discover the NFT badges you can claim based on your contributions. Show off your open-source contributions in a new, unique way. | <img width="800" alt="Web3Button Generator" src="https://user-images.githubusercontent.com/106103625/235327435-75611463-4c57-4085-83e3-bc704607e53a.png"> |
-| Web3Button Generator - thirdweb<br><br><a href="https://github.com/BankkRoll/thirdweb-Web3Button-generator"><img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub"></a> <a href="https://thirdweb-web3button.vercel.app/"><img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Website"></a> | Provides an intuitive interface for creating a custom button to interact with Ethereum smart contracts. This React component is perfect for developers who need to quickly generate buttons for their DApps. |  |
-| Snapshot Tool - thirdweb<br><br><a href="https://github.com/BankkRoll/snapshot-tool-thirdweb"><img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub"></a> <a href="https://snapshottool.vercel.app/"><img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Website"></a> | A simple tool for fetching NFT balances from a smart contract. Supports all ERC-721 contracts. |  |
-| NFT Generator<br><br><a href="https://github.com/BankkRoll/NFTGEN-nft-generator"><img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub"></a> | NFTGEN is an open-source tool for generating unique NFT images or GIFs, complete with metadata. You can easily customize and configure NFTGEN to suit your needs and generate your own NFTs in just a few simple steps. Easily upload directly to IPFS. |  |
+<div align="center">
+<h2>🚀 Current Project</h2>
+
+  <table align="center">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Image</th>
+        <th>Links</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>BitMint</td>
+        <td>The first ever low-code bitcoin ordinals full-stack minting boilerplate.</td>
+        <td>
+          <img src="https://github.com/BankkRoll/BankkRoll/assets/106103625/6031f380-1007-4ccc-bda4-c95640bd5ba4" width="800">
+        </td>
+        <td>
+          <a href="https://github.com/BankkRoll/BitMint2">
+            <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
+          </a>
+          <a href="https://bitmint-beta.vercel.app/">
+            <img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Example Website">
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div align="center">
+<h2>💼 Recent Projects</h2>
+
+<table align="center">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Image</th>
+      <th>Links</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>nextjs-pagination</td>
+      <td>Nextjs-Pagination is a powerful, customizable, and easy-to-use pagination component built specifically for Next.js projects.</td>
+      <td>
+        <img width="800" alt="nextjs-pagination" src="https://github.com/BankkRoll/nextjs-pagination/assets/106103625/5fbb44cb-b1dc-4335-8194-cb9ce4aaaab5" />
+      </td>
+      <td>
+        <a href="https://github.com/BankkRoll/nextjs-pagination">
+          <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
+        </a>
+        <a href="https://www.npmjs.com/package/nextjs-pagination">
+          <img src="https://img.shields.io/badge/npm-View%20Package-blue?logo=npm" alt="npm">
+        </a>
+        <a href="https://npm-i-nextjs-pagination.bankkroll.repl.co/">
+          <img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Example Website">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>repo2pdf</td>
+      <td>Repo-to-PDF is a tool that allows you to convert a GitHub repository into a PDF file. It clones the repository, processes the files, and then creates a PDF.</td>
+      <td>
+        <img width="800" alt="repo2pdf" src="https://github.com/BankkRoll/Repo-to-PDF/assets/106103625/9ceb176f-37f6-40d9-ab95-080942d2d7c0" />
+      </td>
+      <td>
+        <a href="https://github.com/BankkRoll/Repo-to-PDF">
+          <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
+        </a>
+        <a href="https://www.npmjs.com/package/repo2pdf">
+          <img src="https://img.shields.io/badge/npm-View%20Package-blue?logo=npm" alt="npm">
+        </a>
+        <a href="https://freecodecamppdf.bankkroll.repl.co/">
+          <img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Example Website">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>AskGit AI</td>
+      <td>Code Smarter, Not Harder: Enhance Your GitHub Experience with AskGit, the AI-Coding Assistant!</td>
+      <td>
+        <img width="800" alt="Web3Button Generator" src="https://user-images.githubusercontent.com/106103625/236956607-a4438f83-4486-4899-9096-c6b33f328dc5.png">
+      </td>
+      <td>
+        <a href="https://askgit.live/">
+          <img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Website">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>GitBadge</td>
+      <td>Accumulate Your GitHub Achievements as NFT Badges. Sign in with your GitHub account and discover the NFT badges you can claim based on your contributions. Show off your open-source contributions in a new, unique way.</td>
+      <td>
+        <img width="800" alt="Web3Button Generator" src="https://user-images.githubusercontent.com/106103625/235327435-75611463-4c57-4085-83e3-bc704607e53a.png">
+      </td>
+      <td>
+        <a href="https://gitbadge.xyz/">
+          <img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Website">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>Web3Button Generator - thirdweb</td>
+      <td>Provides an intuitive interface for creating a custom button to interact with Ethereum smart contracts. This React component is perfect for developers who need to quickly generate buttons for their DApps.</td>
+      <td>
+        <img src="https://user-images.githubusercontent.com/106103625/235013049-6b5af32c-27e6-4b31-8f79-ee68b1d667f8.png" width="800">
+      </td>
+      <td>
+        <a href="https://github.com/BankkRoll/thirdweb-Web3Button-generator">
+          <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
+        </a>
+        <a href="https://thirdweb-web3button.vercel.app/">
+          <img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Website">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>Snapshot Tool - thirdweb</td>
+      <td>A simple tool for fetching NFT balances from a smart contract. Supports all ERC-721 contracts.</td>
+      <td>
+        <img src="https://user-images.githubusercontent.com/106103625/235228591-d1fc15ba-0a33-4241-9ebc-8223399d477c.png" width="800">
+      </td>
+      <td>
+        <a href="https://github.com/BankkRoll/snapshot-tool-thirdweb">
+          <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
+        </a>
+        <a href="https://snapshottool.vercel.app/">
+          <img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Website">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>NFT Generator</td>
+      <td>NFTGEN is an open-source tool for generating unique NFT images or GIFs, complete with metadata. You can easily customize and configure NFTGEN to suit your needs and generate your own NFTs in just a few simple steps. Easily upload directly to IPFS.</td>
+      <td>
+        <img src="https://i.ibb.co/kBwgZGh/ezgif-com-video-to-gif.gif" width="800">
+      </td>
+      <td>
+        <a href="https://github.com/BankkRoll/NFTGEN-nft-generator">
+          <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 
 
@@ -21,13 +158,19 @@
 
 <h2 align="center">Github stats :bar_chart:</h2>
 
-![](./profile-3d-contrib/profile-night-rainbow.svg)
+<table>
+  <tr>
+    <td valign="top">
+      <img src="./profile-3d-contrib/profile-night-rainbow.svg" width="600" alt="Github stats">
+      <h2 align="center">🏆 Trophys</h2>
+      <img src="https://github-profile-trophy.vercel.app/?username=BankkRoll&theme=onedark" alt="trophy">
+    </td>
+    <td valign="top">
+      <img src="https://metrics.lecoq.io/BankkRoll?template=classic&base.indepth=true&base.hireable=true&repositories.forks=true&isocalendar=1&fortune=1&traffic=1&activity=1&notable=1&achievements=1&habits=1&lines=1&base=header%2C%20activity%2C%20community%2C%20repositories%2C%20metadata&base.indepth=true&base.hireable=true&base.skip=false&isocalendar=false&isocalendar.duration=half-year&lines=false&lines.sections=base&lines.repositories.limit=4&lines.history.limit=1&habits=false&habits.from=200&habits.days=14&habits.facts=true&habits.charts=false&habits.charts.type=classic&habits.trim=false&habits.languages.limit=8&habits.languages.threshold=0%25&achievements=false&achievements.threshold=X&achievements.secrets=true&achievements.display=compact&achievements.limit=10&notable=false&notable.from=all&notable.repositories=true&notable.indepth=false&notable.types=commit&notable.self=false&activity=false&activity.limit=5&activity.load=20&activity.days=14&activity.visibility=all&activity.timestamps=false&activity.filter=all&traffic=false&fortune=false&config.timezone=America%2FNew_York" alt="Metrics">
+    </td>
+  </tr>
+</table>
 
-![Metrics](https://metrics.lecoq.io/BankkRoll?template=classic&base.indepth=true&base.hireable=true&repositories.forks=true&isocalendar=1&fortune=1&traffic=1&activity=1&notable=1&achievements=1&habits=1&lines=1&base=header%2C%20activity%2C%20community%2C%20repositories%2C%20metadata&base.indepth=true&base.hireable=true&base.skip=false&isocalendar=false&isocalendar.duration=half-year&lines=false&lines.sections=base&lines.repositories.limit=4&lines.history.limit=1&habits=false&habits.from=200&habits.days=14&habits.facts=true&habits.charts=false&habits.charts.type=classic&habits.trim=false&habits.languages.limit=8&habits.languages.threshold=0%25&achievements=false&achievements.threshold=X&achievements.secrets=true&achievements.display=compact&achievements.limit=10&notable=false&notable.from=all&notable.repositories=true&notable.indepth=false&notable.types=commit&notable.self=false&activity=false&activity.limit=5&activity.load=20&activity.days=14&activity.visibility=all&activity.timestamps=false&activity.filter=all&traffic=false&fortune=false&config.timezone=America%2FNew_York)
-
-## 🏆 Trophys
-
-[![trophy](https://github-profile-trophy.vercel.app/?username=BankkRoll&theme=onedark)](https://github.com/ryo-ma/github-profile-trophy)
 
 <p align="center">
   <h2>🛠️ Skills</h2>
@@ -140,17 +283,25 @@
 
 ## 🖥️ Workspace Setup
 
-![i7](https://i.ibb.co/5TrdbWC/imageedit-14-2619558547.png)
-![i7-8th-gen](https://img.shields.io/badge/Intel-Core_i7_8th-0071C5?style=for-the-badge&logo=intel&logoColor=white)
+<table>
+  <tr>
+    <td><img src="https://i.ibb.co/5TrdbWC/imageedit-14-2619558547.png" width="50" /></td>
+    <td><img src="https://img.shields.io/badge/Intel-Core_i7_8th-0071C5?style=for-the-badge&logo=intel&logoColor=white" alt="i7-8th-gen" /></td>
+  </tr>
+  <tr>
+    <td><img src="https://i.ibb.co/1GC0VqC/imageedit-19-8970180062.gif" width="50" /></td>
+    <td><img src="https://img.shields.io/badge/NVIDIA-RTX_2080-76B900?style=for-the-badge&logo=nvidia&logoColor=white" alt="rtx-2080" /></td>
+  </tr>
+  <tr>
+    <td><img src="https://i.ibb.co/hBgDy3Q/imageedit-7-3135521893.png" width="50" /></td>
+    <td><img src="https://img.shields.io/badge/Windows_11-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="windows" /></td>
+  </tr>
+  <tr>
+    <td><img src="https://skillicons.dev/icons?i=vscode" width="50" /></td>
+    <td><img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=Visual-Studio-Code&logoColor=white" alt="vs-code" /></td>
+  </tr>
+</table>
 
-![rtx](https://i.ibb.co/1GC0VqC/imageedit-19-8970180062.gif)
-![rtx-2080](https://img.shields.io/badge/NVIDIA-RTX_2080-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
-
-![windows](https://i.ibb.co/hBgDy3Q/imageedit-7-3135521893.png)
-![windows](https://img.shields.io/badge/Windows_11-0078D6?style=for-the-badge&logo=windows&logoColor=white)
-
-[![My Skills](https://skillicons.dev/icons?i=vscode)](https://skillicons.dev)
-![vs-code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=Visual-Studio-Code&logoColor=white)
 
 <h4 align="center">Visitor's count :eyes:</h4>
 <p align="center"><img src="https://profile-counter.glitch.me/{BankkRoll}/count.svg" alt="BankkRoll :: Visitor's Count" /></p>
