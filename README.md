@@ -47,24 +47,6 @@
   </thead>
   <tbody>
     <tr>
-      <td>nextjs-pagination</td>
-      <td>Nextjs-Pagination is a powerful, customizable, and easy-to-use pagination component built specifically for Next.js projects.</td>
-      <td>
-        <img width="800" alt="nextjs-pagination" src="https://github.com/BankkRoll/nextjs-pagination/assets/106103625/5fbb44cb-b1dc-4335-8194-cb9ce4aaaab5" />
-      </td>
-      <td>
-        <a href="https://github.com/BankkRoll/nextjs-pagination">
-          <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
-        </a>
-        <a href="https://www.npmjs.com/package/nextjs-pagination">
-          <img src="https://img.shields.io/badge/npm-View%20Package-blue?logo=npm" alt="npm">
-        </a>
-        <a href="https://npm-i-nextjs-pagination.bankkroll.repl.co/">
-          <img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Example Website">
-        </a>
-      </td>
-    </tr>
-    <tr>
       <td>repo2pdf</td>
       <td>Repo-to-PDF is a tool that allows you to convert a GitHub repository into a PDF file. It clones the repository, processes the files, and then creates a PDF.</td>
       <td>
@@ -78,6 +60,24 @@
           <img src="https://img.shields.io/badge/npm-View%20Package-blue?logo=npm" alt="npm">
         </a>
         <a href="https://freecodecamppdf.bankkroll.repl.co/">
+          <img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Example Website">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>nextjs-pagination</td>
+      <td>Nextjs-Pagination is a powerful, customizable, and easy-to-use pagination component built specifically for Next.js projects.</td>
+      <td>
+        <img width="800" alt="nextjs-pagination" src="https://github.com/BankkRoll/nextjs-pagination/assets/106103625/5fbb44cb-b1dc-4335-8194-cb9ce4aaaab5" />
+      </td>
+      <td>
+        <a href="https://github.com/BankkRoll/nextjs-pagination">
+          <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
+        </a>
+        <a href="https://www.npmjs.com/package/nextjs-pagination">
+          <img src="https://img.shields.io/badge/npm-View%20Package-blue?logo=npm" alt="npm">
+        </a>
+        <a href="https://npm-i-nextjs-pagination.bankkroll.repl.co/">
           <img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Example Website">
         </a>
       </td>
