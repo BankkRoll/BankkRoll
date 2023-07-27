@@ -9,7 +9,6 @@
       <tr>
         <th>Title</th>
         <th>Description</th>
-        <th>Image</th>
         <th>Links</th>
       </tr>
     </thead>
@@ -17,8 +16,6 @@
       <tr>
         <td>nextension</td>
         <td>An Advanced CLI Tool for Building Next.js Applications as Chrome Extensions</td>
-        <td>
-        </td>
         <td>
           <a href="https://github.com/BankkRoll/nextension">
             <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
@@ -28,9 +25,6 @@
       <tr>
         <td>BitMint</td>
         <td>The first ever low-code bitcoin ordinals full-stack minting boilerplate.</td>
-        <td>
-          <img src="https://github.com/BankkRoll/BankkRoll/assets/106103625/6031f380-1007-4ccc-bda4-c95640bd5ba4" width="500">
-        </td>
         <td>
           <a href="https://github.com/BankkRoll/BitMint2">
             <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
