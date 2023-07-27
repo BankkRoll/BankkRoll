@@ -2,7 +2,7 @@
 
 
 <div align="center">
-<h2>🚀 Current Project</h2>
+<h2>🚀 Current Projects</h2>
 
   <table align="center">
     <thead>
