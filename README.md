@@ -15,8 +15,8 @@
     </thead>
     <tbody>
       <tr>
-        <td>BitMint</td>
-        <td>The first ever low-code bitcoin ordinals full-stack minting boilerplate.</td>
+        <td>nextension</td>
+        <td>An Advanced CLI Tool for Building Next.js Applications as Chrome Extensions</td>
         <td>
         </td>
         <td>
