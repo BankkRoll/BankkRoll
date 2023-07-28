@@ -1,25 +1,45 @@
 name: Metrics and 3D Contributions
 on:
-  schedule:
+  schedule: 
     - cron: "0 7 * * *"
   workflow_dispatch:
   push: 
     branches: ["master", "main"]
 
 jobs:
-  general-metrics:
+  github-metrics:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           user: BankkRoll
-          filename: general.svg
           template: classic
           base: activity, community, repositories, metadata
           base_indepth: yes
           config_display: columns
           config_timezone: America/New_York
+          plugin_achievements: yes
+          plugin_achievements_display: detailed
+          plugin_achievements_secrets: yes
+          plugin_achievements_threshold: C
+          plugin_activity: yes
+          plugin_activity_days: 14
+          plugin_activity_filter: all
+          plugin_activity_limit: 4
+          plugin_activity_load: 300
+          plugin_activity_visibility: all
+          plugin_fortune: yes
+          plugin_habits: yes
+          plugin_habits_charts_type: classic
+          plugin_habits_days: 14
+          plugin_habits_facts: yes
+          plugin_habits_from: 200
+          plugin_habits_languages_limit: 8
+          plugin_habits_languages_threshold: 0%
+          plugin_habits_trim: yes
           plugin_isocalendar: yes
           plugin_isocalendar_duration: half-year
           plugin_languages: yes
@@ -44,40 +64,6 @@ jobs:
           plugin_traffic: yes
           repositories_batch: 200
           repositories_forks: yes
-          output_action: gist
-          committer_gist: ${{ secrets.GIST }}
-
-  achievements-metrics:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: lowlighter/metrics@latest
-        with:
-          token: ${{ secrets.METRICS_TOKEN }}
-          user: BankkRoll
-          filename: achievements.svg
-          template: classic
-          base: ""
-          plugin_achievements: yes
-          plugin_achievements_display: detailed
-          plugin_achievements_secrets: yes
-          plugin_achievements_threshold: C
-          plugin_activity: yes
-          plugin_activity_days: 14
-          plugin_activity_filter: all
-          plugin_activity_limit: 4
-          plugin_activity_load: 300
-          plugin_activity_visibility: all
-          plugin_fortune: yes
-          plugin_habits: yes
-          plugin_habits_charts_type: classic
-          plugin_habits_days: 14
-          plugin_habits_facts: yes
-          plugin_habits_from: 200
-          plugin_habits_languages_limit: 8
-          plugin_habits_languages_threshold: 0%
-          plugin_habits_trim: yes
-          output_action: gist
-          committer_gist: ${{ secrets.GIST }}
 
   build-3d-contributions:
     runs-on: ubuntu-latest
