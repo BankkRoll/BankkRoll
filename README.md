@@ -175,17 +175,20 @@
 
 <table>
   <tr>
-    <td valign="top">
-      <img src="./profile-3d-contrib/profile-night-rainbow.svg" width="600" alt="Github stats">
-      <h2 align="center">🏆 Trophys</h2>
-      <img src="https://github-profile-trophy.vercel.app/?username=BankkRoll&theme=onedark" alt="trophy">
+    <td valign="top" width="60%">
+      <img src="./profile-3d-contrib/profile-night-rainbow.svg" width="100%" alt="Github stats">
     </td>
-    <td valign="top">
-      <img src="https://metrics.lecoq.io/BankkRoll?template=classic&base.indepth=true&base.hireable=true&repositories.forks=true&isocalendar=1&fortune=1&traffic=1&activity=1&notable=1&achievements=1&habits=1&lines=1&base=header%2C%20activity%2C%20community%2C%20repositories%2C%20metadata&base.indepth=true&base.hireable=true&base.skip=false&isocalendar=false&isocalendar.duration=half-year&lines=false&lines.sections=base&lines.repositories.limit=4&lines.history.limit=1&habits=false&habits.from=200&habits.days=14&habits.facts=true&habits.charts=false&habits.charts.type=classic&habits.trim=false&habits.languages.limit=8&habits.languages.threshold=0%25&achievements=false&achievements.threshold=X&achievements.secrets=true&achievements.display=compact&achievements.limit=10&notable=false&notable.from=all&notable.repositories=true&notable.indepth=false&notable.types=commit&notable.self=false&activity=false&activity.limit=5&activity.load=20&activity.days=14&activity.visibility=all&activity.timestamps=false&activity.filter=all&traffic=false&fortune=false&config.timezone=America%2FNew_York" alt="Metrics loading="lazy">
+    <td valign="top" width="40%">
+      <h2 align="center">🏆 Trophys</h2>
+      <img src="https://github-profile-trophy.vercel.app/?username=BankkRoll&theme=onedark" width="100%" alt="trophy">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="6" valign="center">
+      <img src="https://metrics.lecoq.io/BankkRoll?template=classic&base.indepth=true&repositories.batch=200&repositories.forks=true&base.header=0&languages=1&isocalendar=1&fortune=1&traffic=1&activity=1&notable=1&achievements=1&habits=1&lines=1&base=header%2C%20activity%2C%20community%2C%20repositories%2C%20metadata&base.indepth=true&base.hireable=false&base.skip=false&isocalendar=false&isocalendar.duration=half-year&languages=false&languages.limit=10&languages.threshold=0%25&languages.other=false&languages.colors=github&languages.sections=most-used&languages.indepth=false&languages.analysis.timeout=15&languages.analysis.timeout.repositories=7.5&languages.categories=markup%2C%20programming&languages.recent.categories=markup%2C%20programming&languages.recent.load=300&languages.recent.days=14&lines=false&lines.sections=base&lines.repositories.limit=4&lines.history.limit=2&habits=false&habits.from=200&habits.days=14&habits.facts=true&habits.charts=false&habits.charts.type=classic&habits.trim=true&habits.languages.limit=8&habits.languages.threshold=0%25&achievements=false&achievements.threshold=C&achievements.secrets=true&achievements.display=detailed&achievements.limit=0&notable=false&notable.from=organization&notable.repositories=true&notable.indepth=false&notable.types=commit&notable.self=false&activity=false&activity.limit=4&activity.load=300&activity.days=14&activity.visibility=all&activity.timestamps=false&activity.filter=all&traffic=false&fortune=false&config.timezone=America%2FNew_York&config.display=columns" alt="Metrics" loading="lazy">
     </td>
   </tr>
 </table>
-
 
 <p align="center">
   <h2>🛠️ Skills</h2>
