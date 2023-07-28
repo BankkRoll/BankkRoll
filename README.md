@@ -9,6 +9,7 @@
       <tr>
         <th>Title</th>
         <th>Description</th>
+        <th>Image</th>
         <th>Links</th>
       </tr>
     </thead>
@@ -17,14 +18,23 @@
         <td>nextension</td>
         <td>An Advanced CLI Tool for Building Next.js Applications as Chrome Extensions</td>
         <td>
+          <img width="300" src="https://user-images.githubusercontent.com/106103625/256899284-cf13bdf8-300f-485d-bfa9-2aa2a801c2a0.png" alt="nextension">
+        </td>
+        <td>
           <a href="https://github.com/BankkRoll/nextension">
             <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
           </a>
+        <a href="https://www.npmjs.com/package/nextension">
+          <img src="https://img.shields.io/badge/npm-View%20Package-blue?logo=npm" alt="npm">
+        </a>
         </td>
       </tr>
       <tr>
         <td>BitMint</td>
         <td>The first ever low-code bitcoin ordinals full-stack minting boilerplate.</td>
+        <td>
+          <img width="300" src="https://user-images.githubusercontent.com/106103625/245309690-7da9ea3d-0ac8-4c3b-8235-b1fa4f57cdc8.png" alt="BitMint">
+        </td>
         <td>
           <a href="https://github.com/BankkRoll/BitMint2">
             <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
