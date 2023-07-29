@@ -20,7 +20,9 @@ jobs:
           base: activity, community, repositories, metadata
           base_indepth: yes
           config_display: large
+          config_octicon: yes
           config_timezone: America/New_York
+          config_twemoji: yes
           plugin_achievements: yes
           plugin_achievements_display: detailed
           plugin_achievements_secrets: yes
@@ -30,7 +32,7 @@ jobs:
           plugin_activity_filter: all
           plugin_activity_limit: 4
           plugin_activity_load: 300
-          plugin_activity_visibility: all
+          plugin_activity_visibility: public
           plugin_fortune: yes
           plugin_habits: yes
           plugin_habits_charts_type: classic
@@ -47,7 +49,7 @@ jobs:
           plugin_languages_analysis_timeout_repositories: 7.5
           plugin_languages_categories: markup, programming
           plugin_languages_colors: github
-          plugin_languages_limit: 10
+          plugin_languages_limit: 8
           plugin_languages_recent_categories: markup, programming
           plugin_languages_recent_days: 14
           plugin_languages_recent_load: 300
@@ -59,10 +61,9 @@ jobs:
           plugin_lines_sections: base
           plugin_notable: yes
           plugin_notable_from: organization
+          plugin_notable_indepth: yes
           plugin_notable_repositories: yes
           plugin_notable_types: commit
-          plugin_traffic: yes
-          repositories_batch: 200
           repositories_forks: yes
 
   build-3d-contributions:
