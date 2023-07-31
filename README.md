@@ -15,6 +15,21 @@
     </thead>
     <tbody>
       <tr>
+        <td>Rainbowkit Playground</td>
+        <td>Interactively play with RainbowKit components</td>
+        <td align="center" >
+          <img width="150" src="https://user-images.githubusercontent.com/106103625/257324040-bd5accdf-62c2-4d38-b7cd-1f0b9b0b1263.jpg" alt="nextension">
+        </td>
+        <td>
+          <a href="https://github.com/BankkRoll/rainbowkit-playground">
+            <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
+          </a>
+          <a href="https://rainbowkit-playground.vercel.app/">
+            <img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Example Website">
+          </a>
+        </td>
+      </tr>
+      <tr>
         <td>nextension</td>
         <td>An Advanced CLI Tool for Building Next.js Applications as Chrome Extensions</td>
         <td>
