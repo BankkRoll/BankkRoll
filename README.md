@@ -28,36 +28,6 @@
           </a>
         </td>
       </tr>
-      <tr>
-        <td>nextension</td>
-        <td>An Advanced CLI Tool for Building Next.js Applications as Chrome Extensions</td>
-        <td>
-          <img width="300" src="https://user-images.githubusercontent.com/106103625/256899284-cf13bdf8-300f-485d-bfa9-2aa2a801c2a0.png" alt="nextension">
-        </td>
-        <td>
-          <a href="https://github.com/BankkRoll/nextension">
-            <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
-          </a>
-        <a href="https://www.npmjs.com/package/nextension">
-          <img src="https://img.shields.io/badge/npm-View%20Package-blue?logo=npm" alt="npm">
-        </a>
-        </td>
-      </tr>
-      <tr>
-        <td>BitMint</td>
-        <td>The first ever low-code bitcoin ordinals full-stack minting boilerplate.</td>
-        <td>
-          <img width="300" src="https://user-images.githubusercontent.com/106103625/245309690-7da9ea3d-0ac8-4c3b-8235-b1fa4f57cdc8.png" alt="BitMint">
-        </td>
-        <td>
-          <a href="https://github.com/BankkRoll/BitMint2">
-            <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
-          </a>
-          <a href="https://bitmint-beta.vercel.app/">
-            <img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Example Website">
-          </a>
-        </td>
-      </tr>
     </tbody>
   </table>
 </div>
@@ -93,24 +63,36 @@
         </a>
       </td>
     </tr>
-    <tr>
-      <td>nextjs-pagination</td>
-      <td>Nextjs-Pagination is a powerful, customizable, and easy-to-use pagination component built specifically for Next.js projects.</td>
-      <td>
-        <img width="800" alt="nextjs-pagination" src="https://github.com/BankkRoll/nextjs-pagination/assets/106103625/5fbb44cb-b1dc-4335-8194-cb9ce4aaaab5" />
-      </td>
-      <td>
-        <a href="https://github.com/BankkRoll/nextjs-pagination">
-          <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
-        </a>
-        <a href="https://www.npmjs.com/package/nextjs-pagination">
+      <tr>
+        <td>nextension</td>
+        <td>An Advanced CLI Tool for Building Next.js Applications as Chrome Extensions</td>
+        <td>
+          <img width="300" src="https://user-images.githubusercontent.com/106103625/256899284-cf13bdf8-300f-485d-bfa9-2aa2a801c2a0.png" alt="nextension">
+        </td>
+        <td>
+          <a href="https://github.com/BankkRoll/nextension">
+            <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
+          </a>
+        <a href="https://www.npmjs.com/package/nextension">
           <img src="https://img.shields.io/badge/npm-View%20Package-blue?logo=npm" alt="npm">
         </a>
-        <a href="https://npm-i-nextjs-pagination.bankkroll.repl.co/">
-          <img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Example Website">
-        </a>
-      </td>
-    </tr>
+        </td>
+      </tr>
+      <tr>
+        <td>BitMint</td>
+        <td>The first ever low-code bitcoin ordinals full-stack minting boilerplate.</td>
+        <td>
+          <img width="300" src="https://user-images.githubusercontent.com/106103625/245309690-7da9ea3d-0ac8-4c3b-8235-b1fa4f57cdc8.png" alt="BitMint">
+        </td>
+        <td>
+          <a href="https://github.com/BankkRoll/BitMint2">
+            <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
+          </a>
+          <a href="https://bitmint-beta.vercel.app/">
+            <img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Example Website">
+          </a>
+        </td>
+      </tr>
     <tr>
       <td>AskGit AI</td>
       <td>Code Smarter, Not Harder: Enhance Your GitHub Experience with AskGit, the AI-Coding Assistant!</td>
@@ -136,25 +118,10 @@
       </td>
     </tr>
     <tr>
-      <td>Web3Button Generator - thirdweb</td>
-      <td>Provides an intuitive interface for creating a custom button to interact with Ethereum smart contracts. This React component is perfect for developers who need to quickly generate buttons for their DApps.</td>
-      <td>
-        <img src="https://user-images.githubusercontent.com/106103625/235013049-6b5af32c-27e6-4b31-8f79-ee68b1d667f8.png" width="800">
-      </td>
-      <td>
-        <a href="https://github.com/BankkRoll/thirdweb-Web3Button-generator">
-          <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
-        </a>
-        <a href="https://thirdweb-web3button.vercel.app/">
-          <img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Website">
-        </a>
-      </td>
-    </tr>
-    <tr>
       <td>Snapshot Tool - thirdweb</td>
       <td>A simple tool for fetching NFT balances from a smart contract. Supports all ERC-721 contracts.</td>
       <td>
-        <img src="https://user-images.githubusercontent.com/106103625/235228591-d1fc15ba-0a33-4241-9ebc-8223399d477c.png" width="800">
+        <img src="https://user-images.githubusercontent.com/106103625/257910988-fe9531f0-4b67-4f0c-9b22-cb1a7f903f2f.png" width="800">
       </td>
       <td>
         <a href="https://github.com/BankkRoll/snapshot-tool-thirdweb">
@@ -199,7 +166,7 @@
   </tr>
   <tr>
     <td colspan="6" valign="center">
-      <img src="https://metrics.lecoq.io/BankkRoll?template=classic&base.indepth=true&repositories.forks=true&base.header=0&fortune=1&activity=1&notable=1&achievements=1&habits=1&lines=1&languages=1&isocalendar=1&base=header%2C%20activity%2C%20community%2C%20repositories%2C%20metadata&base.indepth=true&base.hireable=false&base.skip=false&isocalendar=false&isocalendar.duration=half-year&languages=false&languages.limit=8&languages.threshold=0%25&languages.other=false&languages.colors=github&languages.sections=most-used&languages.indepth=false&languages.analysis.timeout=15&languages.analysis.timeout.repositories=7.5&languages.categories=markup%2C%20programming&languages.recent.categories=markup%2C%20programming&languages.recent.load=300&languages.recent.days=14&lines=false&lines.sections=base&lines.repositories.limit=4&lines.history.limit=2&habits=false&habits.from=200&habits.days=14&habits.facts=true&habits.charts=false&habits.charts.type=classic&habits.trim=true&habits.languages.limit=8&habits.languages.threshold=0%25&achievements=false&achievements.threshold=C&achievements.secrets=true&achievements.display=detailed&achievements.limit=0&notable=false&notable.from=organization&notable.repositories=true&notable.indepth=true&notable.types=commit&notable.self=false&activity=false&activity.limit=4&activity.load=300&activity.days=14&activity.visibility=public&activity.timestamps=false&activity.filter=all&fortune=false&config.timezone=America%2FNew_York&config.twemoji=true&config.octicon=true&config.display=large" alt="Metrics" >
+      <img src="./github-metrics.svg" alt="Metrics" >
     </td>
   </tr>
 </table>
@@ -282,7 +249,10 @@
     <tr>
       <th colspan="7" align="center">Other Skills</th>
     </tr>
-    <tr>
+      <td align="center">
+        <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=solidity"></a>
+        <br>Solidity
+      </td>
       <td align="center">
         <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=discord"></a>
         <br>Discord API
@@ -294,10 +264,6 @@
       <td align="center">
         <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=bots"></a>
         <br>Bots
-      </td>
-      <td align="center">
-        <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=replit"></a>
-        <br>Replit
       </td>
       <td align="center">
         <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=vercel"></a>
