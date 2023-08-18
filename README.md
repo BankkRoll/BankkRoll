@@ -1,36 +1,6 @@
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=37&duration=2000&pause=2000&color=07D8FF&center=true&vCenter=true&multiline=true&width=900&height=200&lines=%F0%9F%91%8B+Hello!+I'm+Bankk;Thanks+for+checking+out+my+GitHub!;%E2%AD%90+Anything+you+find+useful!;Contact+me+if+you+have+any+questions!)](https://git.io/typing-svg)
 
 <div align="center">
-  <h2>🚀 Current Projects</h2>
-  <table align="center">
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>Description</th>
-        <th>Image</th>
-        <th>Links</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Rainbowkit Playground</td>
-        <td>Interactively play with RainbowKit components</td>
-        <td align="center">
-          <img width="150" src="https://user-images.githubusercontent.com/106103625/257324040-bd5accdf-62c2-4d38-b7cd-1f0b9b0b1263.jpg" alt="nextension">
-        </td>
-        <td>
-          <a href="https://github.com/BankkRoll/rainbowkit-playground">
-            <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
-          </a>
-          <a href="https://rainbowkit-playground.vercel.app/">
-            <img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Example Website">
-          </a>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<div align="center">
   <h2>💼 Recent Projects</h2>
   <table align="center">
     <thead>
@@ -72,6 +42,21 @@
           </a>
           <a href="https://www.npmjs.com/package/nextension">
             <img src="https://img.shields.io/badge/npm-View%20Package-blue?logo=npm" alt="npm">
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>Rainbowkit Playground</td>
+        <td>Interactively play with RainbowKit components</td>
+        <td align="center">
+          <img width="150" src="https://user-images.githubusercontent.com/106103625/257324040-bd5accdf-62c2-4d38-b7cd-1f0b9b0b1263.jpg" alt="nextension">
+        </td>
+        <td>
+          <a href="https://github.com/BankkRoll/rainbowkit-playground">
+            <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
+          </a>
+          <a href="https://rainbowkit-playground.vercel.app/">
+            <img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Example Website">
           </a>
         </td>
       </tr>
