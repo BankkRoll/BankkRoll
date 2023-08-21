@@ -13,10 +13,28 @@
     </thead>
     <tbody>
       <tr>
+        <td>tribe-api-wrapper</td>
+        <td>This package is designed to offer an accessible and efficient interface for the Tribe Leaderboard API</td>
+        <td>
+          <img width="1000" alt="repo2pdf" src="https://github.com/BankkRoll/BankkRoll/assets/106103625/acd65305-73ce-430a-90f5-192feb412c11" />
+        </td>
+        <td>
+          <a href="https://github.com/BankkRoll/tribe-api-wrapper">
+            <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
+          </a>
+          <a href="https://www.npmjs.com/package/tribe-api-wrapper">
+            <img src="https://img.shields.io/badge/npm-View%20Package-blue?logo=npm" alt="npm">
+          </a>
+          <a href="https://tribe-api-wrapper.vercel.app/">
+            <img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Example Website">
+          </a>
+        </td>
+      </tr>
+      <tr>
         <td>repo2pdf</td>
         <td>Repo-to-PDF is a tool that allows you to convert a GitHub repository into a PDF file. It clones the repository, processes the files, and then creates a PDF.</td>
         <td>
-          <img width="800" alt="repo2pdf" src="https://github.com/BankkRoll/Repo-to-PDF/assets/106103625/9ceb176f-37f6-40d9-ab95-080942d2d7c0" />
+          <img width="1000" alt="repo2pdf" src="https://github.com/BankkRoll/Repo-to-PDF/assets/106103625/9ceb176f-37f6-40d9-ab95-080942d2d7c0" />
         </td>
         <td>
           <a href="https://github.com/BankkRoll/Repo-to-PDF">
@@ -79,7 +97,7 @@
         <td>AskGit AI</td>
         <td>Code Smarter, Not Harder: Enhance Your GitHub Experience with AskGit, the AI-Coding Assistant!</td>
         <td>
-          <img width="800" alt="Web3Button Generator" src="https://user-images.githubusercontent.com/106103625/236956607-a4438f83-4486-4899-9096-c6b33f328dc5.png">
+          <img width="1000" alt="Web3Button Generator" src="https://user-images.githubusercontent.com/106103625/236956607-a4438f83-4486-4899-9096-c6b33f328dc5.png">
         </td>
         <td>
           <a href="https://askgit.live/">
@@ -91,7 +109,7 @@
         <td>GitBadge</td>
         <td>Accumulate Your GitHub Achievements as NFT Badges. Sign in with your GitHub account and discover the NFT badges you can claim based on your contributions. Show off your open-source contributions in a new, unique way.</td>
         <td>
-          <img width="800" alt="Web3Button Generator" src="https://user-images.githubusercontent.com/106103625/235327435-75611463-4c57-4085-83e3-bc704607e53a.png">
+          <img width="1000" alt="Web3Button Generator" src="https://user-images.githubusercontent.com/106103625/235327435-75611463-4c57-4085-83e3-bc704607e53a.png">
         </td>
         <td>
           <a href="https://gitbadge.xyz/">
@@ -103,7 +121,7 @@
         <td>Snapshot Tool - thirdweb</td>
         <td>A simple tool for fetching NFT balances from a smart contract. Supports all ERC-721 contracts.</td>
         <td>
-          <img src="https://user-images.githubusercontent.com/106103625/257910988-fe9531f0-4b67-4f0c-9b22-cb1a7f903f2f.png" width="800">
+          <img src="https://user-images.githubusercontent.com/106103625/257910988-fe9531f0-4b67-4f0c-9b22-cb1a7f903f2f.png" width="1000">
         </td>
         <td>
           <a href="https://github.com/BankkRoll/snapshot-tool-thirdweb">
@@ -118,7 +136,7 @@
         <td>NFT Generator</td>
         <td>NFTGEN is an open-source tool for generating unique NFT images or GIFs, complete with metadata. You can easily customize and configure NFTGEN to suit your needs and generate your own NFTs in just a few simple steps. Easily upload directly to IPFS.</td>
         <td>
-          <img src="https://i.ibb.co/kBwgZGh/ezgif-com-video-to-gif.gif" width="800">
+          <img src="https://i.ibb.co/kBwgZGh/ezgif-com-video-to-gif.gif" width="1000">
         </td>
         <td>
           <a href="https://github.com/BankkRoll/NFTGEN-nft-generator">
