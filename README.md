@@ -79,21 +79,6 @@
         </td>
       </tr>
       <tr>
-        <td>BitMint</td>
-        <td>The first ever low-code bitcoin ordinals full-stack minting boilerplate.</td>
-        <td>
-          <img width="300" src="https://user-images.githubusercontent.com/106103625/245309690-7da9ea3d-0ac8-4c3b-8235-b1fa4f57cdc8.png" alt="BitMint">
-        </td>
-        <td>
-          <a href="https://github.com/BankkRoll/BitMint2">
-            <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
-          </a>
-          <a href="https://bitmint-beta.vercel.app/">
-            <img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Example Website">
-          </a>
-        </td>
-      </tr>
-      <tr>
         <td>AskGit AI</td>
         <td>Code Smarter, Not Harder: Enhance Your GitHub Experience with AskGit, the AI-Coding Assistant!</td>
         <td>
@@ -105,19 +90,6 @@
           </a>
         </td>
       </tr>
-      <tr>
-        <td>GitBadge</td>
-        <td>Accumulate Your GitHub Achievements as NFT Badges. Sign in with your GitHub account and discover the NFT badges you can claim based on your contributions. Show off your open-source contributions in a new, unique way.</td>
-        <td>
-          <img width="1000" alt="Web3Button Generator" src="https://user-images.githubusercontent.com/106103625/235327435-75611463-4c57-4085-83e3-bc704607e53a.png">
-        </td>
-        <td>
-          <a href="https://gitbadge.xyz/">
-            <img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Website">
-          </a>
-        </td>
-      </tr>
-      <tr>
         <td>Snapshot Tool - thirdweb</td>
         <td>A simple tool for fetching NFT balances from a smart contract. Supports all ERC-721 contracts.</td>
         <td>
