@@ -1,6 +1,55 @@
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=37&duration=2000&pause=2000&color=07D8FF&center=true&vCenter=true&multiline=true&width=900&height=200&lines=%F0%9F%91%8B+Hello!+I'm+Bankk;Thanks+for+checking+out+my+GitHub!;%E2%AD%90+Anything+you+find+useful!;Contact+me+if+you+have+any+questions!)](https://git.io/typing-svg)
 
 <div align="center">
+  <h2>🧑🏻‍💻 Working On..</h2>
+  <table align="center">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Image</th>
+        <th>Links</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>quick-readme</td>
+        <td>A CLI tool to generate README files super fast and easily!</td>
+        <td>
+          <img width="500" alt="nexa-ui" src="https://github.com/BankkRoll/quick-readme/assets/106103625/332aaeb9-0df8-439c-bd72-a1777b0e2019" />
+        </td>
+        <td>
+          <a href="https://github.com/BankkRoll/quick-readme">
+            <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
+          </a>
+          <a href="https://www.npmjs.com/package/quick-readme">
+            <img src="https://img.shields.io/badge/npm-View%20Package-blue?logo=npm" alt="npm">
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>nexa-ui</td>
+        <td>A Modern Components Library for React.</td>
+        <td>
+          <img width="500" alt="nexa-ui" src="https://user-images.githubusercontent.com/106103625/263552554-f45326f5-f355-4e7d-a1e9-6ca927d9232f.png" />
+        </td>
+        <td>
+          <a href="https://github.com/BankkRoll/nexa-ui">
+            <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
+          </a>
+          <a href="https://www.npmjs.com/package/nexa-ui">
+            <img src="https://img.shields.io/badge/npm-View%20Package-blue?logo=npm" alt="npm">
+          </a>
+          <a href="https://nexa-ui.vercel.app/">
+            <img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Example Website">
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div align="center">
   <h2>💼 Recent Projects</h2>
   <table align="center">
     <thead>
