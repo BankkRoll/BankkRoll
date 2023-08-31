@@ -328,7 +328,9 @@
   </td>
   </tr>
 </table>
-</p> ## 🖥️ Workspace Setup <table>
+</p>
+<h2> 🖥️ Workspace Setup</h2>
+<table>
   <tr>
     <td>
       <img src="https://i.ibb.co/5TrdbWC/imageedit-14-2619558547.png" width="50" />
