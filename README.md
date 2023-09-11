@@ -14,7 +14,7 @@
     <tbody>
       <tr>
         <td>auto-header-est2023</td>
-        <td>Automatically insert header comments tailored to your preferences for every file you create.</td>
+        <td>Automatically insert header comments tailored to your preferences for every file you create. - VSCode extension</td>
         <td>
           <img width="500" alt="auto-header-est2023" src="https://github-production-user-asset-6210df.s3.amazonaws.com/106103625/266686489-d5ccd12d-336f-4574-a2a6-2c012ddeea9c.png" />
         </td>
