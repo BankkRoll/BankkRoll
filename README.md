@@ -13,20 +13,17 @@
     </thead>
     <tbody>
       <tr>
-        <td>nexa-ui</td>
-        <td>A Modern Components Library for React.</td>
+        <td>create-next-shadcn-starter</td>
+        <td>A starter template and components playground for NEXTjs and shadcn/ui. Get started now: npx create-next-shadcn-starter</td>
         <td>
-          <img width="500" alt="nexa-ui" src="https://user-images.githubusercontent.com/106103625/263552554-f45326f5-f355-4e7d-a1e9-6ca927d9232f.png" />
+          <img width="500" alt="nexa-ui" src="https://user-images.githubusercontent.com/106103625/270134159-e2ece07f-147d-44a5-a6dc-e0341f5c3051.png" />
         </td>
         <td>
-          <a href="https://github.com/BankkRoll/nexa-ui">
+          <a href="https://github.com/BankkRoll/next-shadcn-starter">
             <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
           </a>
-          <a href="https://www.npmjs.com/package/nexa-ui">
+          <a href="https://www.npmjs.com/package/create-next-shadcn-starter">
             <img src="https://img.shields.io/badge/npm-View%20Package-blue?logo=npm" alt="npm">
-          </a>
-          <a href="https://nexa-ui.vercel.app/">
-            <img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Example Website">
           </a>
         </td>
       </tr>
