@@ -13,6 +13,21 @@
     </thead>
     <tbody>
       <tr>
+        <td>clickfusion</td>
+        <td>React-based npm package designed to enhance your UI with a variety of interactive and customizable particle effects for buttons and other clickable elements</td>
+        <td>
+          <img width="500" alt="nexa-ui" src="https://s6.gifyu.com/images/S4rQ3.gif" />
+        </td>
+        <td>
+          <a href="https://github.com/BankkRoll/ClickFusion">
+            <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
+          </a>
+          <a href="https://www.npmjs.com/package/clickfusion">
+            <img src="https://img.shields.io/badge/npm-View%20Package-blue?logo=npm" alt="npm">
+          </a>
+        </td>
+      </tr>
+      <tr>
         <td>create-next-shadcn-starter</td>
         <td>A starter template and components playground for NEXTjs and shadcn/ui. Get started now: npx create-next-shadcn-starter</td>
         <td>
