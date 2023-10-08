@@ -13,10 +13,22 @@
     </thead>
     <tbody>
       <tr>
+        <td>shopify-v0</td>
+        <td>Generate advanced Shopify Liquid sections with AI. Stand out with a advanced layout and sections in your shop unlike any other!</td>
+        <td>
+          <img width="700" alt="nexa-ui" src="https://github.com/BankkRoll/shopify-v0/assets/106103625/af57b6f8-55c9-4bc8-9e98-ab20c893c9ff" />
+        </td>
+        <td>
+          <a href="https://github.com/BankkRoll/shopify-v0">
+            <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
+          </a>
+        </td>
+      </tr>
+      <tr>
         <td>clickfusion</td>
         <td>React-based npm package designed to enhance your UI with a variety of interactive and customizable particle effects for buttons and other clickable elements</td>
         <td>
-          <img width="800" alt="nexa-ui" src="https://github.com/BankkRoll/BankkRoll/assets/106103625/928dec78-fef2-40ca-8871-d94095972a42" />
+          <img width="700" alt="nexa-ui" src="https://github.com/BankkRoll/BankkRoll/assets/106103625/928dec78-fef2-40ca-8871-d94095972a42" />
         </td>
         <td>
           <a href="https://github.com/BankkRoll/ClickFusion">
