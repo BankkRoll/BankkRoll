@@ -1,0 +1,33 @@
+
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Gradient definition -->
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:lightgrey;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:white;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Card background -->
+  <rect x="5" y="5" rx="15" ry="15" width="390" height="375" style="fill:url(#grad);stroke:black;stroke-width:2;" />
+  <!-- Title centered -->
+  <text x="200" y="40" font-family="Verdana" font-size="24" fill="black" text-anchor="middle">Snapshot Tool - thirdweb</text>
+  <!-- Description centered -->
+  <text x="200" y="70" font-family="Verdana" font-size="14" fill="grey" text-anchor="middle">
+    <tspan x="200" dy="1.2em">A simple tool for fetching NFT</tspan>
+    <tspan x="200" dy="1.2em">balances from a smart contract. Supports</tspan>
+  </text>
+  <!-- Project Image centered and enlarged -->
+  <image xlink:href="https://user-images.githubusercontent.com/106103625/257910988-fe9531f0-4b67-4f0c-9b22-cb1a7f903f2f.png" x="100" y="120" height="200px" width="200px"/>
+  <!-- GitHub Badge -->
+  <a xlink:href="https://github.com/BankkRoll/snapshot-tool-thirdweb" target="_blank">
+    <image xlink:href="/github-svg.svg" x="50" y="320" height="40px" width="40px"/>
+  </a>
+  <!-- npm Badge -->
+  <a xlink:href="https://www.npmjs.com/package/" target="_blank">
+    <image xlink:href="/npm-svg.svg" x="160" y="320" height="40px" width="40px"/>
+  </a>
+  <!-- Website Badge -->
+  <a xlink:href="https://snapshottool.vercel.app/" target="_blank">
+    <image xlink:href="/website-svg.svg" x="270" y="320" height="40px" width="40px"/>
+  </a>
+</svg>
