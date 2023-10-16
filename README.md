@@ -122,47 +122,6 @@
         </td>
       </tr>
       <tr>
-        <td>nextension</td>
-        <td>An Advanced CLI Tool for Building Next.js Applications as Chrome Extensions</td>
-        <td>
-          <img width="300" src="https://user-images.githubusercontent.com/106103625/256899284-cf13bdf8-300f-485d-bfa9-2aa2a801c2a0.png" alt="nextension">
-        </td>
-        <td>
-          <a href="https://github.com/BankkRoll/nextension">
-            <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
-          </a>
-          <a href="https://www.npmjs.com/package/nextension">
-            <img src="https://img.shields.io/badge/npm-View%20Package-blue?logo=npm" alt="npm">
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td>Rainbowkit Playground</td>
-        <td>Interactively play with RainbowKit components</td>
-        <td align="center">
-          <img width="150" src="https://user-images.githubusercontent.com/106103625/257324040-bd5accdf-62c2-4d38-b7cd-1f0b9b0b1263.jpg" alt="nextension">
-        </td>
-        <td>
-          <a href="https://github.com/BankkRoll/rainbowkit-playground">
-            <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
-          </a>
-          <a href="https://rainbowkit-playground.vercel.app/">
-            <img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Example Website">
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td>AskGit AI</td>
-        <td>Code Smarter, Not Harder: Enhance Your GitHub Experience with AskGit, the AI-Coding Assistant!</td>
-        <td>
-          <img width="1000" alt="Web3Button Generator" src="https://user-images.githubusercontent.com/106103625/236956607-a4438f83-4486-4899-9096-c6b33f328dc5.png">
-        </td>
-        <td>
-          <a href="https://askgit.live/">
-            <img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Website">
-          </a>
-        </td>
-      </tr>
         <td>Snapshot Tool - thirdweb</td>
         <td>A simple tool for fetching NFT balances from a smart contract. Supports all ERC-721 contracts.</td>
         <td>
