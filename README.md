@@ -24,6 +24,9 @@
           <a href="https://github.com/BankkRoll/Social-Feeds">
             <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
           </a>
+          <a href="https://socialfeeds.vercel.app/">
+            <img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Website">
+          </a>
         </td>
       </tr>
       <tr>
