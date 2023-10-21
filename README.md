@@ -1,5 +1,7 @@
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=37&duration=2000&pause=2000&color=07D8FF&center=true&vCenter=true&multiline=true&width=900&height=200&lines=%F0%9F%91%8B+Hello!+I'm+Bankk;Thanks+for+checking+out+my+GitHub!;%E2%AD%90+Anything+you+find+useful!;Contact+me+if+you+have+any+questions!)](https://git.io/typing-svg)
 
+
+
 <div align="center">
   <h2>🧑🏻‍💻 Working On..</h2>
   <table align="center">
@@ -12,6 +14,18 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td>SocialFeeds</td>
+        <td>Create a custom profile where you can link all your social media accounts, websites, and more in one place.</td>
+        <td>
+          <img width="700" alt="socialfeeds" src="https://github.com/BankkRoll/BankkRoll/assets/106103625/5bc7bed1-cf0b-44df-8845-b36190bde0c0" />
+        </td>
+        <td>
+          <a href="https://github.com/BankkRoll/Social-Feeds">
+            <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
+          </a>
+        </td>
+      </tr>
       <tr>
         <td>shopify-v0</td>
         <td>Generate advanced Shopify Liquid sections with AI. Stand out with a advanced layout and sections in your shop unlike any other!</td>
