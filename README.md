@@ -76,6 +76,18 @@
     </thead>
     <tbody>
         <tr>
+        <td>Deconomy</td>
+        <td>A advanced discord economy bot with multiple commands</td>
+        <td>
+          <img width="500" alt="deconomy" src="https://github.com/BankkRoll/Deconomy/assets/106103625/9fc23ad3-71bc-44e9-b888-6c9ed6a4ab98" />
+        </td>
+        <td>
+          <a href="https://github.com/BankkRoll/Deconomy">
+            <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
+          </a>
+        </td>
+      </tr>
+        <tr>
         <td>quick-readme</td>
         <td>A CLI tool to generate README files super fast and easily!</td>
         <td>
