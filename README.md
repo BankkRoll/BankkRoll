@@ -18,7 +18,7 @@
         <td>SocialFeeds</td>
         <td>Create a custom profile where you can link all your social media accounts, websites, and more in one place.</td>
         <td>
-          <img width="700" alt="socialfeeds" src="https://github.com/BankkRoll/BankkRoll/assets/106103625/5bc7bed1-cf0b-44df-8845-b36190bde0c0" />
+          <img width="700" alt="socialfeeds" src="https://user-images.githubusercontent.com/106103625/280492283-170e1d5d-f202-485e-886f-7c0387c3feb6.gif" />
         </td>
         <td>
           <a href="https://github.com/BankkRoll/Social-Feeds">
