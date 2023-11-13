@@ -15,6 +15,24 @@
     </thead>
     <tbody>
       <tr>
+        <td>kick.com-api</td>
+        <td>Interacting with Kick's API. It includes extensive customization options and supports various API endpoints as well as direct CLI.</td>
+        <td>
+          <img width="700" alt="clickfusion" src="https://github.com/BankkRoll/BankkRoll/assets/106103625/b9094d9c-6981-4641-8d75-b5f19b232645" />
+        </td>
+        <td>
+          <a href="https://github.com/BankkRoll/kick.com-api">
+            <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
+          </a>
+          <a href="https://www.npmjs.com/package/kick.com-api">
+            <img src="https://img.shields.io/badge/npm-View%20Package-blue?logo=npm" alt="npm">
+          </a>
+          <a href="https://kickcom-api.vercel.app/">
+            <img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Website">
+          </a>
+        </td>
+      </tr>
+      <tr>
         <td>SocialFeeds</td>
         <td>Create a custom profile where you can link all your social media accounts, websites, and more in one place.</td>
         <td>
@@ -38,24 +56,6 @@
         <td>
           <a href="https://github.com/BankkRoll/shopify-v0">
             <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td>clickfusion</td>
-        <td>React-based npm package designed to enhance your UI with a variety of interactive and customizable particle effects for buttons and other clickable elements</td>
-        <td>
-          <img width="700" alt="clickfusion" src="https://github.com/BankkRoll/BankkRoll/assets/106103625/928dec78-fef2-40ca-8871-d94095972a42" />
-        </td>
-        <td>
-          <a href="https://github.com/BankkRoll/ClickFusion">
-            <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
-          </a>
-          <a href="https://www.npmjs.com/package/clickfusion">
-            <img src="https://img.shields.io/badge/npm-View%20Package-blue?logo=npm" alt="npm">
-          </a>
-          <a href="https://clickfusion.mintlify.app/introduction">
-            <img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Website">
           </a>
         </td>
       </tr>
