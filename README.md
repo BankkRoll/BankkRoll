@@ -15,6 +15,18 @@
     </thead>
     <tbody>
       <tr>
+        <td>Sheeetsmap</td>
+        <td>Sheeetsmap | 2023 Basel ETH Events</td>
+        <td>
+          <img width="700" alt="Sheeetsmap" src="https://github.com/BankkRoll/BankkRoll/assets/106103625/bea3177b-c563-4f18-861d-bfe65575c4ab" />
+        </td>
+        <td>
+          <a href="https://sheeetsmap.xyz/">
+            <img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Website">
+          </a>
+        </td>
+      </tr>
+      <tr>
         <td>kick.com-api</td>
         <td>Interacting with Kick's API. It includes extensive customization options and supports various API endpoints as well as direct CLI.</td>
         <td>
