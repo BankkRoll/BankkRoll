@@ -16,7 +16,7 @@
     <tbody>
       <tr>
         <td>Sheeetsmap</td>
-        <td>Sheeetsmap | 2023 Basel ETH Events</td>
+        <td>Sheeetsmap | 2023 Basel ETH Events PWA</td>
         <td>
           <img width="700" alt="Sheeetsmap" src="https://github.com/BankkRoll/BankkRoll/assets/106103625/bea3177b-c563-4f18-861d-bfe65575c4ab" />
         </td>
