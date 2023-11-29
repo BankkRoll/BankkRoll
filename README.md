@@ -15,6 +15,36 @@
     </thead>
     <tbody>
       <tr>
+        <td>thirdweb-payment</td>
+        <td>React component for handling Ethereum payments</td>
+        <td>
+          <img width="700" alt="Sheeetsmap" src="https://github.com/BankkRoll/thirdweb-payment/assets/106103625/532d6f80-4b49-47bf-aa1e-58b27634ce5c" />
+        </td>
+        <td>
+          <a href="https://github.com/BankkRoll/thirdweb-payment">
+            <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
+          </a>
+          <a href="https://www.npmjs.com/package/thirdweb-payment">
+            <img src="https://img.shields.io/badge/npm-View%20Package-blue?logo=npm" alt="npm">
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>thirdweb-marketplace</td>
+        <td>Multi collection NFT marketplace</td>
+        <td>
+          <img width="700" alt="Sheeetsmap" src="https://github.com/BankkRoll/BankkRoll/assets/106103625/a6dfa952-1538-4dcb-85a9-f8f76cc0972c" />
+        </td>
+        <td>
+          <a href="https://github.com/BankkRoll/thirdweb-marketplace-v3-multi-collection">
+            <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
+          </a>
+          <a href="https://multi-marketplace-v3.vercel.app/">
+            <img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Website">
+          </a>
+        </td>
+      </tr>
+      <tr>
         <td>Sheeetsmap</td>
         <td>Sheeetsmap | 2023 Basel ETH Events PWA</td>
         <td>
@@ -127,24 +157,6 @@
         </td>
       </tr>
       <tr>
-        <td>tribe-api-wrapper</td>
-        <td>This package is designed to offer an accessible and efficient interface for the Tribe Leaderboard API</td>
-        <td>
-          <img width="1000" alt="repo2pdf" src="https://github.com/BankkRoll/BankkRoll/assets/106103625/acd65305-73ce-430a-90f5-192feb412c11" />
-        </td>
-        <td>
-          <a href="https://github.com/BankkRoll/tribe-api-wrapper">
-            <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
-          </a>
-          <a href="https://www.npmjs.com/package/tribe-api-wrapper">
-            <img src="https://img.shields.io/badge/npm-View%20Package-blue?logo=npm" alt="npm">
-          </a>
-          <a href="https://tribe-api-wrapper.vercel.app/">
-            <img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Example Website">
-          </a>
-        </td>
-      </tr>
-      <tr>
         <td>repo2pdf</td>
         <td>Repo-to-PDF is a tool that allows you to convert a GitHub repository into a PDF file. It clones the repository, processes the files, and then creates a PDF.</td>
         <td>
@@ -159,21 +171,6 @@
           </a>
           <a href="https://freecodecamppdf.bankkroll.repl.co/">
             <img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Example Website">
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td>Snapshot Tool - thirdweb</td>
-        <td>A simple tool for fetching NFT balances from a smart contract. Supports all ERC-721 contracts.</td>
-        <td>
-          <img src="https://user-images.githubusercontent.com/106103625/257910988-fe9531f0-4b67-4f0c-9b22-cb1a7f903f2f.png" width="1000">
-        </td>
-        <td>
-          <a href="https://github.com/BankkRoll/snapshot-tool-thirdweb">
-            <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
-          </a>
-          <a href="https://snapshottool.vercel.app/">
-            <img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Website">
           </a>
         </td>
       </tr>
@@ -391,21 +388,4 @@
 <h4 align="center">Visitor's count :eyes:</h4>
 <p align="center">
   <img src="https://profile-counter.glitch.me/{BankkRoll}/count.svg" alt="BankkRoll :: Visitor's Count" />
-</p>
-<p align="center">
-  <a href='https://archiveprogram.github.com/'>
-    <img src='https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/acbadge.gif' width='40' height='40'>
-  </a>
-  <a href='https://docs.github.com/en/developers'>
-    <img src='https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/devbadge.gif' width='40' height='40'>
-  </a>
-  <a href='https://github.com/pricing'>
-    <img src='https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/pro.gif' width='40' height='40'>
-  </a>
-  <a href='https://stars.github.com/'>
-    <img src='https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/starbadge.gif' width='35' height='35'>
-  </a>
-  <a href='https://docs.github.com/en/github/supporting-the-open-source-community-with-github-sponsors'>
-    <img src='https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/sponsorbadge.gif' width='35' height='35'>
-  </a>
 </p>
