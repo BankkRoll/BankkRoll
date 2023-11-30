@@ -89,106 +89,10 @@
           </a>
         </td>
       </tr>
-      <tr>
-        <td>shopify-v0</td>
-        <td>Generate advanced Shopify Liquid sections with AI. Stand out with a advanced layout and sections in your shop unlike any other!</td>
-        <td>
-          <img width="700" alt="shopify-v0" src="https://user-images.githubusercontent.com/106103625/274716544-6feaa9f7-8e69-4389-a833-fb36ef0dc478.png" />
-        </td>
-        <td>
-          <a href="https://github.com/BankkRoll/shopify-v0">
-            <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
-          </a>
-        </td>
-      </tr>
     </tbody>
   </table>
 </div>
 
-<div align="center">
-  <h2>💼 Recent Projects</h2>
-  <table align="center">
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>Description</th>
-        <th>Image</th>
-        <th>Links</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-        <td>Deconomy</td>
-        <td>A advanced discord economy bot with multiple commands</td>
-        <td>
-          <img width="500" alt="deconomy" src="https://github.com/BankkRoll/Deconomy/assets/106103625/9fc23ad3-71bc-44e9-b888-6c9ed6a4ab98" />
-        </td>
-        <td>
-          <a href="https://github.com/BankkRoll/Deconomy">
-            <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
-          </a>
-        </td>
-      </tr>
-        <tr>
-        <td>quick-readme</td>
-        <td>A CLI tool to generate README files super fast and easily!</td>
-        <td>
-          <img width="500" alt="nexa-ui" src="https://github.com/BankkRoll/quick-readme/assets/106103625/332aaeb9-0df8-439c-bd72-a1777b0e2019" />
-        </td>
-        <td>
-          <a href="https://github.com/BankkRoll/quick-readme">
-            <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
-          </a>
-          <a href="https://www.npmjs.com/package/quick-readme">
-            <img src="https://img.shields.io/badge/npm-View%20Package-blue?logo=npm" alt="npm">
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td>auto-header-est2023</td>
-        <td>Automatically insert header comments tailored to your preferences for every file you create. - VSCode extension</td>
-        <td>
-          <img width="500" alt="auto-header-est2023" src="https://github-production-user-asset-6210df.s3.amazonaws.com/106103625/266686489-d5ccd12d-336f-4574-a2a6-2c012ddeea9c.png" />
-        </td>
-        <td>
-          <a href="https://github.com/BankkRoll/auto-header-est2023">
-            <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td>repo2pdf</td>
-        <td>Repo-to-PDF is a tool that allows you to convert a GitHub repository into a PDF file. It clones the repository, processes the files, and then creates a PDF.</td>
-        <td>
-          <img width="1000" alt="repo2pdf" src="https://github.com/BankkRoll/Repo-to-PDF/assets/106103625/9ceb176f-37f6-40d9-ab95-080942d2d7c0" />
-        </td>
-        <td>
-          <a href="https://github.com/BankkRoll/Repo-to-PDF">
-            <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
-          </a>
-          <a href="https://www.npmjs.com/package/repo2pdf">
-            <img src="https://img.shields.io/badge/npm-View%20Package-blue?logo=npm" alt="npm">
-          </a>
-          <a href="https://freecodecamppdf.bankkroll.repl.co/">
-            <img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Example Website">
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td>NFT Generator</td>
-        <td>NFTGEN is an open-source tool for generating unique NFT images or GIFs, complete with metadata. You can easily customize and configure NFTGEN to suit your needs and generate your own NFTs in just a few simple steps. Easily upload directly to IPFS.</td>
-        <td>
-          <img src="https://i.ibb.co/kBwgZGh/ezgif-com-video-to-gif.gif" width="1000">
-        </td>
-        <td>
-          <a href="https://github.com/BankkRoll/NFTGEN-nft-generator">
-            <img src="https://img.shields.io/badge/GitHub-View%20Repo-black?logo=github" alt="GitHub">
-          </a>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
 <h2 align="center">Github stats :bar_chart:</h2>
 <table>
   <tr>
