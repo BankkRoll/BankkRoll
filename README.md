@@ -15,6 +15,18 @@
     </thead>
     <tbody>
       <tr>
+        <td>BLOX Solutions</td>
+        <td>Next Gen Web3 Analytics</td>
+        <td>
+          <img width="700" alt="BLOX" src="https://pbs.twimg.com/media/F-S-EmkWEAA6jiG?format=jpg&name=small" />
+        </td>
+        <td>
+          <a href="https://www.bloxsolutions.app/">
+            <img src="https://img.shields.io/badge/Website-Visit%20Site-blue?logo=google-chrome" alt="Website">
+          </a>
+        </td>
+      </tr>
+      <tr>
         <td>thirdweb-payment</td>
         <td>React component for handling Ethereum payments</td>
         <td>
