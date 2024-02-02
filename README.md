@@ -2,12 +2,15 @@
 
 # Recent Projects
 
-| ![Project 1 Image](https://github.com/BankkRoll/BankkRoll/assets/106103625/8e367f5d-6971-471b-b3c7-1c5e51dced63) | ![Project 2 Image](https://github.com/BankkRoll/solana-credenza/assets/106103625/204e21d4-910e-40e9-8cc9-a7c3d898942d) | ![Project 3 Image](https://github.com/BankkRoll/solana-starter/assets/106103625/af316bf3-344e-492d-8f2a-ba6e36cf4730) |
-|:-----------------------------------:|:-----------------------------------:|:-----------------------------------:|
-| [Solana Whitlister](https://github.com/BankkRoll/solana-whitelist) | [Adaptive Solana Credenza](https://github.com/BankkRoll/solana-credenza) | [Solana Starter + Snapshot Tool](https://github.com/BankkRoll/solana-starter) |
-| Set up a whitelist registration for a Solana-based project. | Adaptive Solana Connect Credenza Component. Adapts between dialog for desktop and a drawer for mobile, powered by shadcn/ui components. | Solana Starter Next.js, TypeScript, Tailwind CSS, and shadcn/ui components for the UI. Integrates solana/wallet-adapter-react and solana/web3.js. Includes advanced creator -> hashlist -> wallets snapshot tool. |
+| ![Project 1 Image](https://github.com/BankkRoll/BankkRoll/assets/106103625/8e367f5d-6971-471b-b3c7-1c5e51dced63) | ![Project 3 Image](https://github.com/BankkRoll/solana-starter/assets/106103625/af316bf3-344e-492d-8f2a-ba6e36cf4730) |
+|:-----------------------------------:|:-----------------------------------:|
+| [Solana Whitlister](https://github.com/BankkRoll/solana-whitelist) | [Solana Starter + Snapshot Tool](https://github.com/BankkRoll/solana-starter) |
+| Set up a whitelist registration for a Solana-based project. | Solana Starter Next.js, TypeScript, Tailwind CSS, and shadcn/ui components for the UI. Integrates solana/wallet-adapter-react and solana/web3.js. Includes advanced creator -> hashlist -> wallets snapshot tool. |
 
-
+| Adaptive Solana Credenza PC Version | Adaptive Solana Credenza Mobile Version |
+|:----------:|:--------------:|
+| ![PC Version](https://github.com/BankkRoll/solana-credenza/assets/106103625/204e21d4-910e-40e9-8cc9-a7c3d898942d.png) | ![Mobile Version](https://github.com/BankkRoll/solana-credenza/assets/106103625/69ff78bf-1fcc-4c0a-bc75-d2922f1130c7.png) |
+| [Adaptive Solana Credenza](https://github.com/BankkRoll/solana-credenza) Adaptive Solana Connect Credenza Component. Adapts between dialog for desktop and a drawer for mobile, powered by shadcn/ui components.  | [Adaptive Solana Credenza](https://github.com/BankkRoll/solana-credenza) |
 
 
 <h2 align="center">Github stats :bar_chart:</h2>
