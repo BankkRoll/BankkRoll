@@ -2,6 +2,11 @@
 
 # Recent Projects
 
+| [SOLMINTS](https://www.solmints.xyz/) |
+|:----------:|
+| ![PC Version](https://github.com/BankkRoll/BankkRoll/assets/106103625/8e067898-c08a-4f3c-bed5-07278dd8bda1) |
+| Power your whitelist with SOLMINTS. Create an engaging and authentic community with advanced features to verify users, customize the registration process, and increase social engagement.  |
+
 | ![Project 1 Image](https://github.com/BankkRoll/BankkRoll/assets/106103625/8e367f5d-6971-471b-b3c7-1c5e51dced63) | ![Project 3 Image](https://github.com/BankkRoll/solana-starter/assets/106103625/af316bf3-344e-492d-8f2a-ba6e36cf4730) |
 |:-----------------------------------:|:-----------------------------------:|
 | [Solana Whitlister](https://github.com/BankkRoll/solana-whitelist) | [Solana Starter + Snapshot Tool](https://github.com/BankkRoll/solana-starter) |
