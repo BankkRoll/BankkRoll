@@ -2,6 +2,11 @@
 
 # Recent Projects
 
+| [Gamba V2 Next.js](https://github.com/BankkRoll/Gamba-V2-Next.js) |
+|:----------:|
+| ![PC Version](https://github.com/BankkRoll/Gamba-V2-Next.js/assets/106103625/3708bb52-e538-480e-b07f-f1c2453d2930) |
+| 🕹️ Multi-game platform template built on Gamba - Rewritten using Next.js instead of Vite.  |
+
 | ![Project 1 Image](https://github.com/BankkRoll/BankkRoll/assets/106103625/8e367f5d-6971-471b-b3c7-1c5e51dced63) | ![Project 3 Image](https://github.com/BankkRoll/solana-starter/assets/106103625/af316bf3-344e-492d-8f2a-ba6e36cf4730) |
 |:-----------------------------------:|:-----------------------------------:|
 | [Solana Whitlister](https://github.com/BankkRoll/solana-whitelist) | [Solana Starter + Snapshot Tool](https://github.com/BankkRoll/solana-starter) |
