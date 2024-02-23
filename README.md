@@ -2,7 +2,7 @@
 
 # Recent Projects
 
-| [Gamba V2 Next.js](https://github.com/BankkRoll/Gamba-V2-Next.js) |
+| [Gamba V2 Next.js Repo](https://github.com/BankkRoll/Gamba-V2-Next.js) - [Play Gamba]( https://play-gamba.vercel.app/) |
 |:----------:|
 | ![PC Version](https://github.com/BankkRoll/Gamba-V2-Next.js/assets/106103625/3708bb52-e538-480e-b07f-f1c2453d2930) |
 | 🕹️ Multi-game platform template built on Gamba - Rewritten using Next.js instead of Vite.  |
