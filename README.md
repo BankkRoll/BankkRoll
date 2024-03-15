@@ -2,10 +2,11 @@
 
 # Recent Projects
 
-| [Gamba V2 Next.js Repo](https://github.com/BankkRoll/Gamba-V2-Next.js) - [Play Gamba]( https://play-gamba.vercel.app/) |
-|:----------:|
-| ![PC Version](https://github.com/BankkRoll/Gamba-V2-Next.js/assets/106103625/c7c8d0d4-459b-4cc6-a31e-da2ac84b4306) |
-| 🕹️ Multi-game platform template built on Gamba - Rewritten using Next.js instead of Vite.  |
+| ![image](https://github.com/BankkRoll/BankkRoll/assets/106103625/7061744c-6a94-4374-b3f7-833c107d10c7) | ![image](https://github.com/BankkRoll/BankkRoll/assets/106103625/3dce624c-ed41-4297-86e3-c55bf83c3057) |
+|:-----------------------------------:|:-----------------------------------:|
+| [Contact to Purchase](https://x.com/bankkroll_eth) - [View Demo](https://gamba-pro.vercel.app/)  | [View Repo](https://github.com/BankkRoll/Gamba-V2-Next.js) - [View Demo](https://play-gamba.vercel.app/) |
+| 🕹️ Advanced Multi-game platform template built on Gamba. | 🕹️ Open-Source Multi-game platform template built on Gamba. |
+
 
 | ![Project 1 Image](https://github.com/BankkRoll/BankkRoll/assets/106103625/8e367f5d-6971-471b-b3c7-1c5e51dced63) | ![Project 3 Image](https://github.com/BankkRoll/solana-starter/assets/106103625/af316bf3-344e-492d-8f2a-ba6e36cf4730) |
 |:-----------------------------------:|:-----------------------------------:|
