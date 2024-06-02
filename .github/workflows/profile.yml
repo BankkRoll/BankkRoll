@@ -111,6 +111,7 @@ jobs:
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
+          git pull origin ${{ github.ref }} --rebase
           git add snake/
           git commit -m "Add generated snake contribution grid SVGs"
           git push origin ${{ github.ref }}
