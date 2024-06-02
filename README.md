@@ -4,9 +4,9 @@
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="snake/github-contribution-grid-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="snake/github-contribution-grid-snake.svg" />
-    <img alt="github-snake" src="snake/github-contribution-grid-snake.svg" />
+    <source media="(prefers-color-scheme: dark)" srcset="images/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="images/github-contribution-grid-snake.svg" />
+    <img alt="github-snake" src="images/github-contribution-grid-snake.svg" />
   </picture>
 </div>
 
@@ -20,7 +20,7 @@
   <table>
     <tr>
       <td valign="top" width="60%">
-        <img src="./profile-3d-contrib/profile-night-rainbow.svg" width="100%" alt="Github stats">
+        <img src="./images/profile-night-rainbow.svg" width="100%" alt="Github stats">
       </td>
       <td valign="top" width="40%">
         <h2 align="center">🏆 Trophies</h2>
@@ -29,7 +29,7 @@
     </tr>
     <tr>
       <td colspan="2" valign="center">
-        <img src="./github-metrics.svg" alt="Metrics">
+        <img src="./images/github-metrics.svg" alt="Metrics">
       </td>
     </tr>
   </table>
