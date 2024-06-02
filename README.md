@@ -20,7 +20,7 @@
   <table>
     <tr>
       <td valign="top" width="60%">
-        <img src="./images/profile-night-rainbow.svg" width="100%" alt="Github stats">
+        <img src="./profile-3d-contrib/profile-night-rainbow.svg" width="100%" alt="Github stats">
       </td>
       <td valign="top" width="40%">
         <h2 align="center">🏆 Trophies</h2>
