@@ -78,9 +78,9 @@ jobs:
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git pull origin ${{ github.ref }} --rebase
           git add images/
-          git commit -m "Update GitHub metrics"
+          git diff-index --quiet HEAD || git commit -m "Update GitHub metrics"
+          git pull origin ${{ github.ref }} --rebase
           git push origin ${{ github.ref }}
 
   build-3d-contributions:
@@ -101,9 +101,9 @@ jobs:
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git pull origin ${{ github.ref }} --rebase
           git add images/
-          git commit -m "Update GitHub profile 3D contributions"
+          git diff-index --quiet HEAD || git commit -m "Update GitHub profile 3D contributions"
+          git pull origin ${{ github.ref }} --rebase
           git push origin ${{ github.ref }}
 
   generate-snake-animation:
@@ -131,7 +131,7 @@ jobs:
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git pull origin ${{ github.ref }} --rebase
           git add images/
-          git commit -m "Add generated snake contribution grid SVGs"
+          git diff-index --quiet HEAD || git commit -m "Add generated snake contribution grid SVGs"
+          git pull origin ${{ github.ref }} --rebase
           git push origin ${{ github.ref }}
