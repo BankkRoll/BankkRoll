@@ -83,6 +83,8 @@ jobs:
           git stash
           git pull origin ${{ github.ref }} --rebase
           git stash pop || true
+          git add images/
+          git diff-index --quiet HEAD || git commit -m "Resolve conflicts after rebase"
           git push origin ${{ github.ref }}
 
   build-3d-contributions:
@@ -108,6 +110,8 @@ jobs:
           git stash
           git pull origin ${{ github.ref }} --rebase
           git stash pop || true
+          git add images/
+          git diff-index --quiet HEAD || git commit -m "Resolve conflicts after rebase"
           git push origin ${{ github.ref }}
 
   generate-snake-animation:
