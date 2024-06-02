@@ -141,5 +141,9 @@ jobs:
           git config user.email github-actions@github.com
           git add images/
           git diff-index --quiet HEAD || git commit -m "Add generated snake contribution grid SVGs"
+          git stash
           git pull origin ${{ github.ref }} --rebase
+          git stash pop || true
+          git add images/
+          git diff-index --quiet HEAD || git commit -m "Resolve conflicts after rebase"
           git push origin ${{ github.ref }}
