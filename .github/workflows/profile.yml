@@ -68,6 +68,10 @@ jobs:
           plugin_notable_repositories: yes
           plugin_notable_types: commit
           repositories_forks: yes
+      - name: Create images directory
+        run: mkdir -p images
+      - name: Move generated files to images directory
+        run: mv *.svg images/
 
   build-3d-contributions:
     runs-on: ubuntu-latest
@@ -78,6 +82,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
+      - name: Move generated files to images directory
+        run: mv *.svg images/
       - name: Commit & Push
         run: |
           git config user.name github-actions
@@ -101,10 +107,8 @@ jobs:
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-      - name: Create snake directory
-        run: mkdir -p snake
-      - name: Move generated files to snake directory
-        run: mv dist/* snake/
+      - name: Move generated files to images directory
+        run: mv dist/* images/
       - name: Commit and push snake files
         env:
           GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
@@ -112,6 +116,6 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git pull origin ${{ github.ref }} --rebase
-          git add snake/
+          git add images/
           git commit -m "Add generated snake contribution grid SVGs"
           git push origin ${{ github.ref }}
