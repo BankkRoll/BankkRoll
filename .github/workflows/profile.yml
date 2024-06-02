@@ -97,13 +97,15 @@ jobs:
           USERNAME: ${{ github.repository_owner }}
       - name: Move generated files to images directory
         run: if ls *.svg 1> /dev/null 2>&1; then mv *.svg images/; fi
-      - name: Commit & Push
+      - name: Commit & Stash Changes
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add images/
           git diff-index --quiet HEAD || git commit -m "Update GitHub profile 3D contributions"
+          git stash
           git pull origin ${{ github.ref }} --rebase
+          git stash pop || true
           git push origin ${{ github.ref }}
 
   generate-snake-animation:
