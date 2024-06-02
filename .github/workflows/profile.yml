@@ -74,6 +74,14 @@ jobs:
           repositories_forks: yes
       - name: Move generated files to images directory
         run: if ls *.svg 1> /dev/null 2>&1; then mv *.svg images/; fi
+      - name: Commit and Push
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git pull origin ${{ github.ref }} --rebase
+          git add images/
+          git commit -m "Update GitHub metrics"
+          git push origin ${{ github.ref }}
 
   build-3d-contributions:
     runs-on: ubuntu-latest
@@ -93,9 +101,10 @@ jobs:
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
+          git pull origin ${{ github.ref }} --rebase
           git add images/
           git commit -m "Update GitHub profile 3D contributions"
-          git push
+          git push origin ${{ github.ref }}
 
   generate-snake-animation:
     permissions: 
