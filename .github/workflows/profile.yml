@@ -101,12 +101,16 @@ jobs:
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-      - name: List generated files
-        run: ls -la dist
-      - name: push github-contribution-grid-snake.svg to the output branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
-        with:
-          target_branch: output
-          build_dir: dist
+      - name: Create snake directory
+        run: mkdir -p snake
+      - name: Move generated files to snake directory
+        run: mv dist/* snake/
+      - name: Commit and push snake files
         env:
           GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add snake/
+          git commit -m "Add generated snake contribution grid SVGs"
+          git push origin ${{ github.ref }}
