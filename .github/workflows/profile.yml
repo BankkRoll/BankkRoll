@@ -80,7 +80,9 @@ jobs:
           git config user.email github-actions@github.com
           git add images/
           git diff-index --quiet HEAD || git commit -m "Update GitHub metrics"
+          git stash
           git pull origin ${{ github.ref }} --rebase
+          git stash pop || true
           git push origin ${{ github.ref }}
 
   build-3d-contributions:
