@@ -91,17 +91,19 @@ jobs:
         uses: actions/checkout@v2
       - name: Create images directory
         run: mkdir -p images
+      - name: Create profile-3d-contrib directory
+        run: mkdir -p profile-3d-contrib
       - uses: yoshi389111/github-profile-3d-contrib@0.7.0
         env:
           GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
-      - name: Move generated files to images directory
-        run: if ls *.svg 1> /dev/null 2>&1; then mv *.svg images/; fi
+      - name: Move generated files to profile-3d-contrib directory
+        run: if ls *.svg 1> /dev/null 2>&1; then mv *.svg profile-3d-contrib/; fi
       - name: Commit & Push
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add images/
+          git add profile-3d-contrib/
           git diff-index --quiet HEAD || git commit -m "Update GitHub profile 3D contributions"
           git pull origin ${{ github.ref }} --rebase || (git stash && git pull origin ${{ github.ref }} --rebase && git stash pop)
           git push origin ${{ github.ref }}
