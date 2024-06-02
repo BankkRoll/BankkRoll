@@ -2,6 +2,14 @@
 
 ---
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="github-snake.svg" />
+  <img alt="github-snake" src="github-snake.svg" />
+</picture>
+
+---
+
 <a href="https://gitroll.io/profile/s6vP9klKpmDYJ7lpkPHpa" target="_blank"><img src="https://gitroll.io/api/badges/profiles/v1/s6vP9klKpmDYJ7lpkPHpa" alt="GitRoll Profile Badge"/></a>
 
 ## 🏆 GitHub Stats
