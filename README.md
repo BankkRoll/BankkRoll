@@ -232,6 +232,8 @@
 
 
 ```math
-\ce{$\unicode[goombafont; color:red; pointer-events: none; z-index: -10; position: fixed; top: 0; left: 0; height: 100vh; object-fit: cover; background-size: cover; width: 130vw; opacity: 0.5; background: url('https://github.com/BankkRoll/BankkRoll/assets/106103625/bd97b24d-8f67-440d-9383-8f8b21904260');]{x0000}$}
+\ce{$\unicode[goombafont; color:red; pointer-events: none; z-index: -10; position: fixed; top: 0; left: 0; height: 100vh; object-fit: cover; background-size: cover; width: 130vw; opacity: 0.5; background: url('https://github.com/BankkRoll/BankkRoll/assets/106103625/baf62140-5ebe-4ead-a65f-260116cc952a');]{x0000}$}
 ```
+
+
 
