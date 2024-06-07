@@ -1,3 +1,7 @@
+```math
+\ce{$\unicode[goombafont; color:red; pointer-events: none; z-index: -10; position: fixed; top: 0; left: 0; height: 100vh; object-fit: cover; background-size: cover; width: 130vw; opacity: 0.5; background: url('https://github.com/BankkRoll/BankkRoll/assets/106103625/839f8048-6083-4a19-8410-56372f8900e0');]{x0000}$}
+```
+
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=37&duration=2000&pause=2000&color=07D8FF&center=true&vCenter=true&multiline=true&width=900&height=200&lines=%F0%9F%91%8B+Hello!+I'm+Bankk;Thanks+for+checking+out+my+GitHub!;%E2%AD%90+Anything+you+find+useful!;Contact+me+if+you+have+any+questions!)](https://git.io/typing-svg)
 
 ---
