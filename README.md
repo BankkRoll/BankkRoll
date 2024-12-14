@@ -14,6 +14,55 @@
   </a>
 </div>
 
+# 📂 What I'm Working On...
+
+<div align="center">
+
+### 🌟 Tweet-to-Code  
+<a href="https://github.com/BankkRoll/tweet-to-code" target="_blank">
+  <img src="https://github.com/user-attachments/assets/b46cd660-90bb-4792-bf5b-e9572f12427a" alt="Tweet-to-Code" width="800" style="border-radius: 10px;"/>
+</a>
+<p style="font-size: 16px; max-width: 800px; margin: 20px auto;">
+Transform X/Twitter design inspirations into fully responsive and reusable code snippets.  
+Built for designers and developers to bridge the gap between creativity and functionality.
+</p>
+<p>
+  <a href="https://tweet-to-code.vercel.app/" target="_blank" style="color: #4CAF50; font-weight: bold;">🌐 Live Demo</a> | 
+  <a href="https://github.com/BankkRoll/tweet-to-code" target="_blank" style="color: #2196F3; font-weight: bold;">📂 GitHub Repo</a>
+</p>
+
+---
+
+### 🔥 Shaduxe UI  
+<a href="https://github.com/BankkRoll/shaduxe-ui" target="_blank">
+  <img src="https://github.com/user-attachments/assets/1903c486-106f-4e71-86b9-3cef4c8fe75b" alt="Shaduxe UI" width="800" style="border-radius: 10px;"/>
+</a>
+<p style="font-size: 16px; max-width: 800px; margin: 20px auto;">
+Beautifully crafted, ready-to-use components. Extend your shadcn/ui library effortlessly with elegant, responsive designs that prioritize usability and aesthetics.
+</p>
+<p>
+  <a href="https://ui.shaduxe.com/" target="_blank" style="color: #4CAF50; font-weight: bold;">🌐 Live Demo</a> | 
+  <a href="https://github.com/BankkRoll/shaduxe-ui" target="_blank" style="color: #2196F3; font-weight: bold;">📂 GitHub Repo</a>
+</p>
+
+---
+
+### ⚡ ListFast  
+<a href="https://www.listfast.dev/" target="_blank">
+  <img src="https://github.com/user-attachments/assets/afb7ee2c-5e7c-4d07-89c4-d0bc023e3dbf" alt="ListFast" width="800" style="border-radius: 10px;"/>
+</a>
+<p style="font-size: 16px; max-width: 800px; margin: 20px auto;">
+Simplify your product distribution with ListFast. One form, multiple directories, zero hassle.  
+Built to save time, maximize exposure, and streamline your workflow.
+</p>
+<p>
+  <a href="https://www.listfast.dev/" target="_blank" style="color: #4CAF50; font-weight: bold;">🌐 Visit Site</a>
+</p>
+
+</div>
+
+---
+
 ## 🚀 Tech Stack
 
 <table>
@@ -31,7 +80,6 @@
         <img src="https://img.shields.io/badge/-Chart.js-FF6384?style=for-the-badge&logo=chart.js&logoColor=white" alt="Chart.js" />
         <img src="https://img.shields.io/badge/-Styled_Components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white" alt="Styled Components" />
         <img src="https://img.shields.io/badge/-CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS" />
-        <img src="https://img.shields.io/badge/-Less-1D365D?style=for-the-badge&logo=less&logoColor=white" alt="Less" />
       </div>
     </td>
     <td valign="top" width="50%">
@@ -43,7 +91,6 @@
         <img src="https://img.shields.io/badge/-GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white" alt="GraphQL" />
         <img src="https://img.shields.io/badge/-Microservices-1572B6?style=for-the-badge&logo=microservices&logoColor=white" alt="Microservices" />
         <img src="https://img.shields.io/badge/-API_Development-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="API Development" />
-        <img src="https://img.shields.io/badge/-Server_side_Caching-6DB33F?style=for-the-badge&logo=redis&logoColor=white" alt="Server-side Caching" />
       </div>
     </td>
   </tr>
@@ -85,10 +132,8 @@
         <img src="https://img.shields.io/badge/-Bitcoin-F7931A?style=for-the-badge&logo=bitcoin&logoColor=white" alt="Bitcoin" />
         <img src="https://img.shields.io/badge/-Web3.js-F16822?style=for-the-badge&logo=web3.js&logoColor=white" alt="Web3.js" />
         <img src="https://img.shields.io/badge/-Solidity-363636?style=for-the-badge&logo=solidity&logoColor=white" alt="Solidity" />
-        <img src="https://img.shields.io/badge/-Hardhat-F0F0F0?style=for-the-badge&logo=hardhat&logoColor=black" alt="Hardhat" />
         <img src="https://img.shields.io/badge/-IoT_Cloud_Platforms-0052CC?style=for-the-badge&logo=salesforce&logoColor=white" alt="IoT Cloud Platforms" />
         <img src="https://img.shields.io/badge/-Data_Visualization-FF6384?style=for-the-badge&logo=d3.js&logoColor=white" alt="Data Visualization" />
-        <img src="https://img.shields.io/badge/-Push_Notifications-48B0F1?style=for-the-badge&logo=push-notifications&logoColor=white" alt="Push Notifications" />
       </div>
     </td>
   </tr>
