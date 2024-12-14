@@ -23,11 +23,10 @@
   <img src="https://github.com/user-attachments/assets/b46cd660-90bb-4792-bf5b-e9572f12427a" alt="Tweet-to-Code" width="800" style="border-radius: 10px;"/>
 </a>
 <p style="font-size: 16px; max-width: 800px; margin: 20px auto;">
-Transform X/Twitter design inspirations into fully responsive and reusable code snippets.  
-Built for designers and developers to bridge the gap between creativity and functionality.
+Explore a collection of designs from X/Twitter that have inspired me and been transformed into fully responsive, reusable code examples.
 </p>
 <p>
-  <a href="https://tweet-to-code.vercel.app/" target="_blank" style="color: #4CAF50; font-weight: bold;">🌐 Live Demo</a> | 
+  <a href="https://tweet-to-code.vercel.app/" target="_blank" style="color: #4CAF50; font-weight: bold;">🌐 Visit Site</a> | 
   <a href="https://github.com/BankkRoll/tweet-to-code" target="_blank" style="color: #2196F3; font-weight: bold;">📂 GitHub Repo</a>
 </p>
 
@@ -38,10 +37,10 @@ Built for designers and developers to bridge the gap between creativity and func
   <img src="https://github.com/user-attachments/assets/1903c486-106f-4e71-86b9-3cef4c8fe75b" alt="Shaduxe UI" width="800" style="border-radius: 10px;"/>
 </a>
 <p style="font-size: 16px; max-width: 800px; margin: 20px auto;">
-Beautifully crafted, ready-to-use components. Extend your shadcn/ui library effortlessly with elegant, responsive designs that prioritize usability and aesthetics.
+Beautifully crafted, ready-to-use components. Extend your shadcn/ui library effortlessly with variants that prioritize usability and aesthetics.
 </p>
 <p>
-  <a href="https://ui.shaduxe.com/" target="_blank" style="color: #4CAF50; font-weight: bold;">🌐 Live Demo</a> | 
+  <a href="https://ui.shaduxe.com/" target="_blank" style="color: #4CAF50; font-weight: bold;">🌐 Visit Site</a> | 
   <a href="https://github.com/BankkRoll/shaduxe-ui" target="_blank" style="color: #2196F3; font-weight: bold;">📂 GitHub Repo</a>
 </p>
 
@@ -52,8 +51,7 @@ Beautifully crafted, ready-to-use components. Extend your shadcn/ui library effo
   <img src="https://github.com/user-attachments/assets/afb7ee2c-5e7c-4d07-89c4-d0bc023e3dbf" alt="ListFast" width="800" style="border-radius: 10px;"/>
 </a>
 <p style="font-size: 16px; max-width: 800px; margin: 20px auto;">
-Simplify your product distribution with ListFast. One form, multiple directories, zero hassle.  
-Built to save time, maximize exposure, and streamline your workflow.
+One Form. Multiple Directories. Zero Headaches. Easily distribute your product across multiple platforms with just one click, maximizing your exposure and saving time.
 </p>
 <p>
   <a href="https://www.listfast.dev/" target="_blank" style="color: #4CAF50; font-weight: bold;">🌐 Visit Site</a>
