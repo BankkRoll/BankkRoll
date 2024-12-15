@@ -29,8 +29,6 @@ One Form. Multiple Directories. Zero Headaches. Easily distribute your product a
   <a href="https://www.listfast.dev/" target="_blank" style="color: #4CAF50; font-weight: bold;">🌐 Visit Site</a>
 </p>
 
-</div>
-
 ---
 
 ### 🔥 Shaduxe UI  
@@ -58,6 +56,7 @@ Explore a collection of designs from X/Twitter that have inspired me and been tr
   <a href="https://tweet-to-code.vercel.app/" target="_blank" style="color: #4CAF50; font-weight: bold;">🌐 Visit Site</a> | 
   <a href="https://github.com/BankkRoll/tweet-to-code" target="_blank" style="color: #2196F3; font-weight: bold;">📂 GitHub Repo</a>
 </p>
+</div>
 
 ---
 
