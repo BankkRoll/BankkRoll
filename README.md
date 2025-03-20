@@ -1,27 +1,63 @@
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=37&duration=3000&pause=1000&color=07D8FF&center=true&vCenter=true&multiline=true&width=900&height=200&lines=👋+Hello!+I'm+Bankk;Thanks+for+checking+out+my+GitHub!;⭐+Anything+you+find+useful!;Contact+me+if+you+have+any+questions!)](https://git.io/typing-svg)
-
 <div align="center">
+  <a href="https://github.com/BankkRoll">
+    <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,12,12,12,12&height=180&section=header&text=BankkRoll&fontSize=70&fontAlignY=35&animation=fadeIn&fontColor=ffffff&desc=Full-Stack%20Developer%20|%20Open%20Source%20Contributor|%20Web3%20Enthusiast%20&descAlignY=55&descAlign=50" width="100%" alt="Header" />
+  </a>
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=37&duration=3000&pause=1000&color=07D8FF&center=true&vCenter=true&multiline=true&width=900&height=200&lines=👋+Hello!+I'm+Bankk;Thanks+for+checking+out+my+GitHub!;⭐+Anything+you+find+useful!;Contact+me+if+you+have+any+questions!" alt="Typing SVG" />
+  </a>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="images/github-contribution-grid-snake-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="images/github-contribution-grid-snake.svg" />
     <img alt="github-snake" src="images/github-contribution-grid-snake.svg" />
   </picture>
+  <div align="center">
+    <img src="https://github-readme-activity-graph.vercel.app/graph?username=BankkRoll&theme=react-dark&bg_color=0D1117&hide_border=true&line=07D8FF&point=9600bf&color=FFFFFF" width="100%" alt="Activity Graph" />
+  </div>
 </div>
-
 <div align="center">
-  <a href="https://gitroll.io/profile/s6vP9klKpmDYJ7lpkPHpa" target="_blank">
-    <img src="https://gitroll.io/api/badges/profiles/v1/s6vP9klKpmDYJ7lpkPHpa" alt="GitRoll Profile Badge"/>
-  </a>
+  <h2>
+    <img src="https://media.giphy.com/media/iY8CRBdQXODJSCERIr/giphy.gif" width="30" height="30" style="margin-right: 10px;">
+    <b>About Me</b>
+    <img src="https://media.giphy.com/media/iY8CRBdQXODJSCERIr/giphy.gif" width="30" height="30" style="margin-left: 10px;">
+  </h2>
 </div>
-
----
-
-## 🚀 Tech Stack
-
+<div align="center">
+  <table>
+    <tr>
+      <td width="50%">
+        <h3 align="center">I'm a passionate developer with expertise in:</h3>
+        <ul>
+          <li>🌐 Full-stack web development with React, Next.js, and Node.js</li>
+          <li>⛓️ Blockchain development with Ethereum, Solana, and Web3.js</li>
+          <li>🤖 Automation and API integration</li>
+          <li>🔐 Security and compliance best practices</li>
+          <li>📊 Data visualization and analytics</li>
+          <li>🎨 UI/UX design with Tailwind CSS and Framer Motion</li>
+        </ul>
+        <p align="center">
+          <b>I'm currently working on building innovative solutions that combine web3 technologies with traditional web development to create seamless user experiences.</b>
+        </p>
+      </td>
+      <td width="50%" align="center">
+        <img src="https://github-readme-stats.vercel.app/api?username=BankkRoll&show_icons=true&theme=react&border_color=0EA5E9&bg_color=0D1117&title_color=0EA5E9&icon_color=0EA5E9" height="180em" />
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=BankkRoll&langs_count=8&layout=compact&theme=react&border_color=0EA5E9&bg_color=0D1117&title_color=0EA5E9&icon_color=0EA5E9" height="180em" />
+      </td>
+    </tr>
+  </table>
+</div>
+<div align="center">
+  <h2>
+    <img src="https://media.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif" width="30" height="30" style="margin-right: 10px;">
+    <b>Tech Stack</b>
+    <img src="https://media.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif" width="30" height="30" style="margin-left: 10px;">
+  </h2>
+</div>
 <table>
   <tr>
     <td valign="top" width="50%">
-      <h3 align="center">Frontend</h3>
+      <h3 align="center">
+        <img src="https://media.giphy.com/media/IdyAQJVN2kVPNUrojM/giphy.gif" width="20" height="20"> Frontend
+      </h3>
       <div align="center">
         <img src="https://img.shields.io/badge/-React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
         <img src="https://img.shields.io/badge/-Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js" />
@@ -36,7 +72,9 @@
       </div>
     </td>
     <td valign="top" width="50%">
-      <h3 align="center">Backend</h3>
+      <h3 align="center">
+        <img src="https://media.giphy.com/media/UoLt6Tm8wlSnWGfSFs/giphy.gif" width="20" height="20"> Backend
+      </h3>
       <div align="center">
         <img src="https://img.shields.io/badge/-Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" />
         <img src="https://img.shields.io/badge/-Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express" />
@@ -49,7 +87,9 @@
   </tr>
   <tr>
     <td valign="top" width="50%">
-      <h3 align="center">Data & APIs</h3>
+      <h3 align="center">
+        <img src="https://media.giphy.com/media/eNAsjO55tPbgaor7ma/giphy.gif" width="20" height="20"> Data & APIs
+      </h3>
       <div align="center">
         <img src="https://img.shields.io/badge/-Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase" />
         <img src="https://img.shields.io/badge/-Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase" />
@@ -63,7 +103,9 @@
       </div>
     </td>
     <td valign="top" width="50%">
-      <h3 align="center">DevOps & Tools</h3>
+      <h3 align="center">
+        <img src="https://media.giphy.com/media/KzJkzjggfGN5Py6nkT/giphy.gif" width="20" height="20"> DevOps & Tools
+      </h3>
       <div align="center">
         <img src="https://img.shields.io/badge/-Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
         <img src="https://img.shields.io/badge/-GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
@@ -78,7 +120,9 @@
   </tr>
   <tr>
     <td valign="top" colspan="2">
-      <h3 align="center">Blockchain & Specialized</h3>
+      <h3 align="center">
+        <img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="20" height="20"> Blockchain & Specialized
+      </h3>
       <div align="center">
         <img src="https://img.shields.io/badge/-Ethereum-3C3C3D?style=for-the-badge&logo=ethereum&logoColor=white" alt="Ethereum" />
         <img src="https://img.shields.io/badge/-Solana-9945FF?style=for-the-badge&logo=solana&logoColor=white" alt="Solana" />
@@ -91,64 +135,78 @@
     </td>
   </tr>
 </table>
-
-## 🖥️ Workspace Setup
-
 <div align="center">
-<table>
-  <tr>
-    <td align="center" width="96">
-      <img src="https://i.ibb.co/5TrdbWC/imageedit-14-2619558547.png" width="48" height="48" alt="CPU">
-      <br>
-      <span>CPU</span>
-    </td>
-    <td align="center" width="300">
-      <img src="https://img.shields.io/badge/Intel-Core_i7_8th-0071C5?style=for-the-badge&logo=intel&logoColor=white" alt="i7-8th-gen">
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="96">
-      <img src="https://i.ibb.co/1GC0VqC/imageedit-19-8970180062.gif" width="48" height="48" alt="GPU">
-      <br>
-      <span>GPU</span>
-    </td>
-    <td align="center" width="300">
-      <img src="https://img.shields.io/badge/NVIDIA-RTX_2080-76B900?style=for-the-badge&logo=nvidia&logoColor=white" alt="rtx-2080">
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="96">
-      <img src="https://i.ibb.co/hBgDy3Q/imageedit-7-3135521893.png" width="48" height="48" alt="OS">
-      <br>
-      <span>OS</span>
-    </td>
-    <td align="center" width="300">
-      <img src="https://img.shields.io/badge/Windows_11-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="windows">
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="96">
-      <img src="https://skillicons.dev/icons?i=vscode" width="48" height="48" alt="IDE">
-      <br>
-      <span>IDE</span>
-    </td>
-    <td align="center" width="300">
-      <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=Visual-Studio-Code&logoColor=white" alt="vs-code">
-    </td>
-  </tr>
-</table>
+  <h2>
+    <img src="https://media.giphy.com/media/VgCDAzcKvsR6OM0uWg/giphy.gif" width="30" height="30" style="margin-right: 10px;">
+    <b>GitHub Metrics</b>
+    <img src="https://media.giphy.com/media/VgCDAzcKvsR6OM0uWg/giphy.gif" width="30" height="30" style="margin-left: 10px;">
+  </h2>
+  <div align="center">
+    <img src="/images/github-metrics.svg" width="100%" alt="Detailed GitHub Metrics" />
+  </div>
 </div>
-
-## 🏆 Achievement Showcase
-
 <div align="center">
-
-![Trophy Case](https://github-profile-trophy.vercel.app/?username=BankkRoll&theme=darkhub&no-frame=true&column=4&margin-w=15&margin-h=15)
-
+  <h2>
+    <img src="https://media.giphy.com/media/cj87CxfRtrUifF3Ryk/giphy.gif" width="30" height="30" style="margin-right: 10px;">
+    <b>Workspace Setup</b>
+    <img src="https://media.giphy.com/media/cj87CxfRtrUifF3Ryk/giphy.gif" width="30" height="30" style="margin-left: 10px;">
+  </h2>
+  <table>
+    <tr>
+      <td align="center" width="96">
+        <img src="https://i.ibb.co/5TrdbWC/imageedit-14-2619558547.png" width="48" height="48" alt="CPU">
+        <br>
+        <span>CPU</span>
+      </td>
+      <td align="center" width="300">
+        <img src="https://img.shields.io/badge/Intel-Core_i7_8th-0071C5?style=for-the-badge&logo=intel&logoColor=white" alt="i7-8th-gen">
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="96">
+        <img src="https://i.ibb.co/1GC0VqC/imageedit-19-8970180062.gif" width="48" height="48" alt="GPU">
+        <br>
+        <span>GPU</span>
+      </td>
+      <td align="center" width="300">
+        <img src="https://img.shields.io/badge/NVIDIA-RTX_2080-76B900?style=for-the-badge&logo=nvidia&logoColor=white" alt="rtx-2080">
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="96">
+        <img src="https://i.ibb.co/hBgDy3Q/imageedit-7-3135521893.png" width="48" height="48" alt="OS">
+        <br>
+        <span>OS</span>
+      </td>
+      <td align="center" width="300">
+        <img src="https://img.shields.io/badge/Windows_11-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="windows">
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="96">
+        <img src="https://skillicons.dev/icons?i=vscode" width="48" height="48" alt="IDE">
+        <br>
+        <span>IDE</span>
+      </td>
+      <td align="center" width="300">
+        <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=Visual-Studio-Code&logoColor=white" alt="vs-code">
+      </td>
+    </tr>
+  </table>
 </div>
-
-## Visitor's Count
-
 <div align="center">
-  <img src="https://profile-counter.glitch.me/{BankkRoll}/count.svg" alt="BankkRoll :: Visitor's Count">
+  <h2>
+    <img src="https://media.giphy.com/media/3orifgYbnsq43eFsdO/giphy.gif" width="30" height="30" style="margin-right: 10px;">
+    <b>Achievement Showcase</b>
+    <img src="https://media.giphy.com/media/3orifgYbnsq43eFsdO/giphy.gif" width="30" height="30" style="margin-left: 10px;">
+  </h2>
+  <img src="https://github-profile-trophy.vercel.app/?username=BankkRoll&theme=algolia&no-frame=true&column=4&margin-w=15&margin-h=15" alt="Trophy Case" />
+</div>
+<div align="center">
+  <h2>
+    <img src="https://media.giphy.com/media/QaMcXSekUWx7aogAUr/giphy.gif" width="30" height="30" style="margin-right: 10px;">
+    <b>Visitor Count</b>
+    <img src="https://media.giphy.com/media/QaMcXSekUWx7aogAUr/giphy.gif" width="30" height="30" style="margin-left: 10px;">
+  </h2>
+  <img src="https://profile-counter.glitch.me/{BankkRoll}/count.svg" alt="BankkRoll :: Visitor's Count" />
 </div>
