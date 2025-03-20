@@ -11,6 +11,11 @@
   </div>
 </div>
 <div align="center">
+  <a href="https://gitroll.io/profile/s6vP9klKpmDYJ7lpkPHpa" target="_blank">
+    <img src="https://gitroll.io/api/badges/profiles/v1/s6vP9klKpmDYJ7lpkPHpa" alt="GitRoll Profile Badge"/>
+  </a>
+</div>
+<div align="center">
   <h2>
     <img src="https://media.giphy.com/media/iY8CRBdQXODJSCERIr/giphy.gif" width="30" height="30" style="margin-right: 10px;">
     <b>About Me</b>
