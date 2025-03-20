@@ -17,6 +17,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
         
       - name: Create images directory
         run: mkdir -p images
@@ -83,28 +85,26 @@ jobs:
             mv *.svg images/ 
           fi
           
-      - name: Git setup
+      - name: Fetch latest changes
+        run: git pull origin ${{ github.ref_name }} --no-rebase
+          
+      - name: Commit and push changes
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-      
-      - name: Commit changes
-        run: |
           git add images/
           git commit -m "Update GitHub metrics [skip ci]" || echo "No changes to commit"
-      
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref_name }}
+          git push origin ${{ github.ref_name }} || echo "Push failed, but continuing workflow"
 
   build-3d-contributions:
     runs-on: ubuntu-latest
     needs: github-metrics
+    if: always()  # Run even if previous job fails
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
         
       - name: Create images directory
         run: mkdir -p images
@@ -113,32 +113,42 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
-          OUTPUT_PATH: ./images/
+          OUTPUT_PATH: ./images/  # Try to output directly to images
           
-      - name: Git setup
+      - name: Move 3D contrib files if needed
+        run: |
+          # Check if files were created in profile-3d-contrib directory
+          if [ -d "profile-3d-contrib" ]; then
+            echo "Moving files from profile-3d-contrib to images"
+            mkdir -p images
+            cp -r profile-3d-contrib/* images/
+          fi
+          
+      - name: Fetch latest changes
+        run: git pull origin ${{ github.ref_name }} --no-rebase
+          
+      - name: Commit and push changes
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-      
-      - name: Commit changes
-        run: |
           git add images/
+          if [ -d "profile-3d-contrib" ]; then
+            git add profile-3d-contrib/
+          fi
           git commit -m "Update GitHub profile 3D contributions [skip ci]" || echo "No changes to commit"
-      
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref_name }}
+          git push origin ${{ github.ref_name }} || echo "Push failed, but continuing workflow"
 
   generate-snake-animation:
     permissions: 
       contents: write
     runs-on: ubuntu-latest
-    needs: build-3d-contributions
+    needs: [github-metrics, build-3d-contributions]
+    if: always()  # Run even if previous jobs fail
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
         
       - name: Create images directory
         run: mkdir -p images
@@ -151,18 +161,13 @@ jobs:
             images/github-contribution-grid-snake.svg
             images/github-contribution-grid-snake-dark.svg?palette=github-dark
             
-      - name: Git setup
+      - name: Fetch latest changes
+        run: git pull origin ${{ github.ref_name }} --no-rebase
+          
+      - name: Commit and push changes
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-      
-      - name: Commit changes
-        run: |
           git add images/
           git commit -m "Add generated snake contribution grid SVGs [skip ci]" || echo "No changes to commit"
-      
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref_name }}
+          git push origin ${{ github.ref_name }} || echo "Push failed, but continuing workflow"
