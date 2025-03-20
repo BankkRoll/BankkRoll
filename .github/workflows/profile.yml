@@ -4,24 +4,100 @@ on:
   schedule:
     - cron: "0 7 * * *"
   workflow_dispatch:
+    inputs:
+      force_update:
+        description: 'Force update all metrics'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'true'
+          - 'false'
   push:
     branches:
       - master
       - main
 
+# Prevent concurrent workflow runs to avoid git conflicts
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  GIT_AUTHOR_NAME: github-actions
+  GIT_AUTHOR_EMAIL: github-actions@github.com
+  GIT_COMMITTER_NAME: github-actions
+  GIT_COMMITTER_EMAIL: github-actions@github.com
+
 jobs:
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      should_run: ${{ steps.check.outputs.should_run }}
+      cache_key: ${{ steps.cache_key.outputs.value }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Generate cache key
+        id: cache_key
+        run: echo "value=metrics-$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+      
+      - name: Check if we should run (daily check)
+        id: check
+        run: |
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ github.event.inputs.force_update }}" == "true" ]]; then
+            echo "should_run=true" >> $GITHUB_OUTPUT
+            echo "Force update requested, will run all jobs"
+          elif [[ "${{ github.event_name }}" == "push" ]]; then
+            echo "should_run=true" >> $GITHUB_OUTPUT
+            echo "Push event detected, will run all jobs"
+          else
+            # Check if we already ran today
+            LAST_RUN=$(git log --format=%cd --date=short -n 1 --grep="Update GitHub metrics")
+            TODAY=$(date +'%Y-%m-%d')
+            if [[ "$LAST_RUN" == "$TODAY" ]]; then
+              echo "should_run=false" >> $GITHUB_OUTPUT
+              echo "Already ran today, skipping"
+            else
+              echo "should_run=true" >> $GITHUB_OUTPUT
+              echo "Haven't run today, will execute"
+            fi
+          fi
+      
+      - name: Create images directory
+        if: steps.check.outputs.should_run == 'true'
+        run: mkdir -p images
+
   github-metrics:
     runs-on: ubuntu-latest
+    needs: setup
+    if: needs.setup.outputs.should_run == 'true'
     permissions:
       contents: write
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Create images directory
+          
+      - name: Setup images directory
         run: mkdir -p images
-      - uses: lowlighter/metrics@latest
+        
+      - name: Cache metrics results
+        uses: actions/cache@v4
+        id: cache-metrics
+        with:
+          path: images/github-metrics.svg
+          key: ${{ needs.setup.outputs.cache_key }}-metrics
+          restore-keys: |
+            ${{ needs.setup.outputs.cache_key }}-metrics
+        
+      - name: Generate GitHub metrics
+        if: steps.cache-metrics.outputs.cache-hit != 'true' || github.event.inputs.force_update == 'true'
+        uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           user: BankkRoll
@@ -76,69 +152,249 @@ jobs:
           repositories_forks: yes
           output_action: none
           filename: github-metrics.svg
+          
       - name: Move generated files to images directory
-        run: if ls *.svg 1> /dev/null 2>&1; then mv *.svg images/; fi
+        if: steps.cache-metrics.outputs.cache-hit != 'true' || github.event.inputs.force_update == 'true'
+        run: |
+          if ls *.svg 1> /dev/null 2>&1; then 
+            echo "Moving SVG files to images directory"
+            mv *.svg images/ 
+          else
+            echo "No SVG files found in root directory"
+          fi
+          
       - name: Commit and Push
         run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add images/
-          git diff-index --quiet HEAD || git commit -m "Update GitHub metrics"
-          git pull --rebase origin ${{ github.ref_name }}
-          git push origin ${{ github.ref_name }}
+          git config user.name "${GIT_AUTHOR_NAME}"
+          git config user.email "${GIT_AUTHOR_EMAIL}"
+          
+          # Check if there are changes to commit
+          if git add images/ && git diff --staged --quiet; then
+            echo "No changes to commit for metrics"
+          else
+            git commit -m "Update GitHub metrics [skip ci]"
+            
+            # Try to push with retries
+            MAX_RETRIES=3
+            RETRY_COUNT=0
+            
+            while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
+              echo "Attempting to push metrics (attempt $(($RETRY_COUNT + 1)))"
+              
+              if git pull --rebase origin ${{ github.ref_name }} && git push origin ${{ github.ref_name }}; then
+                echo "Successfully pushed metrics changes"
+                break
+              else
+                RETRY_COUNT=$(($RETRY_COUNT + 1))
+                if [ $RETRY_COUNT -lt $MAX_RETRIES ]; then
+                  echo "Push failed, retrying in 5 seconds..."
+                  sleep 5
+                else
+                  echo "Failed to push after $MAX_RETRIES attempts"
+                  exit 1
+                fi
+              fi
+            done
+          fi
 
   build-3d-contributions:
     runs-on: ubuntu-latest
-    needs: github-metrics
+    needs: [setup, github-metrics]
+    if: needs.setup.outputs.should_run == 'true' && always() && needs.github-metrics.result != 'failure'
     name: generate-github-profile-3d-contrib
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Create images directory
+          ref: ${{ github.ref_name }}
+          
+      - name: Setup images directory
         run: mkdir -p images
-      - uses: yoshi389111/github-profile-3d-contrib@0.7.0
+        
+      - name: Cache 3D contributions
+        uses: actions/cache@v4
+        id: cache-3d
+        with:
+          path: images/profile-3d-contrib
+          key: ${{ needs.setup.outputs.cache_key }}-3d-contrib
+          restore-keys: |
+            ${{ needs.setup.outputs.cache_key }}-3d-contrib
+            
+      - name: Generate 3D contributions
+        if: steps.cache-3d.outputs.cache-hit != 'true' || github.event.inputs.force_update == 'true'
+        uses: yoshi389111/github-profile-3d-contrib@0.7.1
         env:
           GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
           OUTPUT_PATH: ./images/
+          
+      - name: Verify 3D contributions files
+        run: |
+          echo "Checking for 3D contribution files in images directory"
+          find images -name "*.svg" -type f | grep -i "3d-contrib" || echo "No 3D contribution files found"
+          
       - name: Commit & Push
         run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add images/
-          git diff-index --quiet HEAD || git commit -m "Update GitHub profile 3D contributions"
-          git pull --rebase origin ${{ github.ref_name }}
-          git push origin ${{ github.ref_name }}
+          git config user.name "${GIT_AUTHOR_NAME}"
+          git config user.email "${GIT_AUTHOR_EMAIL}"
+          
+          # Check if there are changes to commit
+          if git add images/ && git diff --staged --quiet; then
+            echo "No changes to commit for 3D contributions"
+          else
+            git commit -m "Update GitHub profile 3D contributions [skip ci]"
+            
+            # Try to push with retries
+            MAX_RETRIES=3
+            RETRY_COUNT=0
+            
+            while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
+              echo "Attempting to push 3D contributions (attempt $(($RETRY_COUNT + 1)))"
+              
+              if git pull --rebase origin ${{ github.ref_name }} && git push origin ${{ github.ref_name }}; then
+                echo "Successfully pushed 3D contributions changes"
+                break
+              else
+                RETRY_COUNT=$(($RETRY_COUNT + 1))
+                if [ $RETRY_COUNT -lt $MAX_RETRIES ]; then
+                  echo "Push failed, retrying in 5 seconds..."
+                  sleep 5
+                else
+                  echo "Failed to push after $MAX_RETRIES attempts"
+                  exit 1
+                fi
+              fi
+            done
+          fi
 
   generate-snake-animation:
     permissions: 
       contents: write
     runs-on: ubuntu-latest
-    needs: build-3d-contributions
-    timeout-minutes: 5
+    needs: [setup, build-3d-contributions]
+    if: needs.setup.outputs.should_run == 'true' && always() && needs.build-3d-contributions.result != 'failure'
+    timeout-minutes: 10
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Create images directory
+          ref: ${{ github.ref_name }}
+          
+      - name: Setup images directory
         run: mkdir -p images
+        
+      - name: Cache snake animation
+        uses: actions/cache@v4
+        id: cache-snake
+        with:
+          path: images/github-contribution-grid-snake*.svg
+          key: ${{ needs.setup.outputs.cache_key }}-snake
+          restore-keys: |
+            ${{ needs.setup.outputs.cache_key }}-snake
+            
       - name: Generate GitHub contribution grid snake
+        if: steps.cache-snake.outputs.cache-hit != 'true' || github.event.inputs.force_update == 'true'
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
             images/github-contribution-grid-snake.svg
             images/github-contribution-grid-snake-dark.svg?palette=github-dark
+            
+      - name: Verify snake animation files
+        run: |
+          echo "Checking for snake animation files in images directory"
+          find images -name "github-contribution-grid-snake*.svg" -type f || echo "No snake animation files found"
+          
       - name: Commit and push snake files
         env:
           GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
         run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add images/
-          git diff-index --quiet HEAD || git commit -m "Add generated snake contribution grid SVGs"
+          git config user.name "${GIT_AUTHOR_NAME}"
+          git config user.email "${GIT_AUTHOR_EMAIL}"
+          
+          # Check if there are changes to commit
+          if git add images/ && git diff --staged --quiet; then
+            echo "No changes to commit for snake animation"
+          else
+            git commit -m "Add generated snake contribution grid SVGs [skip ci]"
+            
+            # Try to push with retries
+            MAX_RETRIES=3
+            RETRY_COUNT=0
+            
+            while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
+              echo "Attempting to push snake animation (attempt $(($RETRY_COUNT + 1)))"
+              
+              if git pull --rebase origin ${{ github.ref_name }} && git push origin ${{ github.ref_name }}; then
+                echo "Successfully pushed snake animation changes"
+                break
+              else
+                RETRY_COUNT=$(($RETRY_COUNT + 1))
+                if [ $RETRY_COUNT -lt $MAX_RETRIES ]; then
+                  echo "Push failed, retrying in 5 seconds..."
+                  sleep 5
+                else
+                  echo "Failed to push after $MAX_RETRIES attempts"
+                  exit 1
+                fi
+              fi
+            done
+          fi
+
+  notify:
+    runs-on: ubuntu-latest
+    needs: [github-metrics, build-3d-contributions, generate-snake-animation]
+    if: always()
+    steps:
+      - name: Check workflow status
+        id: status
+        run: |
+          if [[ "${{ needs.github-metrics.result }}" == "success" && \
+                "${{ needs.build-3d-contributions.result }}" == "success" && \
+                "${{ needs.generate-snake-animation.result }}" == "success" ]]; then
+            echo "status=success" >> $GITHUB_OUTPUT
+          elif [[ "${{ needs.github-metrics.result }}" == "skipped" && \
+                  "${{ needs.build-3d-contributions.result }}" == "skipped" && \
+                  "${{ needs.generate-snake-animation.result }}" == "skipped" ]]; then
+            echo "status=skipped" >> $GITHUB_OUTPUT
+          else
+            echo "status=failure" >> $GITHUB_OUTPUT
+          fi
+          
+      - name: Create status file
+        run: |
+          mkdir -p status
+          if [[ "${{ steps.status.outputs.status }}" == "success" ]]; then
+            echo "All GitHub metrics generated successfully on $(date)" > status/last_run.txt
+          elif [[ "${{ steps.status.outputs.status }}" == "skipped" ]]; then
+            echo "GitHub metrics generation skipped on $(date)" > status/last_run.txt
+          else
+            echo "GitHub metrics generation failed on $(date)" > status/last_run.txt
+            echo "Metrics job: ${{ needs.github-metrics.result }}" >> status/last_run.txt
+            echo "3D Contributions job: ${{ needs.build-3d-contributions.result }}" >> status/last_run.txt
+            echo "Snake Animation job: ${{ needs.generate-snake-animation.result }}" >> status/last_run.txt
+          fi
+          
+      - name: Checkout repository
+        if: steps.status.outputs.status != 'skipped'
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          
+      - name: Commit status file
+        if: steps.status.outputs.status != 'skipped'
+        run: |
+          mkdir -p .github/status
+          cp status/last_run.txt .github/status/
+          
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          
+          git add .github/status/last_run.txt
+          git diff --staged --quiet || git commit -m "Update workflow status [skip ci]"
+          
           git pull --rebase origin ${{ github.ref_name }}
           git push origin ${{ github.ref_name }}
