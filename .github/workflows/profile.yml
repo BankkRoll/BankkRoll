@@ -9,6 +9,11 @@ on:
       - master
       - main
 
+# Prevent concurrent runs from conflicting when pushing to the same branch
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
@@ -18,12 +23,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-        
+          fetch-depth: 0  # Full history for metrics generation
+
       - name: Create images directory
         run: mkdir -p images
-        
-      - uses: lowlighter/metrics@latest
+
+      - name: Generate GitHub metrics
+        uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           user: BankkRoll
@@ -78,16 +84,13 @@ jobs:
           repositories_forks: yes
           output_action: none
           filename: github-metrics.svg
-          
+
       - name: Move generated files to images directory
         run: |
           if ls *.svg 1> /dev/null 2>&1; then 
             mv *.svg images/ 
           fi
-          
-      - name: Fetch latest changes
-        run: git pull origin ${{ github.ref_name }} --no-rebase
-          
+
       - name: Commit and push changes
         run: |
           git config user.name "github-actions"
@@ -100,33 +103,32 @@ jobs:
     runs-on: ubuntu-latest
     needs: github-metrics
     if: always()  # Run even if previous job fails
+    permissions:
+      contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-        
+
       - name: Create images directory
         run: mkdir -p images
-        
-      - uses: yoshi389111/github-profile-3d-contrib@0.7.1
+
+      - name: Generate 3D contributions
+        uses: yoshi389111/github-profile-3d-contrib@0.7.1
         env:
           GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
-          OUTPUT_PATH: ./images/  # Try to output directly to images
-          
+          OUTPUT_PATH: ./images/
+
       - name: Move 3D contrib files if needed
         run: |
-          # Check if files were created in profile-3d-contrib directory
           if [ -d "profile-3d-contrib" ]; then
             echo "Moving files from profile-3d-contrib to images"
             mkdir -p images
             cp -r profile-3d-contrib/* images/
           fi
-          
-      - name: Fetch latest changes
-        run: git pull origin ${{ github.ref_name }} --no-rebase
-          
+
       - name: Commit and push changes
         run: |
           git config user.name "github-actions"
@@ -139,20 +141,20 @@ jobs:
           git push origin ${{ github.ref_name }} || echo "Push failed, but continuing workflow"
 
   generate-snake-animation:
-    permissions: 
-      contents: write
     runs-on: ubuntu-latest
     needs: [github-metrics, build-3d-contributions]
     if: always()  # Run even if previous jobs fail
+    permissions:
+      contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-        
+
       - name: Create images directory
         run: mkdir -p images
-        
+
       - name: Generate GitHub contribution grid snake
         uses: Platane/snk/svg-only@v3
         with:
@@ -160,10 +162,7 @@ jobs:
           outputs: |
             images/github-contribution-grid-snake.svg
             images/github-contribution-grid-snake-dark.svg?palette=github-dark
-            
-      - name: Fetch latest changes
-        run: git pull origin ${{ github.ref_name }} --no-rebase
-          
+
       - name: Commit and push changes
         run: |
           git config user.name "github-actions"
