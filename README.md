@@ -1,6 +1,10 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,12,12,12,12&height=180&section=header&text=BankkRoll&fontSize=70&fontAlignY=35&animation=fadeIn&fontColor=ffffff&desc=Full-Stack%20Developer%20|%20Open%20Source%20Contributor|%20Web3%20Enthusiast%20&descAlignY=55&descAlign=50" width="100%" alt="Header" />
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=37&duration=3000&pause=1000&color=07D8FF&center=true&vCenter=true&multiline=true&width=900&height=200&lines=👋+Hello!+I'm+Bankk;Thanks+for+checking+out+my+GitHub!;⭐+Anything+you+find+useful!;Contact+me+if+you+have+any+questions!" alt="Typing SVG" />
+<div align="center">
+  <a href="https://gitroll.io/profile/s6vP9klKpmDYJ7lpkPHpa" target="_blank">
+    <img src="https://gitroll.io/api/badges/profiles/v1/s6vP9klKpmDYJ7lpkPHpa" alt="GitRoll Profile Badge"/>
+  </a>
+</div>
+
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="images/github-contribution-grid-snake-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="images/github-contribution-grid-snake.svg" />
@@ -10,11 +14,7 @@
     <img src="https://github-readme-activity-graph.vercel.app/graph?username=BankkRoll&theme=react-dark&bg_color=0D1117&hide_border=true&line=07D8FF&point=9600bf&color=FFFFFF" width="100%" alt="Activity Graph" />
   </div>
 </div>
-<div align="center">
-  <a href="https://gitroll.io/profile/s6vP9klKpmDYJ7lpkPHpa" target="_blank">
-    <img src="https://gitroll.io/api/badges/profiles/v1/s6vP9klKpmDYJ7lpkPHpa" alt="GitRoll Profile Badge"/>
-  </a>
-</div>
+
 <div align="center">
   <h2>
     <img src="https://media.giphy.com/media/iY8CRBdQXODJSCERIr/giphy.gif" width="30" height="30" style="margin-right: 10px;">
@@ -145,63 +145,6 @@
   <div align="center">
     <img src="/images/github-metrics.svg" width="100%" alt="Detailed GitHub Metrics" />
   </div>
-</div>
-<div align="center">
-  <h2>
-    <img src="https://media.giphy.com/media/cj87CxfRtrUifF3Ryk/giphy.gif" width="30" height="30" style="margin-right: 10px;">
-    <b>Workspace Setup</b>
-    <img src="https://media.giphy.com/media/cj87CxfRtrUifF3Ryk/giphy.gif" width="30" height="30" style="margin-left: 10px;">
-  </h2>
-  <table>
-    <tr>
-      <td align="center" width="96">
-        <img src="https://i.ibb.co/5TrdbWC/imageedit-14-2619558547.png" width="48" height="48" alt="CPU">
-        <br>
-        <span>CPU</span>
-      </td>
-      <td align="center" width="300">
-        <img src="https://img.shields.io/badge/Intel-Core_i7_8th-0071C5?style=for-the-badge&logo=intel&logoColor=white" alt="i7-8th-gen">
-      </td>
-    </tr>
-    <tr>
-      <td align="center" width="96">
-        <img src="https://i.ibb.co/1GC0VqC/imageedit-19-8970180062.gif" width="48" height="48" alt="GPU">
-        <br>
-        <span>GPU</span>
-      </td>
-      <td align="center" width="300">
-        <img src="https://img.shields.io/badge/NVIDIA-RTX_2080-76B900?style=for-the-badge&logo=nvidia&logoColor=white" alt="rtx-2080">
-      </td>
-    </tr>
-    <tr>
-      <td align="center" width="96">
-        <img src="https://i.ibb.co/hBgDy3Q/imageedit-7-3135521893.png" width="48" height="48" alt="OS">
-        <br>
-        <span>OS</span>
-      </td>
-      <td align="center" width="300">
-        <img src="https://img.shields.io/badge/Windows_11-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="windows">
-      </td>
-    </tr>
-    <tr>
-      <td align="center" width="96">
-        <img src="https://skillicons.dev/icons?i=vscode" width="48" height="48" alt="IDE">
-        <br>
-        <span>IDE</span>
-      </td>
-      <td align="center" width="300">
-        <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=Visual-Studio-Code&logoColor=white" alt="vs-code">
-      </td>
-    </tr>
-  </table>
-</div>
-<div align="center">
-  <h2>
-    <img src="https://media.giphy.com/media/3orifgYbnsq43eFsdO/giphy.gif" width="30" height="30" style="margin-right: 10px;">
-    <b>Achievement Showcase</b>
-    <img src="https://media.giphy.com/media/3orifgYbnsq43eFsdO/giphy.gif" width="30" height="30" style="margin-left: 10px;">
-  </h2>
-  <img src="https://github-profile-trophy.vercel.app/?username=BankkRoll&theme=algolia&no-frame=true&column=4&margin-w=15&margin-h=15" alt="Trophy Case" />
 </div>
 <div align="center">
   <h2>
