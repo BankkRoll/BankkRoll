@@ -146,11 +146,3 @@
     <img src="/images/github-metrics.svg" width="100%" alt="Detailed GitHub Metrics" />
   </div>
 </div>
-<div align="center">
-  <h2>
-    <img src="https://media.giphy.com/media/QaMcXSekUWx7aogAUr/giphy.gif" width="30" height="30" style="margin-right: 10px;">
-    <b>Visitor Count</b>
-    <img src="https://media.giphy.com/media/QaMcXSekUWx7aogAUr/giphy.gif" width="30" height="30" style="margin-left: 10px;">
-  </h2>
-  <img src="https://profile-counter.glitch.me/{BankkRoll}/count.svg" alt="BankkRoll :: Visitor's Count" />
-</div>
