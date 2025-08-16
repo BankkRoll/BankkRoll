@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  github-metrics:
+  setup:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -23,11 +23,27 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
+          fetch-depth: 0
+      - name: Create .github/images directory
+        run: mkdir -p .github/images
+      - name: Commit .github/images directory if created
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add .github/images/
+          git commit -m "Create .github/images directory [skip ci]" || echo "No changes to commit"
+          git push origin ${{ github.ref_name }} || echo "Push failed, but continuing workflow"
+
+  github-metrics:
+    runs-on: ubuntu-latest
+    needs: setup
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
           fetch-depth: 0  # Full history for metrics generation
-
-      - name: Create images directory
-        run: mkdir -p images
-
       - name: Generate GitHub metrics
         uses: lowlighter/metrics@latest
         with:
@@ -83,26 +99,19 @@ jobs:
           plugin_notable_types: commit
           repositories_forks: yes
           output_action: none
-          filename: github-metrics.svg
-
-      - name: Move generated files to images directory
-        run: |
-          if ls *.svg 1> /dev/null 2>&1; then 
-            mv *.svg images/ 
-          fi
-
+          filename: .github/images/github-metrics.svg
       - name: Commit and push changes
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add images/
+          git add .github/images/
           git commit -m "Update GitHub metrics [skip ci]" || echo "No changes to commit"
           git push origin ${{ github.ref_name }} || echo "Push failed, but continuing workflow"
 
   build-3d-contributions:
     runs-on: ubuntu-latest
-    needs: github-metrics
-    if: always()  # Run even if previous job fails
+    needs: [setup, github-metrics]
+    if: always()
     permissions:
       contents: write
     steps:
@@ -110,40 +119,30 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
-      - name: Create images directory
-        run: mkdir -p images
-
       - name: Generate 3D contributions
         uses: yoshi389111/github-profile-3d-contrib@0.7.1
         env:
           GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
-          OUTPUT_PATH: ./images/
-
-      - name: Move 3D contrib files if needed
+          OUTPUT_PATH: ./.github/images/
+      - name: Clean up profile-3d-contrib if created
         run: |
           if [ -d "profile-3d-contrib" ]; then
-            echo "Moving files from profile-3d-contrib to images"
-            mkdir -p images
-            cp -r profile-3d-contrib/* images/
+            echo "Cleaning up profile-3d-contrib directory"
+            rm -rf profile-3d-contrib
           fi
-
       - name: Commit and push changes
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add images/
-          if [ -d "profile-3d-contrib" ]; then
-            git add profile-3d-contrib/
-          fi
+          git add .github/images/
           git commit -m "Update GitHub profile 3D contributions [skip ci]" || echo "No changes to commit"
           git push origin ${{ github.ref_name }} || echo "Push failed, but continuing workflow"
 
   generate-snake-animation:
     runs-on: ubuntu-latest
-    needs: [github-metrics, build-3d-contributions]
-    if: always()  # Run even if previous jobs fail
+    needs: [setup, github-metrics, build-3d-contributions]
+    if: always()
     permissions:
       contents: write
     steps:
@@ -151,22 +150,17 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
-      - name: Create images directory
-        run: mkdir -p images
-
       - name: Generate GitHub contribution grid snake
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            images/github-contribution-grid-snake.svg
-            images/github-contribution-grid-snake-dark.svg?palette=github-dark
-
+            .github/images/github-contribution-grid-snake.svg
+            .github/images/github-contribution-grid-snake-dark.svg?palette=github-dark
       - name: Commit and push changes
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add images/
+          git add .github/images/
           git commit -m "Add generated snake contribution grid SVGs [skip ci]" || echo "No changes to commit"
           git push origin ${{ github.ref_name }} || echo "Push failed, but continuing workflow"
