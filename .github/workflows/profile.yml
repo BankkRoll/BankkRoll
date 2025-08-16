@@ -1,4 +1,4 @@
-name: Metrics, 3D Contributions, and Snake Animation
+name: Profile assets (Metrics, 3D Contrib, Snake)
 
 on:
   schedule:
@@ -14,7 +14,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  setup:
+  build-assets:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -23,33 +23,18 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
       - name: Ensure .github/images exists and is tracked
         run: |
           mkdir -p .github/images
           [ -f .github/images/.gitkeep ] || touch .github/images/.gitkeep
-      - name: Commit folder placeholder if needed
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add .github/images/.gitkeep
-          git commit -m "chore: ensure .github/images exists [skip ci]" || echo "No changes to commit"
-          git push origin ${{ github.ref_name }} || echo "Push failed, but continuing workflow"
 
-  github-metrics:
-    runs-on: ubuntu-latest
-    needs: setup
-    permissions:
-      contents: write
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
       - name: Generate GitHub metrics
         uses: lowlighter/metrics@latest
+        continue-on-error: true
         with:
           token: ${{ secrets.METRICS_TOKEN }}
-          user: BankkRoll
+          user: ${{ github.repository_owner }}
           template: classic
           base: activity, community, repositories, metadata
           base_indepth: yes
@@ -99,93 +84,52 @@ jobs:
           plugin_notable_repositories: yes
           plugin_notable_types: commit
           repositories_forks: yes
-          # keep generation local, we'll ship via artifact
           output_action: none
           filename: .github/images/github-metrics.svg
-      - name: Upload metrics artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: github-metrics
-          path: .github/images/github-metrics.svg
-          if-no-files-found: error
 
-  build-3d-contributions:
-    runs-on: ubuntu-latest
-    needs: github-metrics
-    permissions:
-      contents: write
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Prepare output dir
-        run: mkdir -p .github/images
+      - name: Copy metrics from container mount to workspace
+        if: always()
+        run: |
+          mkdir -p .github/images
+          if [ -f /metrics_renders/.github/images/github-metrics.svg ]; then
+            cp -v /metrics_renders/.github/images/github-metrics.svg .github/images/
+          else
+            echo "Metrics output not found; continuing"
+          fi
+
       - name: Generate 3D contributions
         uses: yoshi389111/github-profile-3d-contrib@0.7.1
+        continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
-          OUTPUT_PATH: ./.github/images/
-      - name: Clean up temp dir if created
-        run: |
-          if [ -d "profile-3d-contrib" ]; then
-            rm -rf profile-3d-contrib
-          fi
-      - name: Upload 3D contributions artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: contrib-3d
-          path: |
-            .github/images/*3d*.svg
-            .github/images/*-profile*.svg
-          if-no-files-found: warn
 
-  generate-snake-animation:
-    runs-on: ubuntu-latest
-    needs: build-3d-contributions
-    permissions:
-      contents: write
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Prepare output dir
-        run: mkdir -p .github/images
+      - name: Move 3D contributions into .github/images
+        if: always()
+        run: |
+          mkdir -p .github/images
+          if compgen -G "profile-3d-contrib/*.svg" > /dev/null; then
+            cp -v profile-3d-contrib/*.svg .github/images/
+          else
+            echo "No 3D contribution SVGs found; continuing"
+          fi
+          rm -rf profile-3d-contrib || true
+
       - name: Generate GitHub contribution grid snake
         uses: Platane/snk/svg-only@v3
+        continue-on-error: true
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
             .github/images/github-contribution-grid-snake.svg
             .github/images/github-contribution-grid-snake-dark.svg?palette=github-dark
-      - name: Upload snake artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: snake
-          path: |
-            .github/images/github-contribution-grid-snake.svg
-            .github/images/github-contribution-grid-snake-dark.svg
-          if-no-files-found: error
 
-  commit-and-push:
-    runs-on: ubuntu-latest
-    needs: generate-snake-animation
-    permissions:
-      contents: write
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Ensure output dir
-        run: mkdir -p .github/images
-      - name: Download artifacts
-        uses: actions/download-artifact@v4
-        with:
-          path: .github/images
-      - name: Commit and push all generated images
+      - name: List generated images
+        if: always()
+        run: ls -al .github/images || true
+
+      - name: Commit and push all images
+        if: always()
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
