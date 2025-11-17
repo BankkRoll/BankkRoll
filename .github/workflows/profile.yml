@@ -1,4 +1,4 @@
-name: Profile Assets (Metrics, 3D, Snake, Pac-Man)
+name: Profile Assets (Metrics, 3D Contrib, Snake, Pac-Man)
 
 on:
   schedule:
@@ -20,18 +20,19 @@ jobs:
       contents: write
     steps:
 
-      # -------------------------
+      # 1. Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
+      # 2. Ensure .github/images exists
       - name: Ensure .github/images exists
         run: |
           mkdir -p .github/images
           [ -f .github/images/.gitkeep ] || touch .github/images/.gitkeep
 
-      # -------------------------
+      # 3. Generate GitHub Metrics
       - name: Generate GitHub Metrics
         uses: lowlighter/metrics@latest
         continue-on-error: true
@@ -40,89 +41,37 @@ jobs:
           user: ${{ github.repository_owner }}
           template: classic
           base: activity, community, repositories, metadata
-          base_indepth: yes
-          config_display: large
-          config_octicon: yes
-          config_timezone: America/New_York
-          config_twemoji: yes
-          plugin_achievements: yes
-          plugin_achievements_display: detailed
-          plugin_achievements_secrets: yes
-          plugin_achievements_threshold: C
-          plugin_activity: yes
-          plugin_activity_days: 14
-          plugin_activity_filter: all
-          plugin_activity_limit: 4
-          plugin_activity_load: 300
-          plugin_activity_visibility: public
-          plugin_fortune: yes
-          plugin_habits: yes
-          plugin_habits_charts_type: classic
-          plugin_habits_days: 14
-          plugin_habits_facts: yes
-          plugin_habits_from: 200
-          plugin_habits_languages_limit: 8
-          plugin_habits_languages_threshold: 0%
-          plugin_habits_trim: yes
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: half-year
-          plugin_languages: yes
-          plugin_languages_analysis_timeout: 15
-          plugin_languages_analysis_timeout_repositories: 7.5
-          plugin_languages_categories: markup, programming
-          plugin_languages_colors: github
-          plugin_languages_limit: 8
-          plugin_languages_recent_categories: markup, programming
-          plugin_languages_recent_days: 14
-          plugin_languages_recent_load: 300
-          plugin_languages_sections: most-used
-          plugin_languages_threshold: 0%
-          plugin_lines: yes
-          plugin_lines_history_limit: 2
-          plugin_lines_repositories_limit: 4
-          plugin_lines_sections: base
-          plugin_notable: yes
-          plugin_notable_from: organization
-          plugin_notable_indepth: yes
-          plugin_notable_repositories: yes
-          plugin_notable_types: commit
-          repositories_forks: yes
-          output_action: none
           filename: .github/images/github-metrics.svg
 
-      - name: Copy Metrics to Workspace
+      # 4. Copy GitHub Metrics to .github/images
+      - name: Copy GitHub Metrics to .github/images
         if: always()
         run: |
           mkdir -p .github/images
           if [ -f /metrics_renders/.github/images/github-metrics.svg ]; then
             cp -v /metrics_renders/.github/images/github-metrics.svg .github/images/
-          else
-            echo "[INFO] Metrics SVG not found; skipping copy."
           fi
 
-      # -------------------------
-      - name: Generate 3D Contributions
+      # 5. Generate GitHub 3D Contributions
+      - name: Generate GitHub 3D Contributions
         uses: yoshi389111/github-profile-3d-contrib@0.7.1
         continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
-          NODE_ENV: production
-          NODE_OPTIONS: "--max-old-space-size=4096"
 
-      - name: Copy 3D Contributions
+      # 6. Copy GitHub 3D Contributions to .github/images
+      - name: Copy GitHub 3D Contributions to .github/images
         if: always()
         run: |
           mkdir -p .github/images
           if compgen -G "profile-3d-contrib/*.svg" > /dev/null; then
             cp -v profile-3d-contrib/*.svg .github/images/
-          else
-            echo "[INFO] No 3D contribution SVGs found; skipping."
           fi
           rm -rf profile-3d-contrib || true
 
-      # -------------------------
-      - name: Generate Contribution Grid Snake
+      # 7. Generate GitHub Contribution Grid Snake
+      - name: Generate GitHub Contribution Grid Snake
         uses: Platane/snk/svg-only@v3
         continue-on-error: true
         with:
@@ -131,37 +80,37 @@ jobs:
             .github/images/github-contribution-grid-snake.svg
             .github/images/github-contribution-grid-snake-dark.svg?palette=github-dark
 
-      # -------------------------
-      - name: Generate Contribution Grid Pac-Man
+      # 8. Copy GitHub Contribution Grid Snake to .github/images
+      - name: Copy GitHub Contribution Grid Snake to .github/images
+        run: echo "Snake output already goes to .github/images; step included for consistency"
+
+      # 9. Generate GitHub Contribution Grid Pac-Man
+      - name: Generate GitHub Contribution Grid Pac-Man
         uses: abozanona/pacman-contribution-graph@main
         continue-on-error: true
-        env:
-          GITHUB_USER: ${{ github.repository_owner }}
-          NODE_ENV: production
-          NODE_OPTIONS: "--max-old-space-size=8192"
+        with:
+          github_user_name: ${{ github.repository_owner }}
 
-      - name: Copy Pac-Man Contribution Graph
+      # 10. Copy GitHub Contribution Grid Pac-Man to .github/images
+      - name: Copy GitHub Contribution Grid Pac-Man to .github/images
         if: always()
         run: |
           mkdir -p .github/images
-          PACMAN_SVG="dist/pacman-contribution-graph.svg"
-          if [ -f "$PACMAN_SVG" ]; then
-            cp -v "$PACMAN_SVG" .github/images/github-contribution-grid-pacman.svg
-          else
-            echo "[INFO] Pac-Man SVG not found; skipping."
+          if [ -f dist/pacman-contribution-graph.svg ]; then
+            cp -v dist/pacman-contribution-graph.svg .github/images/github-contribution-grid-pacman.svg
           fi
 
-      # -------------------------
+      # 11. List All Generated Images
       - name: List All Generated Images
         if: always()
         run: ls -al .github/images || true
 
-      # -------------------------
+      # 12. Commit & Push All Images
       - name: Commit & Push All Images
         if: always()
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add .github/images/
-          git commit -m "chore(images): update metrics, 3D, snake & pacman [skip ci]" || echo "[INFO] No changes to commit."
-          git push origin ${{ github.ref_name }} || echo "[WARN] Push failed; continuing workflow."
+          git commit -m "chore(images): update metrics, 3D contribs, snake & pacman [skip ci]" || echo "No changes to commit"
+          git push origin ${{ github.ref_name }} || echo "Push failed, but continuing workflow"
