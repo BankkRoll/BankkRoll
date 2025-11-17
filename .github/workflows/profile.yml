@@ -89,7 +89,9 @@ jobs:
         uses: abozanona/pacman-contribution-graph@main
         continue-on-error: true
         with:
-          username: ${{ github.repository_owner }}
+          github_user_name: ${{ github.repository_owner }}
+          github_token: ${{ secrets.METRICS_TOKEN }}
+
 
       # 10. Copy GitHub Contribution Grid Pac-Man to .github/images
       - name: Copy GitHub Contribution Grid Pac-Man to .github/images
