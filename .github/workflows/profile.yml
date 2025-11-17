@@ -130,6 +130,16 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
 
+      - name: Copy Pac-Man graph to .github/images
+        if: always()
+        run: |
+          mkdir -p .github/images
+          if [ -f dist/pacman-contribution-graph.svg ]; then
+            cp -v dist/pacman-contribution-graph.svg .github/images/
+          else
+            echo "Pac-Man contribution graph not found; continuing"
+          fi
+
       - name: List generated images
         if: always()
         run: ls -al .github/images || true
