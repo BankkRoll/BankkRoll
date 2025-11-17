@@ -1,4 +1,4 @@
-name: Profile assets (Metrics, 3D Contrib, Snake)
+name: Profile assets (Metrics, 3D Contrib, Snake, Pac-Man)
 
 on:
   schedule:
@@ -124,6 +124,12 @@ jobs:
             .github/images/github-contribution-grid-snake.svg
             .github/images/github-contribution-grid-snake-dark.svg?palette=github-dark
 
+      - name: Generate GitHub Pac-Man contribution graph
+        uses: abozanona/pacman-contribution-graph@main
+        continue-on-error: true
+        with:
+          github_user_name: ${{ github.repository_owner }}
+
       - name: List generated images
         if: always()
         run: ls -al .github/images || true
@@ -134,5 +140,5 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add .github/images/
-          git commit -m "chore(images): update metrics, 3D contribs, and snake [skip ci]" || echo "No changes to commit"
+          git commit -m "chore(images): update metrics, 3D contribs, snake & pacman [skip ci]" || echo "No changes to commit"
           git push origin ${{ github.ref_name }} || echo "Push failed, but continuing workflow"
