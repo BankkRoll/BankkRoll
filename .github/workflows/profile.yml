@@ -121,4 +121,4 @@ jobs:
           git config user.email "github-actions@github.com"
           git add .github/images/
           git commit -m "chore(images): update metrics, 3D contribs, snake & pacman [skip ci]" || echo "No changes to commit"
-          git push origin ${{ github.ref_name }} || echo "Push failed, but continuing workflow"
+          git push origin ${{ github.ref_name }} --force || echo "Push failed, but continuing workflow"
