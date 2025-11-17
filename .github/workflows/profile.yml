@@ -98,9 +98,15 @@ jobs:
         if: always()
         run: |
           mkdir -p .github/images
+          # Light version
           if [ -f dist/pacman-contribution-graph.svg ]; then
             cp -v dist/pacman-contribution-graph.svg .github/images/github-contribution-grid-pacman.svg
           fi
+          # Dark version
+          if [ -f dist/pacman-contribution-graph-dark.svg ]; then
+            cp -v dist/pacman-contribution-graph-dark.svg .github/images/github-contribution-grid-pacman-dark.svg
+          fi
+
 
       # 11. List All Generated Images
       - name: List All Generated Images
