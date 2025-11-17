@@ -6,18 +6,18 @@
     </a>
   </div>
 
+  <!-- Pac-Man Contribution Graph -->
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset=".github/images/github-contribution-grid-pacman-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset=".github/images/github-contribution-grid-pacman.svg" />
+    <img alt="GitHub Pac-Man contribution graph" src=".github/images/pacman-contribution-graph.svg" />
+  </picture>
+  
   <!-- Snake Contribution Graph -->
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset=".github/images/github-contribution-grid-snake-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset=".github/images/github-contribution-grid-snake.svg" />
     <img alt="GitHub Snake contribution graph" src=".github/images/github-contribution-grid-snake.svg" />
-  </picture>
-
-  <!-- Pac-Man Contribution Graph -->
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset=".github/images/pacman-contribution-graph-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset=".github/images/pacman-contribution-graph.svg" />
-    <img alt="GitHub Pac-Man contribution graph" src=".github/images/pacman-contribution-graph.svg" />
   </picture>
 
   <!-- Activity Graph -->
