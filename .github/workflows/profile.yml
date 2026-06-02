@@ -1,37 +1,50 @@
 name: Profile Assets (Metrics, 3D Contrib, Snake, Pac-Man)
 
+# Regenerates the profile README's visual assets into .github/images/ and
+# commits them back. Runs daily and on demand -- intentionally NOT on push
+# (the job commits to the repo, so a push trigger would loop / waste minutes).
+#
+# Auth model:
+#   - lowlighter/metrics requires a classic PAT: it queries account-wide data
+#     across the GitHub GraphQL API, which the built-in GITHUB_TOKEN cannot see.
+#     METRICS_TOKEN is the ONLY long-lived secret this account manages (npm/PyPI
+#     publishing is tokenless via OIDC). Keep it a CLASSIC token (fine-grained
+#     PATs are unsupported by the GraphQL API), read-only, with an expiry, and
+#     rotate it on that cadence.
+#   - 3D-contrib and pac-man also read account data; they share METRICS_TOKEN so
+#     private contributions are included.
+#   - The snake generator and the commit/push step use the built-in GITHUB_TOKEN
+#     (auto-injected, nothing to manage).
+
 on:
   schedule:
     - cron: "0 7 * * *"
   workflow_dispatch:
-  push:
-    branches:
-      - master
-      - main
 
+# Don't pile up scheduled runs; a new run supersedes an in-flight one.
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: ${{ github.workflow }}
   cancel-in-progress: true
+
+# Least privilege: the only write this job performs is committing the SVGs.
+permissions:
+  contents: write
 
 jobs:
   build-assets:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    timeout-minutes: 20
     steps:
-
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           fetch-depth: 0
 
       - name: Ensure .github/images exists
-        run: |
-          mkdir -p .github/images
-          [ -f .github/images/.gitkeep ] || touch .github/images/.gitkeep
+        run: mkdir -p .github/images
 
       - name: Generate GitHub metrics
-        uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6  # v3.34
+        uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34
         continue-on-error: true
         with:
           token: ${{ secrets.METRICS_TOKEN }}
@@ -91,13 +104,12 @@ jobs:
       - name: Copy GitHub Metrics to .github/images
         if: always()
         run: |
-          mkdir -p .github/images
           if [ -f /metrics_renders/.github/images/github-metrics.svg ]; then
             cp -v /metrics_renders/.github/images/github-metrics.svg .github/images/
           fi
 
       - name: Generate GitHub 3D Contributions
-        uses: yoshi389111/github-profile-3d-contrib@fd54cf20784ed9a86dc7be48bb5eb1f74e92b4f8  # 0.7.1
+        uses: yoshi389111/github-profile-3d-contrib@fd54cf20784ed9a86dc7be48bb5eb1f74e92b4f8 # 0.7.1
         continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
@@ -106,14 +118,13 @@ jobs:
       - name: Copy GitHub 3D Contributions to .github/images
         if: always()
         run: |
-          mkdir -p .github/images
           if compgen -G "profile-3d-contrib/*.svg" > /dev/null; then
             cp -v profile-3d-contrib/*.svg .github/images/
           fi
           rm -rf profile-3d-contrib || true
 
       - name: Generate GitHub Contribution Grid Snake
-        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b  # v3
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3
         continue-on-error: true
         with:
           github_user_name: ${{ github.repository_owner }}
@@ -121,11 +132,8 @@ jobs:
             .github/images/github-contribution-grid-snake.svg
             .github/images/github-contribution-grid-snake-dark.svg?palette=github-dark
 
-      - name: Copy GitHub Contribution Grid Snake to .github/images
-        run: echo "Snake output already goes to .github/images; step included for consistency"
-
       - name: Generate GitHub Contribution Grid Pac-Man
-        uses: abozanona/pacman-contribution-graph@08373850c1a229b188c1e595cab37a1b15cee778  # main @ 2026-05-11
+        uses: abozanona/pacman-contribution-graph@08373850c1a229b188c1e595cab37a1b15cee778 # main @ 2026-05-11
         continue-on-error: true
         with:
           github_user_name: ${{ github.repository_owner }}
@@ -134,7 +142,6 @@ jobs:
       - name: Copy GitHub Contribution Grid Pac-Man to .github/images
         if: always()
         run: |
-          mkdir -p .github/images
           if [ -f dist/pacman-contribution-graph.svg ]; then
             cp -v dist/pacman-contribution-graph.svg .github/images/github-contribution-grid-pacman.svg
           fi
@@ -142,15 +149,19 @@ jobs:
             cp -v dist/pacman-contribution-graph-dark.svg .github/images/github-contribution-grid-pacman-dark.svg
           fi
 
-      - name: List All Generated Images
+      - name: List generated images
         if: always()
         run: ls -al .github/images || true
 
-      - name: Commit & Push All Images
+      - name: Commit & push updated assets
         if: always()
         run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add .github/images/
-          git commit -m "chore(images): update metrics, 3D contribs, snake & pacman [skip ci]" || echo "No changes to commit"
-          git push origin ${{ github.ref_name }} || echo "Push failed, but continuing workflow"
+          if git diff --cached --quiet; then
+            echo "No asset changes; nothing to commit."
+            exit 0
+          fi
+          git commit -m "chore(images): refresh profile assets [skip ci]"
+          git push origin "${{ github.ref_name }}"
