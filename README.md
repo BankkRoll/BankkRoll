@@ -2,7 +2,20 @@
   <!-- GitRoll Badge -->
   <div align="center">
     <a href="https://gitroll.io/profile/uSKBUAuwEu2OiuJtJx1Oq1MDhL8S2" target="_blank">
-      <img src="https://gitroll.io/api/badges/profiles/v1/s6vP9klKpmDYJ7lpkPHpa" alt="GitRoll Profile Badge" />
+      <picture>
+        <source
+          media="(prefers-color-scheme: dark)"
+          srcset="https://gitroll.io/api/badges/profiles/v1/uSKBUAuwEu2OiuJtJx1Oq1MDhL8S2?theme=midnight"
+        />
+        <source
+          media="(prefers-color-scheme: light)"
+          srcset="https://gitroll.io/api/badges/profiles/v1/uSKBUAuwEu2OiuJtJx1Oq1MDhL8S2?theme=sepia"
+        />
+        <img
+          src="https://gitroll.io/api/badges/profiles/v1/uSKBUAuwEu2OiuJtJx1Oq1MDhL8S2?theme=sepia"
+          alt="GitRoll Profile Badge"
+        />
+      </picture>
     </a>
   </div>
 
