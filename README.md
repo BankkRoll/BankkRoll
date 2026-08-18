@@ -8,16 +8,12 @@
 </a>
 
 <img src=".github/images/metrics-overview.svg" width="100%" alt="" />
-<img src=".github/images/metrics-calendar.svg" width="100%" alt="" />
-<img src=".github/images/metrics-topics.svg" width="100%" alt="" />
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/images/snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset=".github/images/snake.svg" />
   <img src=".github/images/snake.svg" width="100%" alt="" />
 </picture>
-
-<img src=".github/images/3d-gitblock.svg" width="100%" alt="" />
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/images/pacman-dark.svg" />

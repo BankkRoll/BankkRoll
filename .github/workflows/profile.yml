@@ -93,64 +93,8 @@ jobs:
           plugin_reactions_days: 30
           plugin_reactions_limit: 100
 
-      - name: Render calendars
-        uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34
-        continue-on-error: true
-        with:
-          token: ${{ secrets.METRICS_TOKEN }}
-          user: ${{ github.repository_owner }}
-          template: classic
-          output_action: none
-          config_output: svg
-          filename: metrics-calendar.svg
-          base: ""
-          repositories: 0
-          config_display: large
-          config_timezone: America/New_York
-          config_octicon: yes
-          config_animations: yes
-          config_padding: 0, 8 + 11%
-          optimize: css, xml
-          retries: 3
-          retries_delay: 60
-          debug: ${{ inputs.debug == true }}
-
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: full-year
-          plugin_calendar: yes
-          plugin_calendar_limit: 0
-
-      # habits and achievements are dropped: both crash in v3.34 against the current
-      # API (habits on commits with no author, achievements on the sunset Projects
-      # classic query) and the action is unmaintained.
-
-      # mode: mastered renders an empty card here, so topics come from starred repos.
-      - name: Render topics
-        uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34
-        continue-on-error: true
-        with:
-          token: ${{ secrets.METRICS_TOKEN }}
-          user: ${{ github.repository_owner }}
-          template: classic
-          output_action: none
-          config_output: svg
-          filename: metrics-topics.svg
-          base: ""
-          repositories: 100
-          repositories_batch: 20
-          config_display: large
-          config_timezone: America/New_York
-          config_octicon: yes
-          config_padding: 0, 8 + 11%
-          optimize: css, xml
-          retries: 3
-          retries_delay: 60
-          debug: ${{ inputs.debug == true }}
-
-          plugin_topics: yes
-          plugin_topics_mode: starred
-          plugin_topics_sort: stars
-          plugin_topics_limit: 24
+      # habits, achievements, calendars and topics are dropped: the first two crash
+      # against the current API and the other two render empty.
 
       # Never enable: notable, activity, repositories, stars, starlists, projects, code,
       # people, contributors, licenses, discussions, sponsors, traffic, stargazers,
@@ -211,26 +155,6 @@ jobs:
             cp -v "$f" "$RENDER_DIR/$(basename "$f" | sed 's/-contribution-graph//')"
           done
           rm -rf dist || true
-
-      - name: Generate 3D contributions
-        uses: yoshi389111/github-profile-3d-contrib@7d95e7d4cdc028dd1e1cbd957d65f35efb12ae39 # v0.9.3
-        continue-on-error: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
-          USERNAME: ${{ github.repository_owner }}
-          MAX_REPOS: "100"
-
-      - name: Collect 3D output
-        if: always()
-        run: |
-          mkdir -p "$RENDER_DIR"
-          if compgen -G "profile-3d-contrib/*.svg" > /dev/null; then
-            for f in profile-3d-contrib/*.svg; do
-              cp -v "$f" "$RENDER_DIR/3d-$(basename "$f" | sed 's/^profile-//')"
-            done
-          fi
-          rm -rf profile-3d-contrib || true
-          ls -al "$RENDER_DIR"
 
       - name: Upload game renders
         if: always()
