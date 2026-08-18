@@ -1,52 +1,60 @@
 <div align="center">
-  <!-- GitRoll Badge -->
-  <div align="center">
-    <a href="https://gitroll.io/profile/uSKBUAuwEu2OiuJtJx1Oq1MDhL8S2" target="_blank">
-      <picture>
-        <source
-          media="(prefers-color-scheme: dark)"
-          srcset="https://gitroll.io/api/badges/profiles/v1/uSKBUAuwEu2OiuJtJx1Oq1MDhL8S2?theme=midnight"
-        />
-        <source
-          media="(prefers-color-scheme: light)"
-          srcset="https://gitroll.io/api/badges/profiles/v1/uSKBUAuwEu2OiuJtJx1Oq1MDhL8S2?theme=sepia"
-        />
-        <img
-          src="https://gitroll.io/api/badges/profiles/v1/uSKBUAuwEu2OiuJtJx1Oq1MDhL8S2?theme=sepia"
-          alt="GitRoll Profile Badge"
-        />
-      </picture>
-    </a>
-  </div>
 
-  <!-- Pac-Man Contribution Graph -->
+<a href="https://gitroll.io/profile/uSKBUAuwEu2OiuJtJx1Oq1MDhL8S2">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset=".github/images/github-contribution-grid-pacman-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset=".github/images/github-contribution-grid-pacman.svg" />
-    <img alt="GitHub Pac-Man contribution graph" src=".github/images/pacman-contribution-graph.svg" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://gitroll.io/api/badges/profiles/v1/uSKBUAuwEu2OiuJtJx1Oq1MDhL8S2?theme=midnight" />
+    <img src="https://gitroll.io/api/badges/profiles/v1/uSKBUAuwEu2OiuJtJx1Oq1MDhL8S2?theme=sepia" alt="GitRoll profile" />
   </picture>
-  
-  <!-- Snake Contribution Graph -->
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset=".github/images/github-contribution-grid-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset=".github/images/github-contribution-grid-snake.svg" />
-    <img alt="GitHub Snake contribution graph" src=".github/images/github-contribution-grid-snake.svg" />
-  </picture>
+</a>
 
-  <!-- Activity Graph -->
-  <div align="center">
-    <img src="https://github-readme-activity-graph.vercel.app/graph?username=BankkRoll&theme=react-dark&bg_color=0D1117&hide_border=true&line=07D8FF&point=9600bf&color=FFFFFF" width="100%" alt="Activity Graph" />
-  </div>
-</div>
+<img src=".github/images/metrics-overview.svg" width="100%" alt="" />
+<img src=".github/images/metrics-calendar.svg" width="100%" alt="" />
+<img src=".github/images/metrics-habits.svg" width="100%" alt="" />
+<img src=".github/images/metrics-achievements.svg" width="100%" alt="" />
+<img src=".github/images/metrics-topics.svg" width="100%" alt="" />
 
-<!-- GitHub Metrics -->
-<div align="center">
-  <h2>
-    <img src="https://media.giphy.com/media/VgCDAzcKvsR6OM0uWg/giphy.gif" width="30" height="30" style="margin-right: 10px;">
-    <b>GitHub Metrics</b>
-    <img src="https://media.giphy.com/media/VgCDAzcKvsR6OM0uWg/giphy.gif" width="30" height="30" style="margin-left: 10px;">
-  </h2>
-  <div align="center">
-    <img src=".github/images/github-metrics.svg" width="100%" alt="Detailed GitHub Metrics" />
-  </div>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/images/snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset=".github/images/snake.svg" />
+  <img src=".github/images/snake.svg" width="100%" alt="" />
+</picture>
+
+<img src=".github/images/3d-gitblock.svg" width="100%" alt="" />
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/images/pacman-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset=".github/images/pacman.svg" />
+  <img src=".github/images/pacman.svg" width="100%" alt="" />
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/images/breakout-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset=".github/images/breakout.svg" />
+  <img src=".github/images/breakout.svg" width="100%" alt="" />
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/images/galaga-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset=".github/images/galaga.svg" />
+  <img src=".github/images/galaga.svg" width="100%" alt="" />
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/images/puzzle-bobble-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset=".github/images/puzzle-bobble.svg" />
+  <img src=".github/images/puzzle-bobble.svg" width="100%" alt="" />
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/images/bomberman-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset=".github/images/bomberman.svg" />
+  <img src=".github/images/bomberman.svg" width="100%" alt="" />
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/images/minesweeper-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset=".github/images/minesweeper.svg" />
+  <img src=".github/images/minesweeper.svg" width="100%" alt="" />
+</picture>
+
 </div>

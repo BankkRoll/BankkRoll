@@ -1,7 +1,7 @@
 name: Profile Assets
 
-# Regenerates the profile README assets into .github/images/ and commits them.
-# Not triggered on push: this workflow commits to the repo.
+# Aggregate stats from private repos are fine; repository, org, and account names are not.
+# Enforced at three layers: name-free config below, a sanitizer, then a hard grep gate.
 
 on:
   schedule:
@@ -9,7 +9,11 @@ on:
   workflow_dispatch:
     inputs:
       debug:
-        description: "Verbose metrics logs"
+        description: "Verbose render logs"
+        type: boolean
+        default: false
+      skip_commit:
+        description: "Render and verify only, do not commit"
         type: boolean
         default: false
 
@@ -22,6 +26,7 @@ permissions:
 
 env:
   IMAGES_DIR: .github/images
+  RENDER_DIR: renders
 
 jobs:
   metrics:
@@ -30,8 +35,10 @@ jobs:
     timeout-minutes: 30
     steps:
       - name: Prepare output directory
-        run: mkdir -p renders
+        run: mkdir -p "$RENDER_DIR"
 
+      # Never add `community` or `repositories` to base: they render @org/repo names
+      # without any plugin_* toggle being set.
       - name: Render overview
         uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34
         continue-on-error: true
@@ -48,7 +55,7 @@ jobs:
           repositories_forks: yes
           repositories_affiliations: owner, collaborator, organization_member
 
-          base: header, activity, community, repositories, metadata
+          base: header, activity, metadata
           base_indepth: yes
           config_display: large
           config_timezone: America/New_York
@@ -77,7 +84,7 @@ jobs:
           plugin_lines_delay: 2
 
           plugin_followup: yes
-          plugin_followup_sections: repositories, user
+          plugin_followup_sections: user
           plugin_followup_indepth: yes
           plugin_followup_archived: no
 
@@ -111,8 +118,10 @@ jobs:
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
           plugin_calendar: yes
-          plugin_calendar_limit: 0 # all years since account creation
+          plugin_calendar_limit: 0
 
+      # habits crashes in v3.34 on commits with no author object; a smaller sample
+      # window lowers the odds of hitting one.
       - name: Render coding habits
         uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34
         continue-on-error: true
@@ -135,7 +144,7 @@ jobs:
           debug: ${{ inputs.debug == true }}
 
           plugin_habits: yes
-          plugin_habits_from: 100
+          plugin_habits_from: 50
           plugin_habits_days: 14
           plugin_habits_facts: yes
           plugin_habits_charts: yes
@@ -144,6 +153,7 @@ jobs:
           plugin_habits_languages_limit: 8
           plugin_habits_languages_threshold: 0%
 
+      # achievements_secrets needs token scopes METRICS_TOKEN lacks and voids the card.
       - name: Render achievements
         uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34
         continue-on-error: true
@@ -168,7 +178,7 @@ jobs:
           plugin_achievements: yes
           plugin_achievements_display: detailed
           plugin_achievements_threshold: C
-          plugin_achievements_secrets: yes
+          plugin_achievements_secrets: no
 
       - name: Render topics
         uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34
@@ -197,23 +207,23 @@ jobs:
           plugin_topics_sort: activity
           plugin_topics_limit: 20
 
-      # Never enable: notable, activity, repositories, stars, starlists, projects,
-      # code, people, contributors, licenses, lines_sections repositories/history.
-      # They all render repository or account names.
+      # Never enable: notable, activity, repositories, stars, starlists, projects, code,
+      # people, contributors, licenses, discussions, sponsors, traffic, stargazers,
+      # followup_sections: repositories, lines_sections: repositories|history.
 
       - name: Collect renders
         if: always()
         run: |
-          mkdir -p renders
-          cp -v /metrics_renders/*.svg renders/ 2>/dev/null || true
-          ls -al renders
+          mkdir -p "$RENDER_DIR"
+          cp -v /metrics_renders/*.svg "$RENDER_DIR/" 2>/dev/null || true
+          ls -al "$RENDER_DIR"
 
       - name: Upload metrics renders
         if: always()
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: renders-metrics
-          path: renders/
+          path: ${{ env.RENDER_DIR }}/
           if-no-files-found: warn
           retention-days: 1
 
@@ -223,37 +233,37 @@ jobs:
     timeout-minutes: 20
     steps:
       - name: Prepare output directory
-        run: mkdir -p renders
+        run: mkdir -p "$RENDER_DIR"
 
       - name: Generate snake
-        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3.5.0
         continue-on-error: true
         with:
           github_user_name: ${{ github.repository_owner }}
           github_token: ${{ secrets.METRICS_TOKEN }}
-          # options: palette, color_snake, color_dots (5 values, low -> high)
+          # query options: palette, color_snake, color_dots (5 values, low -> high)
           outputs: |
-            renders/snake.svg
+            renders/snake.svg?palette=github-light
             renders/snake-dark.svg?palette=github-dark
             renders/snake-ocean.svg?color_snake=#f97316&color_dots=#161b22,#0e4429,#006d32,#26a641,#39d353
 
       - name: Generate arcade grids
-        uses: abozanona/pacman-contribution-graph@7332e1de7903ab780c3692a4127a59cc13872daa # v5.3.2
+        uses: abozanona/pacman-contribution-graph@8a0caa004b4bb10401ee22aed1f214c8eaf97e4d # v5.3.2
         continue-on-error: true
         with:
           github_user_name: ${{ github.repository_owner }}
           github_token: ${{ secrets.METRICS_TOKEN }}
-          # pacman, breakout, galaga, puzzle-bobble, bomberman, minesweeper
-          games: "pacman,breakout,galaga"
+          games: "pacman,breakout,galaga,puzzle-bobble,bomberman,minesweeper"
           player_style: opportunistic
           hide_month_labels: "false"
 
       - name: Collect arcade output
         if: always()
         run: |
+          mkdir -p "$RENDER_DIR"
           for f in dist/*.svg; do
             [ -e "$f" ] || continue
-            cp -v "$f" "renders/$(basename "$f" | sed 's/-contribution-graph//')"
+            cp -v "$f" "$RENDER_DIR/$(basename "$f" | sed 's/-contribution-graph//')"
           done
           rm -rf dist || true
 
@@ -268,20 +278,21 @@ jobs:
       - name: Collect 3D output
         if: always()
         run: |
+          mkdir -p "$RENDER_DIR"
           if compgen -G "profile-3d-contrib/*.svg" > /dev/null; then
             for f in profile-3d-contrib/*.svg; do
-              cp -v "$f" "renders/3d-$(basename "$f" | sed 's/^profile-//')"
+              cp -v "$f" "$RENDER_DIR/3d-$(basename "$f" | sed 's/^profile-//')"
             done
           fi
           rm -rf profile-3d-contrib || true
-          ls -al renders
+          ls -al "$RENDER_DIR"
 
       - name: Upload game renders
         if: always()
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: renders-games
-          path: renders/
+          path: ${{ env.RENDER_DIR }}/
           if-no-files-found: warn
           retention-days: 1
 
@@ -295,13 +306,44 @@ jobs:
       contents: write
     steps:
       - name: Checkout repository
-        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Download renders
-        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
           path: incoming
           merge-multiple: true
+
+      # Drop broken renders before staging so they can never overwrite the last good copy.
+      - name: Quarantine failed renders
+        run: |
+          shopt -s nullglob
+          dropped=0
+          for f in incoming/*.svg; do
+            if grep -qiE "Unexpected error|Something went wrong" "$f"; then
+              name="$(basename "$f")"
+              echo "::warning file=$IMAGES_DIR/$name::plugin error in render, keeping previous version"
+              echo "- \`$name\` failed to render; previous version kept" >> "$GITHUB_STEP_SUMMARY"
+              rm -f "$f"
+              dropped=$((dropped + 1))
+            fi
+          done
+          echo "quarantined: $dropped"
+
+      # Strip name markup rather than fail a whole run over one stray entry.
+      - name: Sanitize renders
+        run: |
+          shopt -s nullglob
+          scrubbed=0
+          for f in incoming/*.svg; do
+            before="$(md5sum "$f" | cut -d' ' -f1)"
+            perl -0pi -e 's{<span class="name">\@[^<]*</span>}{}g' "$f"
+            if [ "$before" != "$(md5sum "$f" | cut -d' ' -f1)" ]; then
+              echo "::warning file=$IMAGES_DIR/$(basename "$f")::stripped name markup from render"
+              scrubbed=$((scrubbed + 1))
+            fi
+          done
+          echo "scrubbed: $scrubbed"
 
       - name: Stage renders
         run: |
@@ -313,25 +355,10 @@ jobs:
           fi
           rm -rf incoming
 
-      # Keep the last good copy of any card whose plugin failed at render time.
-      - name: Quarantine failed renders
-        run: |
-          restored=0
-          for f in "$IMAGES_DIR"/*.svg; do
-            [ -e "$f" ] || continue
-            if grep -qi "Unexpected error\|Something went wrong" "$f"; then
-              echo "::warning file=$f::plugin error in render, keeping previous version"
-              echo "- \`$(basename "$f")\` failed to render; previous version kept" >> "$GITHUB_STEP_SUMMARY"
-              git checkout -- "$f" 2>/dev/null || rm -f "$f"
-              restored=$((restored+1))
-            fi
-          done
-          echo "quarantined: $restored"
-
-      # Fail before committing if any asset contains an owner/repo style name.
+      # Scans carried-over assets too, so a leak from an older config is caught next run.
       - name: Privacy guard
         run: |
-          ALLOW='lowlighter/metrics|twitter/twemoji|github/gemoji|jdecked/twemoji'
+          ALLOW='lowlighter/metrics|twitter/twemoji|github/gemoji|jdecked/twemoji|Platane/snk|abozanona/pacman-contribution-graph|yoshi389111/github-profile-3d-contrib|w3\.org|creativecommons\.org'
           hits="$(grep -hoE '(@|github\.com/|gitlab\.com/)[A-Za-z0-9][A-Za-z0-9_.-]*/[A-Za-z0-9][A-Za-z0-9_.-]*' "$IMAGES_DIR"/*.svg 2>/dev/null \
                   | sort -u | grep -Eiv "$ALLOW" || true)"
           if [ -n "$hits" ]; then
@@ -346,6 +373,7 @@ jobs:
           echo "privacy guard passed"
 
       - name: Commit and push
+        if: inputs.skip_commit != true
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -364,6 +392,6 @@ jobs:
           {
             echo "### Assets in $IMAGES_DIR"
             echo '```'
-            ls -1 "$IMAGES_DIR" 2>/dev/null || echo "(none)"
+            ls -1sh "$IMAGES_DIR" 2>/dev/null | grep -v '^total' || echo "(none)"
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
