@@ -9,8 +9,6 @@
 
 <img src=".github/images/metrics-overview.svg" width="100%" alt="" />
 <img src=".github/images/metrics-calendar.svg" width="100%" alt="" />
-<img src=".github/images/metrics-habits.svg" width="100%" alt="" />
-<img src=".github/images/metrics-achievements.svg" width="100%" alt="" />
 <img src=".github/images/metrics-topics.svg" width="100%" alt="" />
 
 <picture>

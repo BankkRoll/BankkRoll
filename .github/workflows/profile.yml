@@ -120,66 +120,11 @@ jobs:
           plugin_calendar: yes
           plugin_calendar_limit: 0
 
-      # habits crashes in v3.34 on commits with no author object; a smaller sample
-      # window lowers the odds of hitting one.
-      - name: Render coding habits
-        uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34
-        continue-on-error: true
-        with:
-          token: ${{ secrets.METRICS_TOKEN }}
-          user: ${{ github.repository_owner }}
-          template: classic
-          output_action: none
-          config_output: svg
-          filename: metrics-habits.svg
-          base: ""
-          repositories: 0
-          config_display: large
-          config_timezone: America/New_York
-          config_octicon: yes
-          config_padding: 0, 8 + 11%
-          optimize: css, xml
-          retries: 3
-          retries_delay: 60
-          debug: ${{ inputs.debug == true }}
+      # habits and achievements are dropped: both crash in v3.34 against the current
+      # API (habits on commits with no author, achievements on the sunset Projects
+      # classic query) and the action is unmaintained.
 
-          plugin_habits: yes
-          plugin_habits_from: 50
-          plugin_habits_days: 14
-          plugin_habits_facts: yes
-          plugin_habits_charts: yes
-          plugin_habits_charts_type: classic
-          plugin_habits_trim: yes
-          plugin_habits_languages_limit: 8
-          plugin_habits_languages_threshold: 0%
-
-      # achievements_secrets needs token scopes METRICS_TOKEN lacks and voids the card.
-      - name: Render achievements
-        uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34
-        continue-on-error: true
-        with:
-          token: ${{ secrets.METRICS_TOKEN }}
-          user: ${{ github.repository_owner }}
-          template: classic
-          output_action: none
-          config_output: svg
-          filename: metrics-achievements.svg
-          base: ""
-          repositories: 0
-          config_display: large
-          config_timezone: America/New_York
-          config_octicon: yes
-          config_padding: 0, 8 + 11%
-          optimize: css, xml
-          retries: 3
-          retries_delay: 60
-          debug: ${{ inputs.debug == true }}
-
-          plugin_achievements: yes
-          plugin_achievements_display: detailed
-          plugin_achievements_threshold: C
-          plugin_achievements_secrets: no
-
+      # mode: mastered renders an empty card here, so topics come from starred repos.
       - name: Render topics
         uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34
         continue-on-error: true
@@ -203,9 +148,9 @@ jobs:
           debug: ${{ inputs.debug == true }}
 
           plugin_topics: yes
-          plugin_topics_mode: mastered
-          plugin_topics_sort: activity
-          plugin_topics_limit: 20
+          plugin_topics_mode: starred
+          plugin_topics_sort: stars
+          plugin_topics_limit: 24
 
       # Never enable: notable, activity, repositories, stars, starlists, projects, code,
       # people, contributors, licenses, discussions, sponsors, traffic, stargazers,
