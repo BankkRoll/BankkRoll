@@ -1,167 +1,369 @@
-name: Profile Assets (Metrics, 3D Contrib, Snake, Pac-Man)
+name: Profile Assets
 
-# Regenerates the profile README's visual assets into .github/images/ and
-# commits them back. Runs daily and on demand -- intentionally NOT on push
-# (the job commits to the repo, so a push trigger would loop / waste minutes).
-#
-# Auth model:
-#   - lowlighter/metrics requires a classic PAT: it queries account-wide data
-#     across the GitHub GraphQL API, which the built-in GITHUB_TOKEN cannot see.
-#     METRICS_TOKEN is the ONLY long-lived secret this account manages (npm/PyPI
-#     publishing is tokenless via OIDC). Keep it a CLASSIC token (fine-grained
-#     PATs are unsupported by the GraphQL API), read-only, with an expiry, and
-#     rotate it on that cadence.
-#   - 3D-contrib and pac-man also read account data; they share METRICS_TOKEN so
-#     private contributions are included.
-#   - The snake generator and the commit/push step use the built-in GITHUB_TOKEN
-#     (auto-injected, nothing to manage).
+# Regenerates the profile README assets into .github/images/ and commits them.
+# Not triggered on push: this workflow commits to the repo.
 
 on:
   schedule:
-    - cron: "0 7 * * *"
+    - cron: "17 7 * * *"
   workflow_dispatch:
+    inputs:
+      debug:
+        description: "Verbose metrics logs"
+        type: boolean
+        default: false
 
-# Don't pile up scheduled runs; a new run supersedes an in-flight one.
 concurrency:
   group: ${{ github.workflow }}
   cancel-in-progress: true
 
-# Least privilege: the only write this job performs is committing the SVGs.
 permissions:
-  contents: write
+  contents: read
+
+env:
+  IMAGES_DIR: .github/images
 
 jobs:
-  build-assets:
+  metrics:
+    name: Render metrics cards
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-        with:
-          fetch-depth: 0
+      - name: Prepare output directory
+        run: mkdir -p renders
 
-      - name: Ensure .github/images exists
-        run: mkdir -p .github/images
-
-      - name: Generate GitHub metrics
+      - name: Render overview
         uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34
         continue-on-error: true
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           user: ${{ github.repository_owner }}
           template: classic
-          base: activity, community, repositories, metadata
+          output_action: none
+          config_output: svg
+          filename: metrics-overview.svg
+
+          repositories: 200
+          repositories_batch: 20
+          repositories_forks: yes
+          repositories_affiliations: owner, collaborator, organization_member
+
+          base: header, activity, community, repositories, metadata
           base_indepth: yes
           config_display: large
-          config_octicon: yes
           config_timezone: America/New_York
+          config_octicon: yes
           config_twemoji: yes
-          plugin_achievements: yes
-          plugin_achievements_display: detailed
-          plugin_achievements_secrets: yes
-          plugin_achievements_threshold: C
-          plugin_activity: yes
-          plugin_activity_days: 14
-          plugin_activity_filter: all
-          plugin_activity_limit: 4
-          plugin_activity_load: 300
-          plugin_activity_visibility: public
-          plugin_fortune: yes
-          plugin_habits: yes
-          plugin_habits_charts_type: classic
-          plugin_habits_days: 14
-          plugin_habits_facts: yes
-          plugin_habits_from: 200
-          plugin_habits_languages_limit: 8
-          plugin_habits_languages_threshold: 0%
-          plugin_habits_trim: yes
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: half-year
+          config_animations: yes
+          config_padding: 0, 8 + 11%
+          optimize: css, xml
+
+          retries: 3
+          retries_delay: 60
+          verify: yes
+          debug: ${{ inputs.debug == true }}
+
           plugin_languages: yes
-          plugin_languages_analysis_timeout: 15
-          plugin_languages_analysis_timeout_repositories: 7.5
+          plugin_languages_sections: most-used
           plugin_languages_categories: markup, programming
           plugin_languages_colors: github
+          plugin_languages_details: bytes-size, percentage
           plugin_languages_limit: 8
-          plugin_languages_recent_categories: markup, programming
-          plugin_languages_recent_days: 14
-          plugin_languages_recent_load: 300
-          plugin_languages_sections: most-used
           plugin_languages_threshold: 0%
+          plugin_languages_other: yes
+
           plugin_lines: yes
-          plugin_lines_history_limit: 2
-          plugin_lines_repositories_limit: 4
           plugin_lines_sections: base
-          plugin_notable: yes
-          plugin_notable_from: organization
-          plugin_notable_indepth: yes
-          plugin_notable_repositories: yes
-          plugin_notable_types: commit
-          repositories_forks: yes
-          output_action: none
-          filename: .github/images/github-metrics.svg
+          plugin_lines_delay: 2
 
-      - name: Copy GitHub Metrics to .github/images
-        if: always()
-        run: |
-          if [ -f /metrics_renders/.github/images/github-metrics.svg ]; then
-            cp -v /metrics_renders/.github/images/github-metrics.svg .github/images/
-          fi
+          plugin_followup: yes
+          plugin_followup_sections: repositories, user
+          plugin_followup_indepth: yes
+          plugin_followup_archived: no
 
-      - name: Generate GitHub 3D Contributions
-        uses: yoshi389111/github-profile-3d-contrib@fd54cf20784ed9a86dc7be48bb5eb1f74e92b4f8 # 0.7.1
+          plugin_reactions: yes
+          plugin_reactions_display: absolute
+          plugin_reactions_days: 30
+          plugin_reactions_limit: 100
+
+      - name: Render calendars
+        uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34
         continue-on-error: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
-          USERNAME: ${{ github.repository_owner }}
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: ${{ github.repository_owner }}
+          template: classic
+          output_action: none
+          config_output: svg
+          filename: metrics-calendar.svg
+          base: ""
+          repositories: 0
+          config_display: large
+          config_timezone: America/New_York
+          config_octicon: yes
+          config_animations: yes
+          config_padding: 0, 8 + 11%
+          optimize: css, xml
+          retries: 3
+          retries_delay: 60
+          debug: ${{ inputs.debug == true }}
 
-      - name: Copy GitHub 3D Contributions to .github/images
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+          plugin_calendar: yes
+          plugin_calendar_limit: 0 # all years since account creation
+
+      - name: Render coding habits
+        uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34
+        continue-on-error: true
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: ${{ github.repository_owner }}
+          template: classic
+          output_action: none
+          config_output: svg
+          filename: metrics-habits.svg
+          base: ""
+          repositories: 0
+          config_display: large
+          config_timezone: America/New_York
+          config_octicon: yes
+          config_padding: 0, 8 + 11%
+          optimize: css, xml
+          retries: 3
+          retries_delay: 60
+          debug: ${{ inputs.debug == true }}
+
+          plugin_habits: yes
+          plugin_habits_from: 100
+          plugin_habits_days: 14
+          plugin_habits_facts: yes
+          plugin_habits_charts: yes
+          plugin_habits_charts_type: classic
+          plugin_habits_trim: yes
+          plugin_habits_languages_limit: 8
+          plugin_habits_languages_threshold: 0%
+
+      - name: Render achievements
+        uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34
+        continue-on-error: true
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: ${{ github.repository_owner }}
+          template: classic
+          output_action: none
+          config_output: svg
+          filename: metrics-achievements.svg
+          base: ""
+          repositories: 0
+          config_display: large
+          config_timezone: America/New_York
+          config_octicon: yes
+          config_padding: 0, 8 + 11%
+          optimize: css, xml
+          retries: 3
+          retries_delay: 60
+          debug: ${{ inputs.debug == true }}
+
+          plugin_achievements: yes
+          plugin_achievements_display: detailed
+          plugin_achievements_threshold: C
+          plugin_achievements_secrets: yes
+
+      - name: Render topics
+        uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34
+        continue-on-error: true
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: ${{ github.repository_owner }}
+          template: classic
+          output_action: none
+          config_output: svg
+          filename: metrics-topics.svg
+          base: ""
+          repositories: 100
+          repositories_batch: 20
+          config_display: large
+          config_timezone: America/New_York
+          config_octicon: yes
+          config_padding: 0, 8 + 11%
+          optimize: css, xml
+          retries: 3
+          retries_delay: 60
+          debug: ${{ inputs.debug == true }}
+
+          plugin_topics: yes
+          plugin_topics_mode: mastered
+          plugin_topics_sort: activity
+          plugin_topics_limit: 20
+
+      # Never enable: notable, activity, repositories, stars, starlists, projects,
+      # code, people, contributors, licenses, lines_sections repositories/history.
+      # They all render repository or account names.
+
+      - name: Collect renders
         if: always()
         run: |
-          if compgen -G "profile-3d-contrib/*.svg" > /dev/null; then
-            cp -v profile-3d-contrib/*.svg .github/images/
-          fi
-          rm -rf profile-3d-contrib || true
+          mkdir -p renders
+          cp -v /metrics_renders/*.svg renders/ 2>/dev/null || true
+          ls -al renders
 
-      - name: Generate GitHub Contribution Grid Snake
+      - name: Upload metrics renders
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: renders-metrics
+          path: renders/
+          if-no-files-found: warn
+          retention-days: 1
+
+  games:
+    name: Render contribution games
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Prepare output directory
+        run: mkdir -p renders
+
+      - name: Generate snake
         uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3
         continue-on-error: true
         with:
           github_user_name: ${{ github.repository_owner }}
+          github_token: ${{ secrets.METRICS_TOKEN }}
+          # options: palette, color_snake, color_dots (5 values, low -> high)
           outputs: |
-            .github/images/github-contribution-grid-snake.svg
-            .github/images/github-contribution-grid-snake-dark.svg?palette=github-dark
+            renders/snake.svg
+            renders/snake-dark.svg?palette=github-dark
+            renders/snake-ocean.svg?color_snake=#f97316&color_dots=#161b22,#0e4429,#006d32,#26a641,#39d353
 
-      - name: Generate GitHub Contribution Grid Pac-Man
-        uses: abozanona/pacman-contribution-graph@08373850c1a229b188c1e595cab37a1b15cee778 # main @ 2026-05-11
+      - name: Generate arcade grids
+        uses: abozanona/pacman-contribution-graph@7332e1de7903ab780c3692a4127a59cc13872daa # v5.3.2
         continue-on-error: true
         with:
           github_user_name: ${{ github.repository_owner }}
           github_token: ${{ secrets.METRICS_TOKEN }}
+          # pacman, breakout, galaga, puzzle-bobble, bomberman, minesweeper
+          games: "pacman,breakout,galaga"
+          player_style: opportunistic
+          hide_month_labels: "false"
 
-      - name: Copy GitHub Contribution Grid Pac-Man to .github/images
+      - name: Collect arcade output
         if: always()
         run: |
-          if [ -f dist/pacman-contribution-graph.svg ]; then
-            cp -v dist/pacman-contribution-graph.svg .github/images/github-contribution-grid-pacman.svg
-          fi
-          if [ -f dist/pacman-contribution-graph-dark.svg ]; then
-            cp -v dist/pacman-contribution-graph-dark.svg .github/images/github-contribution-grid-pacman-dark.svg
-          fi
+          for f in dist/*.svg; do
+            [ -e "$f" ] || continue
+            cp -v "$f" "renders/$(basename "$f" | sed 's/-contribution-graph//')"
+          done
+          rm -rf dist || true
 
-      - name: List generated images
-        if: always()
-        run: ls -al .github/images || true
+      - name: Generate 3D contributions
+        uses: yoshi389111/github-profile-3d-contrib@7d95e7d4cdc028dd1e1cbd957d65f35efb12ae39 # v0.9.3
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+          MAX_REPOS: "100"
 
-      - name: Commit & push updated assets
+      - name: Collect 3D output
         if: always()
+        run: |
+          if compgen -G "profile-3d-contrib/*.svg" > /dev/null; then
+            for f in profile-3d-contrib/*.svg; do
+              cp -v "$f" "renders/3d-$(basename "$f" | sed 's/^profile-//')"
+            done
+          fi
+          rm -rf profile-3d-contrib || true
+          ls -al renders
+
+      - name: Upload game renders
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: renders-games
+          path: renders/
+          if-no-files-found: warn
+          retention-days: 1
+
+  publish:
+    name: Verify and publish
+    runs-on: ubuntu-latest
+    needs: [metrics, games]
+    if: always()
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+
+      - name: Download renders
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          path: incoming
+          merge-multiple: true
+
+      - name: Stage renders
+        run: |
+          mkdir -p "$IMAGES_DIR"
+          if compgen -G "incoming/*.svg" > /dev/null; then
+            cp -v incoming/*.svg "$IMAGES_DIR/"
+          else
+            echo "::warning::no renders were produced this run"
+          fi
+          rm -rf incoming
+
+      # Keep the last good copy of any card whose plugin failed at render time.
+      - name: Quarantine failed renders
+        run: |
+          restored=0
+          for f in "$IMAGES_DIR"/*.svg; do
+            [ -e "$f" ] || continue
+            if grep -qi "Unexpected error\|Something went wrong" "$f"; then
+              echo "::warning file=$f::plugin error in render, keeping previous version"
+              echo "- \`$(basename "$f")\` failed to render; previous version kept" >> "$GITHUB_STEP_SUMMARY"
+              git checkout -- "$f" 2>/dev/null || rm -f "$f"
+              restored=$((restored+1))
+            fi
+          done
+          echo "quarantined: $restored"
+
+      # Fail before committing if any asset contains an owner/repo style name.
+      - name: Privacy guard
+        run: |
+          ALLOW='lowlighter/metrics|twitter/twemoji|github/gemoji|jdecked/twemoji'
+          hits="$(grep -hoE '(@|github\.com/|gitlab\.com/)[A-Za-z0-9][A-Za-z0-9_.-]*/[A-Za-z0-9][A-Za-z0-9_.-]*' "$IMAGES_DIR"/*.svg 2>/dev/null \
+                  | sort -u | grep -Eiv "$ALLOW" || true)"
+          if [ -n "$hits" ]; then
+            echo "::error::asset contains repository/account names — refusing to commit"
+            echo "$hits"
+            {
+              echo "### Privacy guard failed"
+              echo '```'; echo "$hits"; echo '```'
+            } >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi
+          echo "privacy guard passed"
+
+      - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add .github/images/
+          git add "$IMAGES_DIR"
           if git diff --cached --quiet; then
             echo "No asset changes; nothing to commit."
             exit 0
           fi
           git commit -m "chore(images): refresh profile assets [skip ci]"
-          git push origin "${{ github.ref_name }}"
+          git pull --rebase --autostash origin "${{ github.ref_name }}" || true
+          git push origin "HEAD:${{ github.ref_name }}"
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "### Assets in $IMAGES_DIR"
+            echo '```'
+            ls -1 "$IMAGES_DIR" 2>/dev/null || echo "(none)"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
